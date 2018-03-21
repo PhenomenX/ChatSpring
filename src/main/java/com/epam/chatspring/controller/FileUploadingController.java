@@ -10,18 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class FrontController {
-	
-	@RequestMapping("/")
-    @ResponseBody
-    public String welcome() {
-        return "Welcome to RestTemplate Example.";
-    }
-	
-	@RequestMapping("/user")
-    @ResponseBody
-    public String getUser() {
-        return "USEEEEER";
-    }
+public class FileUploadingController {
+
 }

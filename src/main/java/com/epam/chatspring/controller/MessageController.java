@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class FrontController {
+public class MessageController {
 	
-	@RequestMapping("/")
+	@RequestMapping(value = "/messages", method = RequestMethod.GET)
     @ResponseBody
-    public String welcome() {
+    public String getMessages() {
         return "Welcome to RestTemplate Example.";
     }
 	
-	@RequestMapping("/user")
+	@RequestMapping(value = "/messages", method = RequestMethod.POST)
     @ResponseBody
-    public String getUser() {
-        return "USEEEEER";
+    public String sendMessage() {
+        return "Welcome to RestTemplate Example.";
     }
+
 }
