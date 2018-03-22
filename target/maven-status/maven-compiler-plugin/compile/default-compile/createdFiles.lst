@@ -11,8 +11,11 @@ com\epam\chatspring\controller\FrontController.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleDBHandler.class
 com\epam\chatspring\config\WebMvcConfig.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleMessageDAO.class
+com\epam\chatspring\service\AdminService.class
 com\epam\chatspring\dao\datalayer\DAOFactory.class
 com\epam\chatspring\dao\datalayer\UserDAO.class
+com\epam\chatspring\controller\FileUploadingController.class
+com\epam\chatspring\controller\MessageController.class
 com\epam\chatspring\dao\datalayer\data\Role.class
 com\epam\chatspring\dao\datalayer\DBTypeException.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleDBDAOFactory.class
@@ -20,8 +23,11 @@ com\epam\chatspring\dao\datalayer\xml\XMLUserDAO.class
 com\epam\chatspring\dao\datalayer\xml\sax\SAXHandlerMessage.class
 com\epam\chatspring\dao\datalayer\DBType$2.class
 com\epam\chatspring\dao\datalayer\xml\XMLDAOFactory.class
+com\epam\chatspring\service\MessageService.class
 com\epam\chatspring\dao\datalayer\data\Status.class
 com\epam\chatspring\dao\datalayer\MessageDAO.class
+com\epam\chatspring\controller\UserController.class
+com\epam\chatspring\service\UserService.class
 com\epam\chatspring\dao\ResourceManager.class
 com\epam\chatspring\config\SpringWebAppInitializer.class
 com\epam\chatspring\dao\datalayer\data\Message.class

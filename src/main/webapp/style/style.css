@@ -18,6 +18,8 @@ body{
     flex-direction: column;
     background: none; 
     align-items: center;
+    padding:0px;
+    margin: 0px;;
 }
 
 div {
@@ -30,8 +32,8 @@ div.buttons{
     background: none;
 }
 
-div.header{
-    background: none;
+div#header{
+    background-color: #ebebeb;
     border: solid 0px black;
     display: -webkit-flex;
     display: flex;
@@ -41,7 +43,7 @@ div.header{
     justify-content: space-around;
 }
     
-div.main {
+div#main {
     background-color: white;
     border: solid 0px black;
     display: -webkit-flex;
@@ -51,9 +53,10 @@ div.main {
     margin:0px;
     flex-basis: auto;
     flex-grow: 0;
+    margin-top: 10vh;
 }
 
-div.chat{
+div#chat{
     display:none;
 }
 
@@ -66,7 +69,8 @@ div.chat_content{
     align-items:center;
 }
 
-div.login{
+form#login_form{
+    border: solid 2px #424242;
 }
     
 div.messages {
@@ -75,13 +79,13 @@ div.messages {
     height: 350px;
 }
     
-div.onlineUsers {
+div.users {
     overflow: scroll;
     width: 150px;
     height: 350px;
 }
     
-div.messageBox {
+form#message_form {
     width: 752px;
     height: 50px;
     background-color: white;
@@ -92,7 +96,7 @@ div.messageBox {
     align-items:center;
 }
     
-input.sending {
+input#sending {
     height: 46px;
     background-color: #424242;
     border: none;

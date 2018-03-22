@@ -1,0 +1,137 @@
+html{
+	max-width: 100vw;
+	max-height: 100vh;
+	font-family: 'proxima-nova';
+	display: -webkit-flex;
+	display: flex;
+    flex-direction: column;
+    align-items:stretch;
+	margin: 0;
+    min-height: 100vh;
+    background-image: url(../image/light-tile.gif);
+}
+
+body{
+    display: -webkit-flex;
+    display: flex;
+    flex:auto;
+    flex-direction: column;
+    background: none; 
+    align-items: center;
+    padding:0px;
+    margin: 0px;;
+}
+
+div {
+    background-color: white;
+    border: solid 2px #424242;
+}
+
+div.buttons{
+    border:none;
+    background: none;
+}
+
+div#header{
+    background-color: #ebebeb;
+    border: solid 0px black;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    min-width: 100%;
+    justify-content: space-around;
+}
+    
+div#main {
+    background-color: white;
+    border: solid 0px black;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin:0px;
+    flex-basis: auto;
+    flex-grow: 0;
+    margin-top: 10vh;
+}
+
+div#chat{
+    display:none;
+}
+
+div.chat_content{
+    background-color: white;
+    border: solid 0px black;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+form#login_form{
+    border: solid 2px #424242;
+}
+    
+div.messages {
+    overflow: scroll;
+    width: 600px;
+    height: 350px;
+}
+    
+div.users {
+    overflow: scroll;
+    width: 150px;
+    height: 350px;
+}
+    
+form#message_form {
+    width: 752px;
+    height: 50px;
+    background-color: white;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+}
+    
+input#sending {
+    height: 46px;
+    background-color: #424242;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;   
+}
+
+input.unkick{
+    background-color: #008000;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+.button {
+    background-color: #424242;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+h3 {
+}
+
+.kick {
+    background-color: #8B0000;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p{
+    font-weight:700;
+}

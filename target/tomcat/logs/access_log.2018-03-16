@@ -1,2 +1,0 @@
-0:0:0:0:0:0:0:1 - - [16/Mar/2018:15:08:41 +0300] "GET /ChatSpring/ HTTP/1.1" 200 32 http-bio-8083-exec-1 58
-0:0:0:0:0:0:0:1 - - [16/Mar/2018:15:08:45 +0300] "GET /ChatSpring/user HTTP/1.1" 200 8 http-bio-8083-exec-2 4

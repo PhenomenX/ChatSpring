@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/init.js"></script>
+    <script src="script/view/View.js"></script>
+    <script src="script/controller/Controller.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h3>Welcome!</h3>
+        <div class="buttons">
+            <input class="button" id="profile_button" type="button" value="Profile" />
+            <input class="button" id="register_button" type="button" value="Register" />
+            <input class="button" id="logout_button" type="submit" value="Logout" />
+        </div>
+    </div>
+    <div id="main">
+        <div id="chat">
+            <div class="chat_content">
+                <div id="messages">
+                </div>
+                <div id="users">
+                    <p>Logged users:</p>
+                </div>
+            </div>
+            <form id="message_form">
+                <textarea name="text" cols="86" rows="3"></textarea>
+                <input class="sending" type="submit" value="Send Message" />
+            </form>
+        </div>
+        <form id="login_form">
+            Please, enter login and password:
+            <input title="Login:" name="nick" type="text" />
+            <input title="Password:" name="password" type="password" />
+            <input id="sending" type="submit" value="Log in" />
+        </form>
+    </div>
+</body>
+
+</html>
