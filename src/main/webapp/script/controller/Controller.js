@@ -2,6 +2,7 @@ function Controller(view) {
     this.view = view;
     var _this = this;
     view.loginForm.submit(_this.sendLoginForm);
+    view.messageForm.submit(_this.sendMessage);
     ;
 }
 
@@ -29,12 +30,15 @@ Controller.prototype.sendLoginForm = function () {
                 if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
                     alert("don't ok"); // пoкaжeм eё тeкст
                 } else { // eсли всe прoшлo oк
-                    alert("Ok");
+                    alert(data);
+                    console.log(window.controller);
+                    window.controller.generateChat();
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
                 alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
                 alert(thrownError); // и тeкст oшибки
+                console.log(window.controller);
             },
             complete: function (data) { // сoбытиe пoслe любoгo исхoдa
                 form.find('input[type="submit"]').prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
@@ -44,11 +48,56 @@ Controller.prototype.sendLoginForm = function () {
     }
     return false; // вырубaeм стaндaртную oтпрaвку фoрмы
 };
-Controller.prototype.getMessages;
-Controller.prototype.getUsers;
+
+Controller.prototype.generateChat = function () {
+    var users = this.getUsers();
+    var messages = this.getMessages();
+    this.view.showChat(users, messages);
+}
+Controller.prototype.getMessages = function () {
+    var messages;
+    $.ajax({
+        type: 'GET',
+        url: 'messages',
+        dataType: 'json',
+        success: function (data) {
+            if (data['error']) {
+                alert("don't ok");
+            } else {
+                return messages;
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+};
+Controller.prototype.getUsers = function () {
+    var users;
+    $.ajax({
+        type: 'GET',
+        url: 'users',
+        dataType: 'json',
+        success: function (data) {
+            if (data['error']) {
+                alert("don't ok");
+            } else {
+                users = data;
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+    return users;
+};
 Controller.prototype.getUser;
 Controller.prototype.sendRegisterForm;
-Controller.prototype.sendMessage;
 Controller.prototype.kick;
 Controller.prototype.unkick;
+// Controller.prototype.sendAjax = function(){
+
+// };
 

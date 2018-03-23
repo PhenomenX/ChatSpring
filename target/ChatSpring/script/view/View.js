@@ -9,9 +9,16 @@ function View() {
 }
 
 View.prototype.refleshMessages;
-View.prototype.refleshUsers;
+View.prototype.refleshUsers = function(users){
+    for (var i = 0; i < users.length; i++) {
+        usersContainer.appendChild();
+    }
+};
 View.prototype.showLoginForm;
-View.prototype.showChat;
+View.prototype.showChat = function(users, messages){
+    alert(users);
+    alert(messages);
+};
 View.prototype.showProfile;
 View.prototype.showUser;
 View.prototype.showRegisterForm;

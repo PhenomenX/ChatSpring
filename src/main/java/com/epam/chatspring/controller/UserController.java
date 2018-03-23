@@ -1,6 +1,11 @@
 package com.epam.chatspring.controller;
 
 import com.epam.chatspring.dao.*;
+import com.epam.chatspring.dao.datalayer.data.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,10 +42,13 @@ public class UserController {
         return "Welcome to RestTemplate Example.";
     }
 	
-	@RequestMapping(value = "/users/", method = RequestMethod.GET)
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
     @ResponseBody
-    public String getUsers() {
-        return "Welcome to RestTemplate Example.";
+    public List<User> getUsers() {
+		List<User> users = new ArrayList<User>();
+		users.add(new User("Psycho"));
+		users.add(new User("Pennywise"));
+        return users;
     }
 	
 	@RequestMapping(value = "/users/kick/{id}", method = RequestMethod.PUT)
