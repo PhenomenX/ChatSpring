@@ -3,6 +3,7 @@ function Controller(view) {
     var _this = this;
     view.loginForm.submit(_this.sendLoginForm);
     view.messageForm.submit(_this.sendMessage);
+    view.registerForm.submit(_this.sendRegisterForm);
     ;
 }
 
@@ -50,48 +51,50 @@ Controller.prototype.sendLoginForm = function () {
 };
 
 Controller.prototype.generateChat = function () {
-    var users = this.getUsers();
-    var messages = this.getMessages();
-    this.view.showChat(users, messages);
+    Promise.all([this.getUsers(), this.getMessages()]).then(
+    values => {this.view.showChat(values[0], values[1])});
 }
+
 Controller.prototype.getMessages = function () {
-    var messages;
-    $.ajax({
-        type: 'GET',
-        url: 'messages',
-        dataType: 'json',
-        success: function (data) {
-            if (data['error']) {
-                alert("don't ok");
-            } else {
-                return messages;
+    return new Promise(function (resolve, reject) {
+        $.ajax({
+            type: 'GET',
+            url: 'messages',
+            dataType: 'json',
+            success: function (data) {
+                if (data['error']) {
+                    alert("don't ok");
+                } else {
+                    resolve(data);
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
             }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
-        }
+        });
     });
-};
+}
 Controller.prototype.getUsers = function () {
-    var users;
-    $.ajax({
-        type: 'GET',
-        url: 'users',
-        dataType: 'json',
-        success: function (data) {
-            if (data['error']) {
-                alert("don't ok");
-            } else {
-                users = data;
+    return new Promise(function (resolve, reject) {
+        var users;
+        $.ajax({
+            type: 'GET',
+            url: 'users',
+            dataType: 'json',
+            success: function (data) {
+                if (data['error']) {
+                    alert("don't ok");
+                } else {
+                    resolve(data);
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
             }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
-        }
+        });
     });
-    return users;
 };
 Controller.prototype.getUser;
 Controller.prototype.sendRegisterForm;

@@ -58,9 +58,10 @@ div#main {
 
 div#chat{
     display:none;
+    flex-direction: column;
 }
 
-div.chat_content{
+div#chat_content{
     background-color: white;
     border: solid 0px black;
     display: -webkit-flex;
@@ -73,13 +74,13 @@ form#login_form{
     border: solid 2px #424242;
 }
     
-div.messages {
+div#messages {
     overflow: scroll;
     width: 600px;
     height: 350px;
 }
     
-div.users {
+div#users {
     overflow: scroll;
     width: 150px;
     height: 350px;

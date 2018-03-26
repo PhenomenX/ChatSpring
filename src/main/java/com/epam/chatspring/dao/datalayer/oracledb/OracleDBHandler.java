@@ -128,7 +128,6 @@ public class OracleDBHandler {
 	}
 
 	public static Role getRole(String nick, Connection connection) {
-		PreparedStatement ps = null;
 		ResultSet rs = null;
 		Role role = null;
 		try {
