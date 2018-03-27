@@ -17,6 +17,7 @@
         <div class="buttons">
             <input class="button" id="profile_button" type="button" value="Profile" />
             <input class="button" id="register_button" type="button" value="Register" />
+            <input class="button" id="login_button" type="button" value="Login" />
             <input class="button" id="logout_button" type="submit" value="Logout" />
         </div>
     </div>
@@ -31,14 +32,21 @@
             </div>
             <form id="message_form">
                 <textarea name="text" cols="86" rows="3"></textarea>
-                <input class="sending" type="submit" value="Send Message" />
+                <input id="sending" type="submit" value="Send Message" />
             </form>
         </div>
         <form id="login_form">
             Please, enter login and password:
             <input title="Login:" name="nick" type="text" />
             <input title="Password:" name="password" type="password" />
-            <input id="sending" type="submit" value="Log in" />
+            <input class="button" type="submit" value="Log in" />
+        </form>
+        <form enctype="multipart/form-data" id="registration_form">
+            Please, enter your data:
+            <input title="Login:" name="nick" type="text" placeholder="Login"/>
+            <input title="Password:" name="password" type="password" placeholder="Password"/>
+            <input type="file" name="photo" accept="image/*">
+            <input class="button" type="submit" value="Register" />
         </form>
     </div>
 </body>

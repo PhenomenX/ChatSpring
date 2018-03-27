@@ -102,4 +102,10 @@ public class XMLUserDAO implements UserDAO {
 		return null;
 	}
 
+	@Override
+	public int isValid(String login, String password) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

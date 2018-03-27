@@ -23,4 +23,6 @@ public interface UserDAO {
 	Role getRole(String nick);
 	
 	List<User> getAllKicked();
+	
+	int isValid(String login, String password);
 }

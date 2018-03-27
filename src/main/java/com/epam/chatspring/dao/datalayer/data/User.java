@@ -2,11 +2,18 @@ package com.epam.chatspring.dao.datalayer.data;
 
 public class User {
 	private String name;
+	private String password;
 	private Status status;
 	private Role role;
+	private int id;
 
 	public User(String name) {
 		this.name = name;
+	}
+
+	public User(String name, String password) {
+		this.name = name;
+		this.password = password;
 	}
 
 	public User(String name, Status status, Role role) {
@@ -37,6 +44,22 @@ public class User {
 
 	public void setRole(Role role) {
 		this.role = role;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String toString() {

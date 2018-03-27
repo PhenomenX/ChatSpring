@@ -24,7 +24,7 @@ public class UserController {
         return "Welcome to RestTemplate Example.";
     }
 	
-	@RequestMapping(value = "/users", method = RequestMethod.PUT)
+	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
     @ResponseBody
     public String login() {
         return "Welcome to RestTemplate Example.";

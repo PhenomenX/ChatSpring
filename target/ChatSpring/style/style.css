@@ -90,11 +90,26 @@ form#message_form {
     width: 752px;
     height: 50px;
     background-color: white;
+    border: solid 2px #424242;
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items:center;
+}
+
+form#registration_form{
+    border: solid 2px #424242;
+    background-color: white;
+    display: -webkit-flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+form#registration_form *{
+    margin: 6px;
 }
     
 input#sending {

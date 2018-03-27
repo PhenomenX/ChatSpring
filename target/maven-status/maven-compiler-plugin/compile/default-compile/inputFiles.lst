@@ -21,10 +21,14 @@ C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\config\SpringWebAppInitializer.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\data\Message.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\oracledb\OracleDBDAOFactory.java
+C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\filter\AuthorizationFilter.java
+C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\service\MessageServiceImpl.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\data\User.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\DBType.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\oracledb\OracleMessageDAO.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\data\Status.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\config\WebMvcConfig.java
+C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\service\AdminServiceImpl.java
+C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\service\UserServiceImpl.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\xml\XMLMessageDAO.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\datalayer\xml\sax\SAXHandlerMessage.java
