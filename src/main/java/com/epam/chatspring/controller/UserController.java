@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,8 +27,8 @@ public class UserController {
 	
 	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
     @ResponseBody
-    public String login() {
-        return "Welcome to RestTemplate Example.";
+    public String login(@RequestParam(required = false) String nick, @RequestParam(required = false) String password, @RequestBody String bitch) {
+        return nick + " " + password + " " + bitch;
     }
 	
 	@RequestMapping(value = "/users/logout/{id}", method = RequestMethod.PUT)

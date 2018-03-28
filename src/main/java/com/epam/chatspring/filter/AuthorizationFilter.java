@@ -1,7 +1,11 @@
 package com.epam.chatspring.filter;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Enumeration;
+import java.util.Map;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -35,18 +39,20 @@ public class AuthorizationFilter implements Filter {
 			throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
-		String nick = httpRequest.getParameter("nick");
-		String password = httpRequest.getParameter("password");
-		Enumeration<String> names = httpRequest.getParameterNames();
-		while(names.hasMoreElements()){
-			System.out.println(names.nextElement());
-		}
-		int id = userDAO.isValid(nick, password);
-		if (id == 0) {
-			httpResponse.sendError(401, "Invalid login or password");
-		} else {
-			chain.doFilter(httpRequest, httpResponse);
-		}
+//		String nick = httpRequest.getParameter("nick");
+//		String password = httpRequest.getParameter("password");
+
+		Map<String, String[]> params = httpRequest.getParameterMap();
+		for(String key: params.keySet()){
+			System.out.println(key);
+		};
+//		System.out.println(getBody(httpRequest));
+		// int id = userDAO.isValid(nick, password);
+		// if (id == 0) {
+		// httpResponse.sendError(401, "Invalid login or password");
+		// } else {
+		chain.doFilter(httpRequest, httpResponse);
+		// }
 	}
 
 	@Override
@@ -55,6 +61,40 @@ public class AuthorizationFilter implements Filter {
 		messageDAO = factory.getMessageDAO();
 		userDAO = factory.getUserDAO();
 
+	}
+
+	public String getBody(HttpServletRequest request) throws IOException {
+
+		String body = null;
+		StringBuilder stringBuilder = new StringBuilder();
+		BufferedReader bufferedReader = null;
+
+		try {
+			InputStream inputStream = request.getInputStream();
+			if (inputStream != null) {
+				bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+				char[] charBuffer = new char[128];
+				int bytesRead = -1;
+				while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+					stringBuilder.append(charBuffer, 0, bytesRead);
+				}
+			} else {
+				stringBuilder.append("");
+			}
+		} catch (IOException ex) {
+			throw ex;
+		} finally {
+			if (bufferedReader != null) {
+				try {
+					bufferedReader.close();
+				} catch (IOException ex) {
+					throw ex;
+				}
+			}
+		}
+
+		body = stringBuilder.toString();
+		return body;
 	}
 
 }
