@@ -2,11 +2,15 @@ package com.epam.chatspring.controller;
 
 import com.epam.chatspring.dao.*;
 import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.service.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +23,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 	
+	@Autowired
+	@Qualifier("userService")
+	UserService userService;
+	
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
     @ResponseBody
     public String register() {
@@ -27,8 +35,11 @@ public class UserController {
 	
 	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
     @ResponseBody
-    public String login(@RequestParam(required = false) String nick, @RequestParam(required = false) String password, @RequestBody String bitch) {
-        return nick + " " + password + " " + bitch;
+    public String login(@RequestParam String nick, @RequestParam String password, HttpSession httpSession) {
+		User user = new User(nick,password);
+		httpSession.setAttribute("currentUser", user);
+		userService.login(user);
+        return nick + " " + password + " ";
     }
 	
 	@RequestMapping(value = "/users/logout/{id}", method = RequestMethod.PUT)
@@ -45,10 +56,9 @@ public class UserController {
 	
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
     @ResponseBody
-    public List<User> getUsers() {
-		List<User> users = new ArrayList<User>();
-		users.add(new User("Psycho"));
-		users.add(new User("Pennywise"));
+    public List<User> getUsers(HttpSession httpSession) {
+		User user = (User) httpSession.getAttribute("currentUser");
+		List<User> users = userService.getUsers(user);
         return users;
     }
 	

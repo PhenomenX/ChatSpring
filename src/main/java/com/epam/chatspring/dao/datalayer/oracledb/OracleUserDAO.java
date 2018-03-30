@@ -30,6 +30,7 @@ public class OracleUserDAO implements UserDAO {
 		this.connection = connection;
 		this.updateUserQ = ResourceManager.getRegExp("updateUser");
 		this.isValidQ = ResourceManager.getRegExp("isValid");
+		this.allLoggedQ = ResourceManager.getRegExp("allLogged");
 	}
 
 	@Override
@@ -140,12 +141,14 @@ public class OracleUserDAO implements UserDAO {
 		ResultSet resultSet = null;
 		int id = 0;
 		try {
-			PreparedStatement ps = connection.prepareStatement(isValidQ);
-			ps.setString(1, login);
-			ps.setString(1, password);
-			resultSet = ps.executeQuery();
-			resultSet.next();
-			id = resultSet.getInt(1);
+			Statement st = connection.createStatement();
+			String query = String.format(isValidQ, login, password);
+			resultSet = st.executeQuery(query);
+			while (resultSet.next()) {
+				id = resultSet.getInt(1);
+				System.out.println(id);
+			}
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

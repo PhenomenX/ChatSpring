@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/ HTTP/1.1" 200 2073 http-bio-8083-exec-1 45
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/script/init.js HTTP/1.1" 200 212 http-bio-8083-exec-5 5
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/style/style.css HTTP/1.1" 200 2741 http-bio-8083-exec-7 4
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/script/controller/Controller.js HTTP/1.1" 200 4050 http-bio-8083-exec-4 8
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/script/view/View.js HTTP/1.1" 200 1952 http-bio-8083-exec-3 10
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/script/jquery-3.3.1.min.js HTTP/1.1" 200 86927 http-bio-8083-exec-2 10
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:30 +0300] "GET /ChatSpring/image/light-tile.gif HTTP/1.1" 200 24532 http-bio-8083-exec-2 3
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:48 +0300] "PUT /ChatSpring/users/login HTTP/1.1" 200 11 http-bio-8083-exec-2 158
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:50 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 401 http-bio-8083-exec-10 126
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:15:58:50 +0300] "GET /ChatSpring/users HTTP/1.1" 200 271 http-bio-8083-exec-2 136
+0:0:0:0:0:0:0:1 - - [30/Mar/2018:16:03:13 +0300] "GET /ChatSpring/ HTTP/1.1" 304 - http-bio-8083-exec-7 5

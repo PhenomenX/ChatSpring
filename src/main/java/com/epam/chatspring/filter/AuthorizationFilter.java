@@ -39,20 +39,14 @@ public class AuthorizationFilter implements Filter {
 			throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest) request;
 		HttpServletResponse httpResponse = (HttpServletResponse) response;
-//		String nick = httpRequest.getParameter("nick");
-//		String password = httpRequest.getParameter("password");
-
-		Map<String, String[]> params = httpRequest.getParameterMap();
-		for(String key: params.keySet()){
-			System.out.println(key);
-		};
-//		System.out.println(getBody(httpRequest));
-		// int id = userDAO.isValid(nick, password);
-		// if (id == 0) {
-		// httpResponse.sendError(401, "Invalid login or password");
-		// } else {
-		chain.doFilter(httpRequest, httpResponse);
-		// }
+		String nick = httpRequest.getParameter("nick");
+		String password = httpRequest.getParameter("password");
+		int id = userDAO.isValid(nick, password);
+		if (id == 0) {
+			httpResponse.sendError(401, "Invalid login or password");
+		} else {
+			chain.doFilter(httpRequest, httpResponse);
+		}
 	}
 
 	@Override
@@ -60,7 +54,6 @@ public class AuthorizationFilter implements Filter {
 		factory = DAOFactory.getInstance(DBType.ORACLE);
 		messageDAO = factory.getMessageDAO();
 		userDAO = factory.getUserDAO();
-
 	}
 
 	public String getBody(HttpServletRequest request) throws IOException {

@@ -34,6 +34,7 @@ public class OracleDBDAOFactory extends DAOFactory {
 		String user = "SYSTEM";
 		String password = "zver12";
 		connection = DriverManager.getConnection(url, user, password);
+		connection.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
 		System.out.println("Connected to oracle DB!");
 	}
 
