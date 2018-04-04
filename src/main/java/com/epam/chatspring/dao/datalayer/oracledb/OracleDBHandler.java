@@ -28,48 +28,6 @@ public class OracleDBHandler {
 	private static Status statuses[] = Status.values();
 	private static String allKickedQ = ResourceManager.getRegExp("allKicked");
 
-	public static void sendMessage(Message message, Connection connection) {
-		try {
-			PreparedStatement ps = connection.prepareStatement(messageQ);
-			ps.setInt(1, message.getUser().getRole().ordinal() + 1);
-			ps.setInt(2, message.getUser().getStatus().ordinal() + 1);
-			ps.setString(3, message.getUser().getName());
-			ps.setString(4, message.getMessage());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static List<Message> getLast(int count, Connection connection) {
-		List<Message> messages = new ArrayList<Message>();
-		try {
-			PreparedStatement ps = connection.prepareStatement(lastQ);
-			ps.setInt(1, count);
-			Message message;
-			String name;
-			Role role;
-			Status status;
-			String text;
-			Timestamp data;
-
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				role = roles[rs.getInt("ROLE_ID") - 1];
-				status = statuses[rs.getInt(3) - 1];
-				name = rs.getString(4);
-				data = rs.getTimestamp(5);
-				text = rs.getString(6);
-				message = new Message(data, new User(name, status, role), text);
-				messages.add(message);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		Collections.reverse(messages);
-		return messages;
-	}
-
 	public static boolean isLogged(User user, Connection connection) {
 		boolean isLogged = false;
 		try {

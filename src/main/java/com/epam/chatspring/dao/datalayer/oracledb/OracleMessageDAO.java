@@ -20,33 +20,30 @@ public class OracleMessageDAO implements MessageDAO {
 
 	private Connection connection;
 	private String lastQ;
+	private String messageQ;
 
 	public OracleMessageDAO(Connection connection) {
 		this.connection = connection;
 		this.lastQ = ResourceManager.getRegExp("last");
+		this.messageQ = ResourceManager.getRegExp("newMessage");
 	}
 
 	@Override
 	public List<Message> getLast(int count) {
 		List<Message> messages = new ArrayList<Message>();
-		try {
-			PreparedStatement ps = connection.prepareStatement(lastQ);
+		try(PreparedStatement ps = connection.prepareStatement(lastQ)) {
 			ps.setInt(1, count);
 			Message message;
 			String name;
-			Role role;
-			Status status;
 			String text;
 			Timestamp data;
 
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				role = Role.values()[rs.getInt("ROLE_ID") - 1];
-				status = Status.values()[rs.getInt(3) - 1];
-				name = rs.getString(4);
-				data = rs.getTimestamp(5);
-				text = rs.getString(6);
-				message = new Message(data, new User(name, status, role), text);
+				name = rs.getString(2);
+				data = rs.getTimestamp(3);
+				text = rs.getString(4);
+				message = new Message(data, name, text);
 				messages.add(message);
 			}
 		} catch (SQLException e) {
@@ -58,9 +55,13 @@ public class OracleMessageDAO implements MessageDAO {
 
 	@Override
 	public void sendMessage(Message message) {
-		OracleDBHandler.sendMessage(message, connection);
-			}
-	
-	
-
+		try {
+			PreparedStatement ps = connection.prepareStatement(messageQ);
+			ps.setString(1, message.getNick());
+			ps.setString(2, message.getMessage());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

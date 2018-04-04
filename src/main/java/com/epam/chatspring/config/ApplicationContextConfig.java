@@ -1,7 +1,10 @@
 package com.epam.chatspring.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 @Configuration
 
@@ -9,11 +12,10 @@ import org.springframework.context.annotation.Configuration;
 
 public class ApplicationContextConfig {
 
-
-  // No need ViewSolver
- 
- 
-
-  // Other declarations if needed ...
+	@Bean(name = "multipartResolver")
+    public MultipartResolver getMultipartResolver() {
+		StandardServletMultipartResolver resolver = new StandardServletMultipartResolver();
+        return resolver;
+    }
  
 }

@@ -31,12 +31,12 @@ public class OracleUserDAO implements UserDAO {
 		this.updateUserQ = ResourceManager.getRegExp("updateUser");
 		this.isValidQ = ResourceManager.getRegExp("isValid");
 		this.allLoggedQ = ResourceManager.getRegExp("allLogged");
+		this.roleQ = ResourceManager.getRegExp("role");
 	}
 
 	@Override
 	public void logIn(User user) {
-		try {
-			PreparedStatement ps = connection.prepareStatement(updateUserQ);
+		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
 			ps.setInt(1, Status.LOGIN.ordinal() + 1);
 			ps.setInt(2, user.getId());
 			ps.executeUpdate();
@@ -47,11 +47,13 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public void logOut(User user) {
-		Formatter formatter = new Formatter();
-		formatter.format(ResourceManager.getRegExp("logoutF"), user.getName());
-		user.setStatus(Status.LOGOUT);
-		Message message = new Message(user, formatter.toString());
-		OracleDBHandler.sendMessage(message, connection);
+		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
+			ps.setInt(1, Status.LOGOUT.ordinal() + 1);
+			ps.setInt(2, user.getId());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -61,21 +63,26 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public void kick(User admin, User kickableUser) {
-		Formatter formatter = new Formatter();
-		formatter.format(ResourceManager.getRegExp("kickF"), admin.getName(), kickableUser.getName());
-		kickableUser.setStatus(Status.KICK);
-		Message message = new Message(kickableUser, formatter.toString());
-		OracleDBHandler.sendMessage(message, connection);
+		// Formatter formatter = new Formatter();
+		// formatter.format(ResourceManager.getRegExp("kickF"), admin.getName(),
+		// kickableUser.getName());
+		// formatter.close();
+		// kickableUser.setStatus(Status.KICK);
+		// Message message = new Message(kickableUser, formatter.toString());
+		// formatter.close();
+		// OracleDBHandler.sendMessage(message, connection);
 
 	}
 
 	@Override
 	public void unkick(User user) {
-		Formatter formatter = new Formatter();
-		formatter.format(ResourceManager.getRegExp("unkickF"), user.getName());
-		user.setStatus(Status.LOGOUT);
-		Message message = new Message(user, formatter.toString());
-		OracleDBHandler.sendMessage(message, connection);
+		// Formatter formatter = new Formatter();
+		// formatter.format(ResourceManager.getRegExp("unkickF"),
+		// user.getName());
+		// user.setStatus(Status.LOGOUT);
+		// Message message = new Message(user, formatter.toString());
+		// formatter.close();
+		// OracleDBHandler.sendMessage(message, connection);
 	}
 
 	@Override
@@ -89,8 +96,7 @@ public class OracleUserDAO implements UserDAO {
 		User user;
 		Role role;
 		Status status;
-		try {
-			Statement st = connection.createStatement();
+		try (Statement st = connection.createStatement();) {
 			ResultSet rs = st.executeQuery(allLoggedQ);
 			while (rs.next()) {
 				role = Role.values()[rs.getInt(2) - 1];
@@ -107,23 +113,18 @@ public class OracleUserDAO implements UserDAO {
 	public Role getRole(String nick) {
 		ResultSet resultSet = null;
 		Role role = null;
-		PreparedStatement ps = null;
-		try {
-			ps = connection.prepareStatement(roleQ);
-			ps.setString(1, nick);
-			resultSet = ps.executeQuery();
-			resultSet.next();
-			String roleString = resultSet.getString("NAME").trim();
-			role = Role.valueOf(roleString);
+		Formatter formatter = new Formatter();
+		try (Statement st = connection.createStatement()) {
+			formatter.format(roleQ, nick);
+			resultSet = st.executeQuery(formatter.toString());
+			while (resultSet.next()) {
+				String roleString = resultSet.getString("NAME").trim();
+				role = Role.valueOf(roleString);
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			try {
-				ps.close();
-				resultSet.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			formatter.close();
 		}
 		if (role == null) {
 			System.err.print("This user does not exist");
@@ -140,15 +141,14 @@ public class OracleUserDAO implements UserDAO {
 	public int isValid(String login, String password) {
 		ResultSet resultSet = null;
 		int id = 0;
-		try {
-			Statement st = connection.createStatement();
+		try (Statement st = connection.createStatement()) {
 			String query = String.format(isValidQ, login, password);
 			resultSet = st.executeQuery(query);
 			while (resultSet.next()) {
 				id = resultSet.getInt(1);
 				System.out.println(id);
 			}
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

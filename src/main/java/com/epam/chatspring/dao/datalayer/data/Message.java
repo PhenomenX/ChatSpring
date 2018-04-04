@@ -3,31 +3,31 @@ package com.epam.chatspring.dao.datalayer.data;
 import java.sql.Timestamp;
 
 public class Message {
-	private Timestamp data;
-	private User user;
+	private Timestamp date;
+	private String nick;
 	private String message;
 	
-	public Message(Timestamp data, User user, String message){
-		this.data = data;
+	public Message(Timestamp date, String user, String message){
+		this.date = date;
 		this.message = message;
-		this.user = user;		
+		this.nick = user;		
 	}
 	
-	public Message(User user, String message){
-		this.user = user;
+	public Message(String user, String message){
+		this.nick = user;
 		this.message = message;
 	}
 
 	public Timestamp getDate() {
-		return this.data;
+		return this.date;
 	}
 
 	public void setDate(Timestamp data) {
-		this.data = data;
+		this.date = data;
 	}
 
-	public User getUser() {
-		return this.user;
+	public String getNick() {
+		return this.nick;
 	}
 	
 	public String getMessage(){
@@ -36,9 +36,9 @@ public class Message {
 
 	public String toString() {
 		StringBuilder userLogString = new StringBuilder();
-		userLogString.append(data);
+		userLogString.append(date);
 		userLogString.append("\t");
-		userLogString.append(user);
+		userLogString.append(nick);
 		userLogString.append("\t");
 		userLogString.append(message);
 		return userLogString.toString();

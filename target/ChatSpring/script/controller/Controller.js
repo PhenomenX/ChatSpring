@@ -1,13 +1,43 @@
 function Controller(view) {
     this.view = view;
     var _this = this;
+    this.chatRefleshingEnable = false;
     view.loginForm.submit(_this.sendLoginForm);
     view.messageForm.submit(_this.sendMessage);
     view.registerForm.submit(_this.sendRegisterForm);
-    ;
+    view.logoutButton.bind("click", function () { _this.logoutUser(); _this.view.showLoginForm() });
 }
 
-Controller.prototype.sendMessage;
+Controller.prototype.sendMessage = function () {
+    var form = $(this);
+    var data = form.serialize();
+    $.ajax({
+        type: 'POST',
+        url: 'messages',
+        dataType: 'text',
+        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        data: data,
+        beforeSend: function (data) {
+            form.find('input[type="submit"]').attr('disabled', 'disabled');
+        },
+        success: function (data) {
+            if (data['error']) {
+                alert("don't ok");
+            } else {
+                window.controller.generateChat();
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+            console.log(window.controller);
+        },
+        complete: function (data) {
+            form.find('input[type="submit"]').prop('disabled', false);
+        }
+    });
+    return false;
+};
 Controller.prototype.sendLoginForm = function () {
     var form = $(this);
     var error = false;
@@ -32,8 +62,7 @@ Controller.prototype.sendLoginForm = function () {
                 if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
                     alert("don't ok"); // пoкaжeм eё тeкст
                 } else { // eсли всe прoшлo oк
-                    alert(data);
-                    console.log(window.controller);
+                    window.controller.chatRefleshingEnable = true;
                     window.controller.generateChat();
                 }
             },
@@ -52,8 +81,11 @@ Controller.prototype.sendLoginForm = function () {
 };
 
 Controller.prototype.generateChat = function () {
-    Promise.all([this.getUsers(), this.getMessages()]).then(
-    values => {this.view.showChat(values[0], values[1])});
+    if (this.chatRefleshingEnable) {
+        Promise.all([this.getUsers(), this.getMessages()]).then(
+            values => { this.view.showChat(values[0], values[1]) });
+        setTimeout(this.generateChat.bind(this), 2000);
+    }
 }
 
 Controller.prototype.getMessages = function () {
@@ -97,8 +129,53 @@ Controller.prototype.getUsers = function () {
         });
     });
 };
+
+Controller.prototype.logoutUser = function () {
+    this.chatRefleshingEnable = false;
+    $.ajax({
+        type: 'PUT',
+        url: 'users/logout',
+        success: function (data) {
+            if (data['error']) {
+                alert("don't ok");
+            } else {
+                resolve(data);
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+}
 Controller.prototype.getUser;
-Controller.prototype.sendRegisterForm;
+Controller.prototype.sendRegisterForm = function () {
+    alert($(this)[1]);
+    var form = $(this)[1];
+    var data = new FormData(form);
+    $.ajax({
+        type: "POST",
+        enctype: 'multipart/form-data',
+        url: "users",
+        data: data,
+        processData: false,
+        contentType: false,
+        cache: false,
+        timeout: 60000,
+        success: function (data) {
+            if (data['error']) {
+                alert("don't ok");
+            } else {
+                console.log("file is uploaded");
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+    return false;
+};
 Controller.prototype.kick;
 Controller.prototype.unkick;
 // Controller.prototype.sendAjax = function(){

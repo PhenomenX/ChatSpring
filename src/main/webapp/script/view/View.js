@@ -16,13 +16,15 @@ function View() {
 }
 
 View.prototype.refleshMessages = function (messages) {
+    this.messagesContainer.empty();
     for (var i = 0; i < messages.length; i++) {
         $("<p>" + messages[i] + "</p>").appendTo(this.messagesContainer);
     }
 };
 View.prototype.refleshUsers = function (users) {
+    this.usersContainer.empty();
     for (var i = 0; i < users.length; i++) {
-        $("<p>" + users[i].name + "</p>").appendTo(this.usersContainer);;
+        $("<p>" + users[i].name + "</p>").appendTo(this.usersContainer);
     }
 };
 View.prototype.showLoginForm = function () {

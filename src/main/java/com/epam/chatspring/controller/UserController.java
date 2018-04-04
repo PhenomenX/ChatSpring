@@ -27,25 +27,25 @@ public class UserController {
 	@Qualifier("userService")
 	UserService userService;
 	
-	@RequestMapping(value = "/users", method = RequestMethod.POST)
-    @ResponseBody
-    public String register() {
-        return "Welcome to RestTemplate Example.";
-    }
+//	@RequestMapping(value = "/users", method = RequestMethod.POST)
+//    @ResponseBody
+//    public String register() {
+//        return "Welcome to RestTemplate Example.";
+//    }
 	
 	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
     @ResponseBody
     public String login(@RequestParam String nick, @RequestParam String password, HttpSession httpSession) {
 		User user = new User(nick,password);
-		httpSession.setAttribute("currentUser", user);
-		userService.login(user);
+		userService.login(user, httpSession);
         return nick + " " + password + " ";
     }
 	
-	@RequestMapping(value = "/users/logout/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/users/logout", method = RequestMethod.PUT)
     @ResponseBody
-    public String logout() {
-        return "Welcome to RestTemplate Example.";
+    public void logout(HttpSession httpSession) {
+        User user = (User) httpSession.getAttribute("currentUser");
+        userService.logout(user, httpSession);
     }
 	
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
