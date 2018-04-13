@@ -25,6 +25,7 @@ public class OracleUserDAO implements UserDAO {
 	private String allLoggedQ;
 	private String roleQ;
 	private String allKickedQ;
+	private String newUserQ;
 
 	public OracleUserDAO(Connection connection) {
 		this.connection = connection;
@@ -32,6 +33,7 @@ public class OracleUserDAO implements UserDAO {
 		this.isValidQ = ResourceManager.getRegExp("isValid");
 		this.allLoggedQ = ResourceManager.getRegExp("allLogged");
 		this.roleQ = ResourceManager.getRegExp("role");
+		this.newUserQ = ResourceManager.getRegExp("newUser");
 	}
 
 	@Override
@@ -154,5 +156,20 @@ public class OracleUserDAO implements UserDAO {
 		}
 		return id;
 	}
+
+	@Override
+	public void createUser(User user) {
+		try(PreparedStatement ps = connection.prepareStatement(newUserQ)){
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getPassword());
+			ps.setString(3, user.getPicturePath());
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
 
 }

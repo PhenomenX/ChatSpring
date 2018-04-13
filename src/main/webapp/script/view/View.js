@@ -23,8 +23,16 @@ View.prototype.refleshMessages = function (messages) {
 };
 View.prototype.refleshUsers = function (users) {
     this.usersContainer.empty();
-    for (var i = 0; i < users.length; i++) {
-        $("<p>" + users[i].name + "</p>").appendTo(this.usersContainer);
+    if (window.localStorage.getItem("role") == "USER") {
+        for (var i = 0; i < users.length; i++) {
+            $("<div>" + users[i].name + "</div>").appendTo(this.usersContainer);
+        }
+    }
+    else {
+        for (var i = 0; i < users.length; i++) {
+            let container = $("<div>" + users[i].name + "</div>");
+            // ДОБАВИТЬ КНОПКУ KICK
+        }
     }
 };
 View.prototype.showLoginForm = function () {
@@ -33,12 +41,14 @@ View.prototype.showLoginForm = function () {
     this.chat.css("display", "none");
     this.registerForm.css("display", "none");
     this.registerButton.css("display", "flex");
+    window.localStorage.setItem("state", "login");
 };
 View.prototype.showChat = function (users, messages) {
     this.loginForm.css("display", "none");
     this.chat.css("display", "flex");
     this.refleshUsers(users);
     this.refleshMessages(messages);
+    window.localStorage.setItem("state", "chat");
 };
 View.prototype.showProfile = function () {
 
@@ -52,4 +62,5 @@ View.prototype.showRegisterForm = function () {
     this.loginButton.css("display", "flex");
     this.registerForm.css("display", "flex");
     this.registerButton.css("display", "none");
+    window.localStorage.setItem("state", "register");
 };

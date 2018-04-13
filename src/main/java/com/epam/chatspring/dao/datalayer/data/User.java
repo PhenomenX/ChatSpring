@@ -3,6 +3,7 @@ package com.epam.chatspring.dao.datalayer.data;
 public class User {
 	private String name;
 	private String password;
+	private String picturePath;
 	private Status status;
 	private Role role;
 	private int id;
@@ -61,6 +62,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getPicturePath() {
+		return picturePath;
+	}
+
+	public void setPicturePath(String picturePath) {
+		this.picturePath = picturePath;
+	}
 
 	public String toString() {
 		StringBuilder userString = new StringBuilder();
@@ -71,5 +80,7 @@ public class User {
 		userString.append(status);
 		return userString.toString();
 	}
+
+
 
 }

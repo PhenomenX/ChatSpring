@@ -2,7 +2,6 @@ package com.epam.chatspring.config;
 
 import java.io.File;
 
-import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
 import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletContext;
@@ -14,9 +13,6 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.servlet.DispatcherServlet;
-
-import com.epam.chatspring.filter.AuthorizationFilter;
-import com.epam.chatspring.filter.XSSPreventionFilter;
 
 public class SpringWebAppInitializer implements WebApplicationInitializer {
 
@@ -35,15 +31,15 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 		fr.setInitParameter("forceEncoding", "true");
 		fr.addMappingForUrlPatterns(null, true, "/*");
 
-		fr = servletContext.addFilter("XSSPreventionFilter", XSSPreventionFilter.class);
-		fr.addMappingForUrlPatterns(null, true, "/users/login");
-		fr.addMappingForUrlPatterns(null, true, "/messages");
+//		fr = servletContext.addFilter("XSSPreventionFilter", XSSPreventionFilter.class);
+//		fr.addMappingForUrlPatterns(null, true, "/users/login");
+//		fr.addMappingForUrlPatterns(null, true, "/messages");
 
 		servletContext.addFilter("putFormFilter", HttpPutFormContentFilter.class).addMappingForUrlPatterns(null, true,
 				"/*");
 
-		servletContext.addFilter("authorizationFilter", AuthorizationFilter.class).addMappingForUrlPatterns(null, true,
-				"/users/login");
+//		servletContext.addFilter("authorizationFilter", AuthorizationFilter.class).addMappingForUrlPatterns(null, true,
+//				"/users/login");
 
 		File uploadDirectory = new File(System.getProperty("java.io.tmpdir"));
 

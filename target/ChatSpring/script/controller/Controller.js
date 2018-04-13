@@ -1,15 +1,15 @@
 function Controller(view) {
     this.view = view;
     var _this = this;
-    this.chatRefleshingEnable = false;
-    view.loginForm.submit(_this.sendLoginForm);
-    view.messageForm.submit(_this.sendMessage);
-    view.registerForm.submit(_this.sendRegisterForm);
+    this.chatRefleshingEnable = true;
+    view.loginForm.submit(_this.sendLoginForm.bind(_this));
+    view.messageForm.submit(_this.sendMessage.bind(_this));
+    view.registerForm.submit(_this.sendRegisterForm.bind(_this));
     view.logoutButton.bind("click", function () { _this.logoutUser(); _this.view.showLoginForm() });
 }
 
-Controller.prototype.sendMessage = function () {
-    var form = $(this);
+Controller.prototype.sendMessage = function (event) {
+    var form = $(event.currentTarget);
     var data = form.serialize();
     $.ajax({
         type: 'POST',
@@ -21,11 +21,7 @@ Controller.prototype.sendMessage = function () {
             form.find('input[type="submit"]').attr('disabled', 'disabled');
         },
         success: function (data) {
-            if (data['error']) {
-                alert("don't ok");
-            } else {
-                window.controller.generateChat();
-            }
+            window.controller.generateChat();
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status);
@@ -38,8 +34,8 @@ Controller.prototype.sendMessage = function () {
     });
     return false;
 };
-Controller.prototype.sendLoginForm = function () {
-    var form = $(this);
+Controller.prototype.sendLoginForm = function (event) {
+    var form = $(event.currentTarget);
     var error = false;
     form.find('input, textarea').each(function () {
         if ($(this).val() == '') {
@@ -59,12 +55,9 @@ Controller.prototype.sendLoginForm = function () {
                 form.find('input[type="submit"]').attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
             },
             success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
-                if (data['error']) { // eсли oбрaбoтчик вeрнул oшибку
-                    alert("don't ok"); // пoкaжeм eё тeкст
-                } else { // eсли всe прoшлo oк
-                    window.controller.chatRefleshingEnable = true;
-                    window.controller.generateChat();
-                }
+                this.defineRole(data);
+                window.controller.chatRefleshingEnable = true;
+                window.controller.generateChat();
             },
             error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
                 alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
@@ -95,11 +88,7 @@ Controller.prototype.getMessages = function () {
             url: 'messages',
             dataType: 'json',
             success: function (data) {
-                if (data['error']) {
-                    alert("don't ok");
-                } else {
-                    resolve(data);
-                }
+                resolve(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
@@ -116,11 +105,7 @@ Controller.prototype.getUsers = function () {
             url: 'users',
             dataType: 'json',
             success: function (data) {
-                if (data['error']) {
-                    alert("don't ok");
-                } else {
-                    resolve(data);
-                }
+                resolve(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
@@ -136,11 +121,6 @@ Controller.prototype.logoutUser = function () {
         type: 'PUT',
         url: 'users/logout',
         success: function (data) {
-            if (data['error']) {
-                alert("don't ok");
-            } else {
-                resolve(data);
-            }
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status);
@@ -149,9 +129,8 @@ Controller.prototype.logoutUser = function () {
     });
 }
 Controller.prototype.getUser;
-Controller.prototype.sendRegisterForm = function () {
-    alert($(this)[1]);
-    var form = $(this)[1];
+Controller.prototype.sendRegisterForm = function (event) {
+    var form = $("#registration_form")[0];
     var data = new FormData(form);
     $.ajax({
         type: "POST",
@@ -163,22 +142,33 @@ Controller.prototype.sendRegisterForm = function () {
         cache: false,
         timeout: 60000,
         success: function (data) {
-            if (data['error']) {
-                alert("don't ok");
-            } else {
-                console.log("file is uploaded");
-            }
+            console.log("file is uploaded");
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status);
             alert(thrownError);
         }
     });
+    this.view.showLoginForm();
     return false;
 };
 Controller.prototype.kick;
 Controller.prototype.unkick;
-// Controller.prototype.sendAjax = function(){
 
-// };
+Controller.prototype.setCurrentView = function () {
+    let state = window.localStorage.getItem("state");
+    if (state) {
+        if (state == "login") {
+            this.view.showLoginForm();
+        } else if (state == "chat") {
+            this.generateChat();
+        } else if (state == "register") {
+            this.view.showRegisterForm();
+        }
+    }
+}
+
+Controller.prototype.defineRole = function(role){
+    window.localStorage.setItem("role", role);
+}
 

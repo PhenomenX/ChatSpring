@@ -2,11 +2,13 @@ com\epam\chatspring\dao\datalayer\data\UserList.class
 com\epam\chatspring\dao\datalayer\data\User.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleUserDAO.class
 com\epam\chatspring\dao\datalayer\DBType$1.class
+com\epam\chatspring\filter\XSSInterceptor.class
 com\epam\chatspring\filter\XSSPreventionFilter.class
 com\epam\chatspring\config\ApplicationContextConfig.class
 com\epam\chatspring\dao\datalayer\DBType.class
 com\epam\chatspring\service\MessageServiceImpl.class
 com\epam\chatspring\controller\FrontController.class
+com\epam\chatspring\service\FileStoreService.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleDBHandler.class
 com\epam\chatspring\config\WebMvcConfig.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleMessageDAO.class
@@ -19,7 +21,9 @@ com\epam\chatspring\dao\datalayer\data\Role.class
 com\epam\chatspring\dao\datalayer\DBTypeException.class
 com\epam\chatspring\dao\datalayer\oracledb\OracleDBDAOFactory.class
 com\epam\chatspring\filter\AuthorizationFilter.class
+com\epam\chatspring\service\FileSystemStoreService.class
 com\epam\chatspring\service\UserServiceImpl.class
+com\epam\chatspring\filter\AuthorizationInterceptor.class
 com\epam\chatspring\service\MessageService.class
 com\epam\chatspring\dao\datalayer\data\Status.class
 com\epam\chatspring\dao\datalayer\MessageDAO.class

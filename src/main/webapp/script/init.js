@@ -3,5 +3,5 @@ jQuery(document).ready(function () {
     var controller = new Controller(view);
     window.view = view;
     window.controller = controller;
-    console.log(window.controller);
+    controller.setCurrentView();
 });

@@ -25,4 +25,6 @@ public interface UserDAO {
 	List<User> getAllKicked();
 	
 	int isValid(String login, String password);
+	
+	void createUser(User user);
 }

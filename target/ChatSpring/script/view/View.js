@@ -33,12 +33,14 @@ View.prototype.showLoginForm = function () {
     this.chat.css("display", "none");
     this.registerForm.css("display", "none");
     this.registerButton.css("display", "flex");
+    window.localStorage.setItem("state", "login");
 };
 View.prototype.showChat = function (users, messages) {
     this.loginForm.css("display", "none");
     this.chat.css("display", "flex");
     this.refleshUsers(users);
     this.refleshMessages(messages);
+    window.localStorage.setItem("state", "chat");
 };
 View.prototype.showProfile = function () {
 
@@ -52,4 +54,5 @@ View.prototype.showRegisterForm = function () {
     this.loginButton.css("display", "flex");
     this.registerForm.css("display", "flex");
     this.registerButton.css("display", "none");
+    window.localStorage.setItem("state", "register");
 };
