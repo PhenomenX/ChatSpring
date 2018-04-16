@@ -3,6 +3,7 @@ package com.epam.chatspring.dao.datalayer;
 import java.util.List;
 
 import com.epam.chatspring.dao.datalayer.data.Role;
+import com.epam.chatspring.dao.datalayer.data.Status;
 import com.epam.chatspring.dao.datalayer.data.User;
 
 public interface UserDAO {
@@ -12,9 +13,9 @@ public interface UserDAO {
 
 	boolean isLogged(User user);
 
-	void kick(User admin, User kickableUser);
+	void kick(String nick);
 
-	void unkick(User user);
+	void unkick(String nick);
 
 	boolean isKicked(User user);
 
@@ -27,4 +28,6 @@ public interface UserDAO {
 	int isValid(String login, String password);
 	
 	void createUser(User user);
+
+	List<User> getUsersByStatus(Status status);
 }

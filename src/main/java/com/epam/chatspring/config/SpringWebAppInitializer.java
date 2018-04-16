@@ -30,17 +30,8 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 		fr.setInitParameter("encoding", "UTF-8");
 		fr.setInitParameter("forceEncoding", "true");
 		fr.addMappingForUrlPatterns(null, true, "/*");
-
-//		fr = servletContext.addFilter("XSSPreventionFilter", XSSPreventionFilter.class);
-//		fr.addMappingForUrlPatterns(null, true, "/users/login");
-//		fr.addMappingForUrlPatterns(null, true, "/messages");
-
 		servletContext.addFilter("putFormFilter", HttpPutFormContentFilter.class).addMappingForUrlPatterns(null, true,
 				"/*");
-
-//		servletContext.addFilter("authorizationFilter", AuthorizationFilter.class).addMappingForUrlPatterns(null, true,
-//				"/users/login");
-
 		File uploadDirectory = new File(System.getProperty("java.io.tmpdir"));
 
 		int maxUploadSizeInMb = 5 * 1024 * 1024;

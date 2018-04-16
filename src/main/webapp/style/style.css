@@ -136,11 +136,8 @@ input.unkick{
     text-decoration: none;
     cursor: pointer;
 }
-    
-h3 {
-}
 
-.kick {
+.kick_button {
     background-color: #8B0000;
     border: none;
     color: white;
@@ -148,6 +145,9 @@ h3 {
     cursor: pointer;
 }
 
-p{
-    font-weight:700;
+.user {
+    border: none;
+    display:flex;
+    justify-content: space-between;
+    margin: 2px;
 }

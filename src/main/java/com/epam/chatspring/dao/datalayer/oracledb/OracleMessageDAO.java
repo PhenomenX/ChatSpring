@@ -12,9 +12,6 @@ import java.util.List;
 import com.epam.chatspring.dao.ResourceManager;
 import com.epam.chatspring.dao.datalayer.MessageDAO;
 import com.epam.chatspring.dao.datalayer.data.Message;
-import com.epam.chatspring.dao.datalayer.data.Role;
-import com.epam.chatspring.dao.datalayer.data.Status;
-import com.epam.chatspring.dao.datalayer.data.User;
 
 public class OracleMessageDAO implements MessageDAO {
 

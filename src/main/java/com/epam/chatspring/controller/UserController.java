@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.epam.chatspring.dao.datalayer.data.Status;
 import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.service.AdminService;
 import com.epam.chatspring.service.FileStoreService;
 import com.epam.chatspring.service.UserService;
 
@@ -22,19 +24,22 @@ public class UserController {
 
 	@Autowired
 	@Qualifier("userService")
-	UserService userService;
-	
+	private UserService userService;
+
 	@Autowired
-	FileStoreService fileStoreService;
+	private AdminService adminService;
+
+	@Autowired
+	private FileStoreService fileStoreService;
 
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	@ResponseBody
 	public void register(@RequestParam MultipartFile file, @RequestParam(required = false) String nick,
 			@RequestParam(required = false) String password) {
-			User user = new User(nick, password);
-			user.setPicturePath(file.getOriginalFilename());
-			userService.register(user);
-			fileStoreService.saveFile(file);		
+		User user = new User(nick, password);
+		user.setPicturePath(file.getOriginalFilename());
+		userService.register(user);
+		fileStoreService.saveFile(file);
 	}
 
 	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
@@ -60,22 +65,21 @@ public class UserController {
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
-	public List<User> getUsers(HttpSession httpSession) {
-		User user = (User) httpSession.getAttribute("currentUser");
-		List<User> users = userService.getUsers(user);
+	public List<User> getUsers(@RequestParam String status) {
+		List<User> users = userService.getUsers(Status.valueOf(status));
 		return users;
 	}
 
-	@RequestMapping(value = "/users/kick/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/users/kick", method = RequestMethod.PUT)
 	@ResponseBody
-	public String kick() {
-		return "Welcome to RestTemplate Example.";
+	public void kick(@RequestParam String nick) {
+		adminService.kick(nick);
 	}
 
-	@RequestMapping(value = "/users/unkick/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/users/unkick/", method = RequestMethod.PUT)
 	@ResponseBody
-	public String unkick() {
-		return "Welcome to RestTemplate Example.";
+	public void unkick(@RequestParam String nick) {
+		adminService.unkick(nick);
 	}
 
 }

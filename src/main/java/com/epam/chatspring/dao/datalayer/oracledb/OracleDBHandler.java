@@ -24,8 +24,8 @@ public class OracleDBHandler {
 	private static String isKickedQ = ResourceManager.getRegExp("isKicked");
 	private static String allLoggedQ = ResourceManager.getRegExp("allLogged");
 	private static String roleQ = ResourceManager.getRegExp("role");
-	private static Role roles[] = Role.values();
-	private static Status statuses[] = Status.values();
+	private static Role[] roles = Role.values();
+	private static Status[] statuses = Status.values();
 	private static String allKickedQ = ResourceManager.getRegExp("allKicked");
 
 	public static boolean isLogged(User user, Connection connection) {

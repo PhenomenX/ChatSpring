@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.epam.chatspring.dao.datalayer.UserDAO;
 import com.epam.chatspring.dao.datalayer.data.Role;
+import com.epam.chatspring.dao.datalayer.data.Status;
 import com.epam.chatspring.dao.datalayer.data.User;
 
 @Service(value = "userService")
@@ -27,6 +28,7 @@ public class UserServiceImpl implements UserService {
 	public Role login(User user, HttpSession httpSession) {
 		Role role = userDAO.getRole(user.getName());
 		user.setRole(role);
+		System.out.println(role);
 		httpSession.setAttribute("currentUser", user);
 		userDAO.logIn(user);
 		return role;
@@ -45,8 +47,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<User> getUsers(User user) {
-		return userDAO.getAllLogged();
+	public List<User> getUsers(Status status) {
+		return userDAO.getUsersByStatus(status);
 	}
 
 }

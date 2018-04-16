@@ -1,5 +1,24 @@
 package com.epam.chatspring.service;
 
-public class AdminServiceImpl {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.epam.chatspring.dao.datalayer.UserDAO;
+
+@Service
+public class AdminServiceImpl implements AdminService {
+
+	@Autowired
+	private UserDAO userDAO;
+
+	@Override
+	public void kick(String nick) {
+		userDAO.kick(nick);
+	}
+
+	@Override
+	public void unkick(String nick) {
+		userDAO.unkick(nick);
+	}
 
 }

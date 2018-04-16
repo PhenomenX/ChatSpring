@@ -32,6 +32,7 @@ public class OracleUserDAO implements UserDAO {
 		this.updateUserQ = ResourceManager.getRegExp("updateUser");
 		this.isValidQ = ResourceManager.getRegExp("isValid");
 		this.allLoggedQ = ResourceManager.getRegExp("allLogged");
+		this.allKickedQ = ResourceManager.getRegExp("allKicked");
 		this.roleQ = ResourceManager.getRegExp("role");
 		this.newUserQ = ResourceManager.getRegExp("newUser");
 	}
@@ -40,7 +41,7 @@ public class OracleUserDAO implements UserDAO {
 	public void logIn(User user) {
 		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
 			ps.setInt(1, Status.LOGIN.ordinal() + 1);
-			ps.setInt(2, user.getId());
+			ps.setString(2, user.getName());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -64,27 +65,25 @@ public class OracleUserDAO implements UserDAO {
 	}
 
 	@Override
-	public void kick(User admin, User kickableUser) {
-		// Formatter formatter = new Formatter();
-		// formatter.format(ResourceManager.getRegExp("kickF"), admin.getName(),
-		// kickableUser.getName());
-		// formatter.close();
-		// kickableUser.setStatus(Status.KICK);
-		// Message message = new Message(kickableUser, formatter.toString());
-		// formatter.close();
-		// OracleDBHandler.sendMessage(message, connection);
-
+	public void kick(String nick) {
+		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
+			ps.setInt(1, 4);
+			ps.setString(2, nick);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
-	public void unkick(User user) {
-		// Formatter formatter = new Formatter();
-		// formatter.format(ResourceManager.getRegExp("unkickF"),
-		// user.getName());
-		// user.setStatus(Status.LOGOUT);
-		// Message message = new Message(user, formatter.toString());
-		// formatter.close();
-		// OracleDBHandler.sendMessage(message, connection);
+	public void unkick(String nick) {
+		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
+			ps.setInt(1, Status.LOGOUT.ordinal() + 1);
+			ps.setString(2, nick);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -116,9 +115,9 @@ public class OracleUserDAO implements UserDAO {
 		ResultSet resultSet = null;
 		Role role = null;
 		Formatter formatter = new Formatter();
-		try (Statement st = connection.createStatement()) {
-			formatter.format(roleQ, nick);
-			resultSet = st.executeQuery(formatter.toString());
+		try (PreparedStatement ps = connection.prepareStatement(roleQ)) {
+			ps.setString(1, nick);
+			resultSet = ps.executeQuery();
 			while (resultSet.next()) {
 				String roleString = resultSet.getString("NAME").trim();
 				role = Role.valueOf(roleString);
@@ -136,16 +135,32 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public List<User> getAllKicked() {
-		return OracleDBHandler.getAllKicked(connection);
+		List<User> onlineUserList = new ArrayList<User>();
+		User user;
+		Role role;
+		Status status;
+		try (Statement st = connection.createStatement();) {
+			ResultSet rs = st.executeQuery(allKickedQ);
+			while (rs.next()) {
+				role = Role.values()[rs.getInt(2) - 1];
+				status = Status.values()[rs.getInt(3) - 1];
+				user = new User(rs.getString(1), status, role);
+				onlineUserList.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return onlineUserList;
 	}
 
 	@Override
 	public int isValid(String login, String password) {
 		ResultSet resultSet = null;
 		int id = 0;
-		try (Statement st = connection.createStatement()) {
-			String query = String.format(isValidQ, login, password);
-			resultSet = st.executeQuery(query);
+		try (PreparedStatement ps = connection.prepareStatement(isValidQ)) {
+			ps.setString(1, login);
+			ps.setString(2, password);
+			resultSet = ps.executeQuery();
 			while (resultSet.next()) {
 				id = resultSet.getInt(1);
 				System.out.println(id);
@@ -159,7 +174,7 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public void createUser(User user) {
-		try(PreparedStatement ps = connection.prepareStatement(newUserQ)){
+		try (PreparedStatement ps = connection.prepareStatement(newUserQ)) {
 			ps.setString(1, user.getName());
 			ps.setString(2, user.getPassword());
 			ps.setString(3, user.getPicturePath());
@@ -167,9 +182,27 @@ public class OracleUserDAO implements UserDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	
+
+	@Override
+	public List<User> getUsersByStatus(Status status) {
+		List<User> onlineUserList = new ArrayList<User>();
+		User user;
+		Role role;
+		try (PreparedStatement ps = connection.prepareStatement(allLoggedQ)) {
+			ps.setInt(1, status.ordinal() + 1);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				role = Role.values()[rs.getInt(2) - 1];
+				status = Status.values()[rs.getInt(3) - 1];
+				user = new User(rs.getString(1), status, role);
+				onlineUserList.add(user);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return onlineUserList;
+	}
 
 }

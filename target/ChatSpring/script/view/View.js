@@ -1,4 +1,5 @@
 function View() {
+    //DOM Elements
     this.loginForm = $("#login_form");
     this.messageForm = $("#message_form");
     this.registerForm = $("#registration_form");
@@ -10,6 +11,22 @@ function View() {
     this.usersContainer = $("#users");
     this.chat = $("#chat");
     var _this = this;
+
+    //Events
+    this.messageSended = new Event(this);
+    this.loginFormSended = new Event(this);
+    this.registerFormSended = new Event(this);
+    this.logoutClicked = new Event(this);
+    this.userKicked = new Event(this);
+    this.userUnkicked = new Event(this);
+
+    //Event Initializers
+    this.messageForm.submit(function (event) {event.preventDefault(); _this.messageSended.notify(event) });
+    this.loginForm.submit(function (event) {event.preventDefault(); _this.loginFormSended.notify(event) });
+    this.registerForm.submit(function (event) {event.preventDefault(); _this.registerFormSended.notify(event) });
+    this.logoutButton.click(function () { _this.logoutClicked.notify() });
+
+    //View Changers
     this.registerButton.bind("click", function () { _this.showRegisterForm() });
     this.loginButton.bind("click", function () { _this.showLoginForm() });
     this.profileButton.bind("click", function () { _this.showProfile() });
@@ -21,10 +38,23 @@ View.prototype.refleshMessages = function (messages) {
         $("<p>" + messages[i] + "</p>").appendTo(this.messagesContainer);
     }
 };
+
 View.prototype.refleshUsers = function (users) {
     this.usersContainer.empty();
-    for (var i = 0; i < users.length; i++) {
-        $("<p>" + users[i].name + "</p>").appendTo(this.usersContainer);
+    var _this = this;
+    if (window.localStorage.getItem("role") == "USER") {
+        for (var i = 0; i < users.length; i++) {
+            $("<div class=\"user\">" + users[i].name + "</div>").appendTo(this.usersContainer);
+        }
+    }
+    else {
+        for (var i = 0; i < users.length; i++) {
+            let userContainer = $("<div class=\"user\">" + users[i].name + "</div>");
+            let button = $("<input class=\"kick_button\" type=\"button\" value=\"kick\"/>");
+            button.click(function (e) { _this.userKicked.notify({ 'user': e.currentTarget.parentNode.textContent }) });
+            button.appendTo(userContainer);
+            userContainer.appendTo(this.usersContainer);
+        }
     }
 };
 View.prototype.showLoginForm = function () {
