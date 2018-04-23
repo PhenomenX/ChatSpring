@@ -6,11 +6,13 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.core.io.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.support.ServletContextResource;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.epam.chatspring.dao.datalayer.data.Status;
@@ -81,5 +83,11 @@ public class UserController {
 	public void unkick(@RequestParam String nick) {
 		adminService.unkick(nick);
 	}
+	
+//	@ResponseBody
+//	@RequestMapping(value = "/image-resource", method = RequestMethod.GET)
+//	public Resource getImageAsResource() {
+//	   return new ServletContextResource(servletContext, "/WEB-INF/images/image-example.jpg");
+//	}
 
 }

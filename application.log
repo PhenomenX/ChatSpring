@@ -1,0 +1,26 @@
+2018-04-23 17:44:25,365 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/controller/Controller.js] is: -1
+2018-04-23 17:44:25,373 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/view/View.js] is: -1
+2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,365 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Matching patterns for request [/script/controller/Event.js] are [/**]
+2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-23 17:44:25,365 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/style/style.css] is: -1
+2018-04-23 17:44:25,374 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - URI Template variables for request [/script/controller/Event.js] are {}
+2018-04-23 17:44:25,375 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Mapping [/script/controller/Event.js] to HandlerExecutionChain with handler [org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler@3ca10313] and 1 interceptor
+2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/controller/Event.js] is: -1
+2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-23 17:44:25,402 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/images/opengraph-Jpoint-RU.jpg]
+2018-04-23 17:44:25,402 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /images/opengraph-Jpoint-RU.jpg
+2018-04-23 17:44:25,403 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Did not find handler method for [/images/opengraph-Jpoint-RU.jpg]
+2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Matching patterns for request [/images/opengraph-Jpoint-RU.jpg] are [/images/**]
+2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - URI Template variables for request [/images/opengraph-Jpoint-RU.jpg] are {}
+2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Mapping [/images/opengraph-Jpoint-RU.jpg] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[URL [file:D:/images/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1aa12d3a]]] and 1 interceptor
+2018-04-23 17:44:25,403 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/images/opengraph-Jpoint-RU.jpg] is: -1
+2018-04-23 17:44:25,428 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-23 17:44:25,428 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request

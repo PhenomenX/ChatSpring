@@ -38,7 +38,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
 		String nick = request.getParameter("nick");
 		String password = request.getParameter("password");
-		System.out.println(userDAO);
+		logger.debug("LOGGER IS WORK");
 		int id = userDAO.isValid(nick, password);
 		if (id == 0) {
 			response.sendError(401, "Invalid login or password");
