@@ -1,26 +1,21 @@
-2018-04-23 17:44:25,365 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/controller/Controller.js] is: -1
-2018-04-23 17:44:25,373 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/view/View.js] is: -1
-2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,365 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Matching patterns for request [/script/controller/Event.js] are [/**]
-2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,374 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,365 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/style/style.css] is: -1
-2018-04-23 17:44:25,374 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - URI Template variables for request [/script/controller/Event.js] are {}
-2018-04-23 17:44:25,375 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Mapping [/script/controller/Event.js] to HandlerExecutionChain with handler [org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler@3ca10313] and 1 interceptor
-2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,375 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/script/controller/Event.js] is: -1
-2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,380 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,402 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/images/opengraph-Jpoint-RU.jpg]
-2018-04-23 17:44:25,402 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /images/opengraph-Jpoint-RU.jpg
-2018-04-23 17:44:25,403 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Did not find handler method for [/images/opengraph-Jpoint-RU.jpg]
-2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Matching patterns for request [/images/opengraph-Jpoint-RU.jpg] are [/images/**]
-2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - URI Template variables for request [/images/opengraph-Jpoint-RU.jpg] are {}
-2018-04-23 17:44:25,403 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Mapping [/images/opengraph-Jpoint-RU.jpg] to HandlerExecutionChain with handler [ResourceHttpRequestHandler [locations=[URL [file:D:/images/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1aa12d3a]]] and 1 interceptor
-2018-04-23 17:44:25,403 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/images/opengraph-Jpoint-RU.jpg] is: -1
-2018-04-23 17:44:25,428 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,428 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 16:00:01,357 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/users]
+2018-04-24 16:00:01,357 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/messages]
+2018-04-24 16:00:01,360 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /users
+2018-04-24 16:00:01,360 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 16:00:01,360 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /messages
+2018-04-24 16:00:01,360 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<com.epam.chatspring.dao.datalayer.data.User> com.epam.chatspring.controller.UserController.getUsers(java.lang.String)]
+2018-04-24 16:00:01,360 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'userController'
+2018-04-24 16:00:01,361 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<java.lang.String> com.epam.chatspring.controller.MessageController.getMessages()]
+2018-04-24 16:00:01,361 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/users] is: -1
+2018-04-24 16:00:01,361 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'messageController'
+2018-04-24 16:00:01,361 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/messages] is: -1
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [[USER Pavel                KICK, USER Arkady               KICK, USER qwert                KICK]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7ed96de2]
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [[2018-04-13 15:38:17.099	asd                 	awfwfe, 2018-04-13 15:38:21.058	asd                 	awfwfewefef, 2018-04-16 14:36:19.407	qwert               	qwert, 2018-04-24 11:44:17.98	admin               	vh,vhj,, 2018-04-24 11:59:03.096	admin               	asddd]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7ed96de2]
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-24 16:00:01,362 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 16:00:06,973 [INFO ][web.context.support.AnnotationConfigWebApplicationContext] - Closing WebApplicationContext for namespace 'SpringDispatcher-servlet': startup date [Tue Apr 24 15:49:22 MSK 2018]; root of context hierarchy
+2018-04-24 16:00:06,973 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'lifecycleProcessor'
+2018-04-24 16:00:06,973 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17d57d70: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,applicationContextConfig,webMvcConfig,frontController,messageController,userController,XSSInterceptor,adminServiceImpl,fileSystemStoreService,messageService,userService,org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration,requestMappingHandlerMapping,mvcPathMatcher,mvcUrlPathHelper,mvcContentNegotiationManager,viewControllerHandlerMapping,beanNameHandlerMapping,resourceHandlerMapping,mvcResourceUrlProvider,defaultServletHandlerMapping,requestMappingHandlerAdapter,mvcConversionService,mvcValidator,mvcUriComponentsContributor,httpRequestHandlerAdapter,simpleControllerHandlerAdapter,handlerExceptionResolver,mvcViewResolver,mvcHandlerMappingIntrospector,multipartResolver,userDAO,messageDAO]; root of factory hierarchy
+2018-04-24 16:00:06,973 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Retrieved dependent beans for bean 'mvcResourceUrlProvider': [requestMappingHandlerMapping, resourceHandlerMapping]

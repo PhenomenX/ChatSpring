@@ -8,6 +8,7 @@ function Controller(view) {
     this.view.logoutClicked.attach(function () { _this.logoutUser(); _this.view.showLoginForm() });
     this.view.userKicked.attach(_this.kickUser.bind(_this));
     this.view.userUnkicked.attach(_this.unkickUser.bind(_this));
+    this.view.userClicked.attach(_this.generateUserWindow.bind(_this));
 }
 
 Controller.prototype.sendMessage = function (target, event) {
@@ -65,13 +66,27 @@ Controller.prototype.sendLoginForm = function (target, event) {
 };
 
 Controller.prototype.generateChat = function () {
-    if (this.chatRefleshingEnable) {
-        Promise.all([this.getUsers(), this.getMessages()]).then(
-            values => { this.view.showChat(values[0], values[1]) });
-        setTimeout(this.generateChat.bind(this), 2000);
+    var chatGenerating;
+    var controller = this;
+    if (window.localStorage.getItem("role") == "ADMIN") {
+        chatGenerating = function () {
+            if (this.chatRefleshingEnable) {
+                Promise.all([this.getUsers("LOGIN"), this.getMessages(), this.getUsers("KICK")]).then(
+                    values => { this.view.showChat(values[0], values[1], values[2]) });
+                setTimeout(chatGenerating.bind(controller), 2000);
+            }
+        };
+    } else {
+        chatGenerating = function () {
+            if (this.chatRefleshingEnable) {
+                Promise.all([this.getUsers("LOGIN"), this.getMessages()]).then(
+                    values => { this.view.showChat(values[0], values[1]) });
+                setTimeout(chatGenerating.bind(controller), 2000);
+            }
+        }
     }
+    chatGenerating.bind(controller)();
 }
-
 Controller.prototype.getMessages = function () {
     return new Promise(function (resolve, reject) {
         $.ajax({
@@ -88,13 +103,13 @@ Controller.prototype.getMessages = function () {
         });
     });
 }
-Controller.prototype.getUsers = function () {
+Controller.prototype.getUsers = function (status) {
     return new Promise(function (resolve, reject) {
         var users;
         $.ajax({
             type: 'GET',
             url: 'users',
-            data: "status=LOGIN",
+            data: "status=" + status,
             dataType: 'json',
             success: function (data) {
                 resolve(data);
@@ -161,7 +176,20 @@ Controller.prototype.kickUser = function (target, args) {
     });
 };
 
-Controller.prototype.unkickUser = function () { };
+Controller.prototype.unkickUser = function (target, args) {
+    var data = 'nick=' + encodeURIComponent(args.user.trim());
+    $.ajax({
+        type: 'PUT',
+        url: 'users/unkick',
+        data: data,
+        success: function (data) {
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
+            alert(thrownError);
+        }
+    });
+};
 
 Controller.prototype.setCurrentView = function () {
     let state = window.localStorage.getItem("state");
@@ -186,5 +214,21 @@ Controller.prototype.defineRole = function (role) {
     window.localStorage.setItem("role", role);
 }
 
+Controller.prototype.generateUserWindow = function (sender, args) {
+    var userName = args.user.trim();
+    var userPromise = new Promise(function (resolve, reject) {
+        $.ajax({
+            type: 'GET',
+            url: 'users/' + userName,
+            success: function (data) { 
+                resolve(data) },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+            }
+        });
+    });
+    userPromise.then(sender.showInfo.bind(sender));
+}
 
 

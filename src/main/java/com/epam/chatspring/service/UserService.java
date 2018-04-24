@@ -13,7 +13,7 @@ public interface UserService {
 	void register(User user);
 	Role login(User user, HttpSession httpSession);
 	void logout(User user, HttpSession httpSession);
-	User getUser(User user);
+	User getUser(String nick);
 	List<User> getUsers(Status status);
 	
 }

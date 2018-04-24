@@ -8,7 +8,7 @@ html{
     align-items:stretch;
 	margin: 0;
     min-height: 100vh;
-    background-image: url(../images/opengraph-Jpoint-RU.jpg);
+    background-image: url(../image/light-tile.gif);
 }
 
 body{
@@ -144,10 +144,22 @@ input.unkick{
     text-decoration: none;
     cursor: pointer;
 }
+.unkick_button {
+    background-color: rgb(0, 139, 7);
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .user {
     border: none;
     display:flex;
     justify-content: space-between;
     margin: 2px;
+}
+
+.user_info{
+    display:none;
+    z-index: 9999;
 }

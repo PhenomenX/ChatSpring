@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.Resource;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -59,10 +60,10 @@ public class UserController {
 		userService.logout(user, httpSession);
 	}
 
-	@RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/users/{nick}", method = RequestMethod.GET)
 	@ResponseBody
-	public String getUser() {
-		return "Welcome to RestTemplate Example.";
+	public User getUser(@PathVariable String nick) {
+		return userService.getUser(nick);
 	}
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
@@ -78,7 +79,7 @@ public class UserController {
 		adminService.kick(nick);
 	}
 
-	@RequestMapping(value = "/users/unkick/", method = RequestMethod.PUT)
+	@RequestMapping(value = "/users/unkick", method = RequestMethod.PUT)
 	@ResponseBody
 	public void unkick(@RequestParam String nick) {
 		adminService.unkick(nick);

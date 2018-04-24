@@ -1,30 +1,28 @@
-2018-04-23 17:44:10,879 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'mvcViewResolver'
-2018-04-23 17:44:10,880 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
-2018-04-23 17:44:10,884 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Finished creating instance of bean 'org.springframework.web.servlet.support.SessionFlashMapManager'
-2018-04-23 17:44:10,884 [DEBUG][web.servlet.DispatcherServlet] - Unable to locate FlashMapManager with name 'flashMapManager': using default [org.springframework.web.servlet.support.SessionFlashMapManager@43a37789]
-2018-04-23 17:44:10,884 [DEBUG][web.servlet.resource.ResourceUrlProvider] - Looking for resource handler mappings
-2018-04-23 17:44:10,885 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'resourceHandlerMapping'
-2018-04-23 17:44:10,885 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'defaultServletHandlerMapping'
-2018-04-23 17:44:10,885 [DEBUG][web.servlet.resource.ResourceUrlProvider] - Found resource handler mapping: URL pattern="/images/**", locations=[URL [file:D:/images/]], resolvers=[org.springframework.web.servlet.resource.PathResourceResolver@1aa12d3a]
-2018-04-23 17:44:10,886 [DEBUG][jndi.JndiTemplate] - Looking up JNDI object with name [java:comp/env/spring.liveBeansView.mbeanDomain]
-2018-04-23 17:44:10,887 [DEBUG][jndi.JndiLocatorDelegate] - Converted JNDI name [java:comp/env/spring.liveBeansView.mbeanDomain] not found - trying original name [spring.liveBeansView.mbeanDomain]. javax.naming.NameNotFoundException: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].
-2018-04-23 17:44:10,887 [DEBUG][jndi.JndiTemplate] - Looking up JNDI object with name [spring.liveBeansView.mbeanDomain]
-2018-04-23 17:44:10,887 [DEBUG][jndi.JndiPropertySource] - JNDI lookup for name [spring.liveBeansView.mbeanDomain] threw NamingException with message: Name [spring.liveBeansView.mbeanDomain] is not bound in this Context. Unable to find [spring.liveBeansView.mbeanDomain].. Returning null.
-2018-04-23 17:44:10,887 [DEBUG][core.env.PropertySourcesPropertyResolver] - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source
-2018-04-23 17:44:10,888 [DEBUG][web.servlet.DispatcherServlet] - Published WebApplicationContext of servlet 'SpringDispatcher' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.SpringDispatcher]
-2018-04-23 17:44:10,888 [INFO ][web.servlet.DispatcherServlet] - FrameworkServlet 'SpringDispatcher': initialization completed in 996 ms
-2018-04-23 17:44:10,888 [DEBUG][web.servlet.DispatcherServlet] - Servlet 'SpringDispatcher' configured successfully
-2018-04-23 17:44:25,328 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/]
-2018-04-23 17:44:25,330 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /index.html
-2018-04-23 17:44:25,331 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Did not find handler method for [/index.html]
-2018-04-23 17:44:25,332 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Matching patterns for request [/index.html] are [/**]
-2018-04-23 17:44:25,332 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - URI Template variables for request [/index.html] are {}
-2018-04-23 17:44:25,332 [DEBUG][web.servlet.handler.SimpleUrlHandlerMapping] - Mapping [/index.html] to HandlerExecutionChain with handler [org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler@3ca10313] and 1 interceptor
-2018-04-23 17:44:25,333 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/] is: -1
-2018-04-23 17:44:25,337 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
-2018-04-23 17:44:25,337 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
-2018-04-23 17:44:25,355 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/script/controller/Event.js]
-2018-04-23 17:44:25,356 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/script/init.js]
-2018-04-23 17:44:25,355 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/script/jquery-3.3.1.min.js]
-2018-04-23 17:44:25,355 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/script/controller/Controller.js]
-2018-04-23 17:44:25,356 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /script/jquery-3.3.1.min.js
+2018-04-24 15:59:52,348 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 15:59:55,344 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/users]
+2018-04-24 15:59:55,344 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /users
+2018-04-24 15:59:55,344 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<com.epam.chatspring.dao.datalayer.data.User> com.epam.chatspring.controller.UserController.getUsers(java.lang.String)]
+2018-04-24 15:59:55,344 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'userController'
+2018-04-24 15:59:55,344 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/users] is: -1
+2018-04-24 15:59:55,345 [DEBUG][web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [[USER retry                LOGIN, ADMIN admin                LOGIN]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7ed96de2]
+2018-04-24 15:59:55,345 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-24 15:59:55,345 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 15:59:55,346 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/messages]
+2018-04-24 15:59:55,346 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /messages
+2018-04-24 15:59:55,346 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<java.lang.String> com.epam.chatspring.controller.MessageController.getMessages()]
+2018-04-24 15:59:55,346 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'messageController'
+2018-04-24 15:59:55,346 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/messages] is: -1
+2018-04-24 15:59:55,347 [DEBUG][web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [[2018-04-13 15:38:17.099	asd                 	awfwfe, 2018-04-13 15:38:21.058	asd                 	awfwfewefef, 2018-04-16 14:36:19.407	qwert               	qwert, 2018-04-24 11:44:17.98	admin               	vh,vhj,, 2018-04-24 11:59:03.096	admin               	asddd]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7ed96de2]
+2018-04-24 15:59:55,347 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-24 15:59:55,347 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 15:59:55,349 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/users]
+2018-04-24 15:59:55,349 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /users
+2018-04-24 15:59:55,349 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<com.epam.chatspring.dao.datalayer.data.User> com.epam.chatspring.controller.UserController.getUsers(java.lang.String)]
+2018-04-24 15:59:55,349 [DEBUG][beans.factory.support.DefaultListableBeanFactory] - Returning cached instance of singleton bean 'userController'
+2018-04-24 15:59:55,349 [DEBUG][web.servlet.DispatcherServlet] - Last-Modified value for [/ChatSpring/users] is: -1
+2018-04-24 15:59:55,350 [DEBUG][web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor] - Written [[USER Pavel                KICK, USER Arkady               KICK, USER qwert                KICK]] as "application/json" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@7ed96de2]
+2018-04-24 15:59:55,350 [DEBUG][web.servlet.DispatcherServlet] - Null ModelAndView returned to DispatcherServlet with name 'SpringDispatcher': assuming HandlerAdapter completed request handling
+2018-04-24 15:59:55,350 [DEBUG][web.servlet.DispatcherServlet] - Successfully completed request
+2018-04-24 15:59:58,344 [DEBUG][web.servlet.DispatcherServlet] - DispatcherServlet with name 'SpringDispatcher' processing GET request for [/ChatSpring/users]
+2018-04-24 15:59:58,344 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Looking up handler method for path /users
+2018-04-24 15:59:58,344 [DEBUG][web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] - Returning handler method [public java.util.List<com.epam.chatspring.dao.datalayer.data.User> com.epam.chatspring.controller.UserController.getUsers(java.lang.String)]

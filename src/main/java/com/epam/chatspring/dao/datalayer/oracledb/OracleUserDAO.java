@@ -26,6 +26,7 @@ public class OracleUserDAO implements UserDAO {
 	private String roleQ;
 	private String allKickedQ;
 	private String newUserQ;
+	private String getUserQ;
 
 	public OracleUserDAO(Connection connection) {
 		this.connection = connection;
@@ -35,6 +36,7 @@ public class OracleUserDAO implements UserDAO {
 		this.allKickedQ = ResourceManager.getRegExp("allKicked");
 		this.roleQ = ResourceManager.getRegExp("role");
 		this.newUserQ = ResourceManager.getRegExp("newUser");
+		this.getUserQ = ResourceManager.getRegExp("getUser");
 	}
 
 	@Override
@@ -135,7 +137,7 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public List<User> getAllKicked() {
-		List<User> onlineUserList = new ArrayList<User>();
+		List<User> kickedUserList = new ArrayList<User>();
 		User user;
 		Role role;
 		Status status;
@@ -145,12 +147,12 @@ public class OracleUserDAO implements UserDAO {
 				role = Role.values()[rs.getInt(2) - 1];
 				status = Status.values()[rs.getInt(3) - 1];
 				user = new User(rs.getString(1), status, role);
-				onlineUserList.add(user);
+				kickedUserList.add(user);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return onlineUserList;
+		return kickedUserList;
 	}
 
 	@Override
@@ -203,6 +205,28 @@ public class OracleUserDAO implements UserDAO {
 			e.printStackTrace();
 		}
 		return onlineUserList;
+	}
+
+	@Override
+	public User getUser(String nick) {
+		User user = null;
+		Role role;
+		Status status;
+		String picture;
+		try (PreparedStatement ps = connection.prepareStatement(getUserQ);) {
+			ps.setString(1, nick);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				System.out.println("YEEAAAAAH");
+				role = Role.values()[rs.getInt(2) - 1];
+				status = Status.values()[rs.getInt(3) - 1];
+				picture = rs.getString(4);
+				user = new User(nick, status, role, picture);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 }

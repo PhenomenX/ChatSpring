@@ -23,6 +23,13 @@ public class User {
 		this.role = role;
 	}
 
+	public User(String name, Status status, Role role, String picture) {
+		this.name = name;
+		this.status = status;
+		this.role = role;
+		this.picturePath = picture;
+	}
+
 	public String getName() {
 		return name;
 	}

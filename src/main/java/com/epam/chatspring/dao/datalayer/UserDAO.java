@@ -30,4 +30,6 @@ public interface UserDAO {
 	void createUser(User user);
 
 	List<User> getUsersByStatus(Status status);
+
+	User getUser(String nick);
 }
