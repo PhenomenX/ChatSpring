@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:41 +0300] "GET /ChatSpring/ HTTP/1.1" 304 - http-bio-8083-exec-1 43
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:41 +0300] "GET /ChatSpring/script/controller/Controller.js HTTP/1.1" 304 - http-bio-8083-exec-7 5
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:45 +0300] "PUT /ChatSpring/users/login HTTP/1.1" 200 597 http-bio-8083-exec-8 145
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:45 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-2 14
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:45 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 23
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:47 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-10 3
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:47 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 4
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:49 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-10 3
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:49 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 5
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:51 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-10 3
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:51 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 7
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:53 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-10 4
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:53 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 8
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:55 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 295 http-bio-8083-exec-10 3
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:55 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 329 http-bio-8083-exec-9 5
+0:0:0:0:0:0:0:1 - - [26/Apr/2018:15:39:57 +0300] "PUT /ChatSpring/users/logout HTTP/1.1" 200 - http-bio-8083-exec-9 4

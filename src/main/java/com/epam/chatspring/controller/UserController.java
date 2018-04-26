@@ -4,20 +4,21 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.core.io.Resource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.support.ServletContextResource;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.epam.chatspring.dao.datalayer.data.Status;
 import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.filter.AuthorizationInterceptor;
 import com.epam.chatspring.service.AdminService;
 import com.epam.chatspring.service.FileStoreService;
 import com.epam.chatspring.service.UserService;
@@ -31,10 +32,12 @@ public class UserController {
 
 	@Autowired
 	private AdminService adminService;
-
+	
 	@Autowired
 	private FileStoreService fileStoreService;
 
+	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
+	
 	@RequestMapping(value = "/users", method = RequestMethod.POST)
 	@ResponseBody
 	public void register(@RequestParam MultipartFile file, @RequestParam(required = false) String nick,
@@ -47,17 +50,19 @@ public class UserController {
 
 	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
 	@ResponseBody
-	public String login(@RequestParam String nick, @RequestParam String password, HttpSession httpSession) {
+	public User login(@RequestParam String nick, @RequestParam String password, HttpSession httpSession) {
 		User user = new User(nick, password);
-		String role = userService.login(user, httpSession).toString();
-		return role;
+		user = userService.login(user, httpSession);
+		return user;
 	}
 
 	@RequestMapping(value = "/users/logout", method = RequestMethod.PUT)
 	@ResponseBody
 	public void logout(HttpSession httpSession) {
 		User user = (User) httpSession.getAttribute("currentUser");
-		userService.logout(user, httpSession);
+		if (user != null) {
+			userService.logout(user, httpSession);
+		}
 	}
 
 	@RequestMapping(value = "/users/{nick}", method = RequestMethod.GET)
@@ -68,7 +73,7 @@ public class UserController {
 
 	@RequestMapping(value = "/users", method = RequestMethod.GET)
 	@ResponseBody
-	public List<User> getUsers(@RequestParam String status) {
+	public List<User> getUsers(@RequestParam(required = false) String status) {
 		List<User> users = userService.getUsers(Status.valueOf(status));
 		return users;
 	}
@@ -84,11 +89,5 @@ public class UserController {
 	public void unkick(@RequestParam String nick) {
 		adminService.unkick(nick);
 	}
-	
-//	@ResponseBody
-//	@RequestMapping(value = "/image-resource", method = RequestMethod.GET)
-//	public Resource getImageAsResource() {
-//	   return new ServletContextResource(servletContext, "/WEB-INF/images/image-example.jpg");
-//	}
 
 }

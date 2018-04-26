@@ -35,6 +35,7 @@ Controller.prototype.sendMessage = function (target, event) {
             form.find('input[type="submit"]').prop('disabled', false);
         }
     });
+    form.get(0).messageText.value = '';
 };
 
 Controller.prototype.sendLoginForm = function (target, event) {
@@ -43,32 +44,36 @@ Controller.prototype.sendLoginForm = function (target, event) {
     let loginPromise = new Promise(function (resolve, reject) {
         $.ajax({
             type: 'PUT',
-            url: 'users/login', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
-            dataType: 'text',
+            url: 'users/login',
+            dataType: 'json',
             contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-            data: data, // дaнныe для oтпрaвки
-            beforeSend: function (data) { // сoбытиe дo oтпрaвки
-                form.find('input[type="submit"]').attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
+            data: data,
+            beforeSend: function (data) {
+                form.find('input[type="submit"]').attr('disabled', 'disabled');
             },
-            success: function (data) { // сoбытиe пoслe удaчнoгo oбрaщeния к сeрвeру и пoлучeния oтвeтa
+            success: function (data) {
                 resolve(data);
             },
-            error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
-                alert(xhr.status); // пoкaжeм oтвeт сeрвeрa
-                alert(thrownError); // и тeкст oшибки
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
             },
-            complete: function (data) { // сoбытиe пoслe любoгo исхoдa
-                form.find('input[type="submit"]').prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
+            complete: function (data) {
+                form.find('input[type="submit"]').prop('disabled', false);
             }
         });
     });
+    form.get(0).nick.value = '';
+    form.get(0).password.value = '';
     loginPromise.then(this.processLoginResponse.bind(this));
 };
 
 Controller.prototype.generateChat = function () {
     var chatGenerating;
     var controller = this;
-    if (window.localStorage.getItem("role") == "ADMIN") {
+    var user = JSON.parse(window.sessionStorage.getItem("user"));
+    this.view.showUser();
+    if (user.role == "ADMIN") {
         chatGenerating = function () {
             if (this.chatRefleshingEnable) {
                 Promise.all([this.getUsers("LOGIN"), this.getMessages(), this.getUsers("KICK")]).then(
@@ -138,7 +143,7 @@ Controller.prototype.logoutUser = function () {
 Controller.prototype.getUser;
 
 Controller.prototype.sendRegisterForm = function (target, event) {
-    var form = $("#registration_form")[0];
+    var form = event.currentTarget;
     var data = new FormData(form);
     $.ajax({
         type: "POST",
@@ -157,6 +162,9 @@ Controller.prototype.sendRegisterForm = function (target, event) {
             alert(thrownError);
         }
     });
+    form.nick.value = '';
+    form.password.value = '';
+    form.file.value = '';
     this.view.showLoginForm();
     return false;
 };
@@ -192,7 +200,7 @@ Controller.prototype.unkickUser = function (target, args) {
 };
 
 Controller.prototype.setCurrentView = function () {
-    let state = window.localStorage.getItem("state");
+    let state = window.sessionStorage.getItem("state");
     if (state) {
         if (state == "login") {
             this.view.showLoginForm();
@@ -205,13 +213,13 @@ Controller.prototype.setCurrentView = function () {
 }
 
 Controller.prototype.processLoginResponse = function (data) {
-    this.defineRole(data);
+    this.defineUser(data);
     this.chatRefleshingEnable = true;
     this.generateChat();
 }
 
-Controller.prototype.defineRole = function (role) {
-    window.localStorage.setItem("role", role);
+Controller.prototype.defineUser = function (user) {
+    window.sessionStorage.setItem("user", JSON.stringify(user));
 }
 
 Controller.prototype.generateUserWindow = function (sender, args) {
@@ -220,6 +228,7 @@ Controller.prototype.generateUserWindow = function (sender, args) {
         $.ajax({
             type: 'GET',
             url: 'users/' + userName,
+            dataType: 'json',
             success: function (data) { 
                 resolve(data) },
             error: function (xhr, ajaxOptions, thrownError) {

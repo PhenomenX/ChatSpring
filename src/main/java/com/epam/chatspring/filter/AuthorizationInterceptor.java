@@ -18,7 +18,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 	DAOFactory factory = DAOFactory.getInstance(DBType.ORACLE);
 	UserDAO userDAO = factory.getUserDAO();
 
-	private Logger logger = Logger.getLogger(HandlerInterceptor.class);
+	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
 	
 	@Override
 	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
@@ -38,7 +38,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
 		String nick = request.getParameter("nick");
 		String password = request.getParameter("password");
-		logger.debug("LOGGER IS WORK");
+		logger.info("LOGGER IS WORK");
 		int id = userDAO.isValid(nick, password);
 		if (id == 0) {
 			response.sendError(401, "Invalid login or password");

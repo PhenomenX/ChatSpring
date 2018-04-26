@@ -5,9 +5,12 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import com.epam.chatspring.dao.datalayer.MessageDAO;
 import com.epam.chatspring.dao.datalayer.UserDAO;
+import com.epam.chatspring.dao.datalayer.data.Message;
 import com.epam.chatspring.dao.datalayer.data.Role;
 import com.epam.chatspring.dao.datalayer.data.Status;
 import com.epam.chatspring.dao.datalayer.data.User;
@@ -17,27 +20,39 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserDAO userDAO;
+	@Autowired
+	private MessageDAO messageDAO;
 
+	@Value( "${message.login}" )
+	String loginMessage;
+	
+	@Value( "${message.logout}" )
+	String logoutMessage;
+
+	
 	@Override
 	public void register(User user) {
 		userDAO.createUser(user);
-
 	}
 
 	@Override
-	public Role login(User user, HttpSession httpSession) {
-		Role role = userDAO.getRole(user.getName());
-		user.setRole(role);
-		System.out.println(role);
+	public User login(User user, HttpSession httpSession) {
 		httpSession.setAttribute("currentUser", user);
 		userDAO.logIn(user);
-		return role;
+		user =  userDAO.getUser(user.getName());
+		String messageText = String.format(loginMessage, user.getName());
+		Message message = new Message(user.getName(), messageText);
+		messageDAO.sendMessage(message);
+		return user;
 	}
 
 	@Override
 	public void logout(User user, HttpSession httpSession) {
 		httpSession.removeAttribute("currentUser");
 		userDAO.logOut(user);
+		String messageText = String.format(logoutMessage, user.getName());
+		Message message = new Message(user.getName(), messageText);
+		messageDAO.sendMessage(message);
 	}
 
 	@Override

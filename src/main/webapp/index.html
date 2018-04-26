@@ -14,48 +14,52 @@
 </head>
 
 <body>
-    <div id="header">
+    <div class="header">
         <h3>Welcome!</h3>
         <div class="buttons">
-            <input class="button" id="profile_button" type="button" value="Profile" />
-            <input class="button" id="register_button" type="button" value="Register" />
-            <input class="button" id="login_button" type="button" value="Login" />
-            <input class="button" id="logout_button" type="submit" value="Logout" />
+            <input class="button profile_button" type="button" value="Profile" />
+            <input class="button register_button" type="button" value="Register" />
+            <input class="button login_button" type="button" value="Login" />
+            <input class="button logout_button" type="submit" value="Logout" />
         </div>
     </div>
-    <div id="main">
-        <div id="chat">
-            <div id="chat_content">
-                <div id="messages">
+    <div class="main">
+        <div class="chat">
+            <div class="chat_content">
+                <div class="messages">
                 </div>
-                <div id="users">
+                <div class="users">
                     <p>Logged users:</p>
                 </div>
             </div>
-            <form id="message_form">
+            <form class="message_form">
                 <textarea name="messageText" cols="86" rows="3"></textarea>
-                <input id="sending" type="submit" value="Send Message" />
+                <input class="sending" type="submit" value="Send Message" />
             </form>
         </div>
-        <form id="login_form">
+        <form class="login_form">
             Please, enter login and password:
             <input title="Login:" name="nick" type="text" />
             <input title="Password:" name="password" type="password" />
             <input class="button" type="submit" value="Log in" />
         </form>
-        <form enctype="multipart/form-data" id="registration_form" method="POST">
+        <form enctype="multipart/form-data" class="registration_form" method="POST">
             Please, enter your data:
-            <input title="Login:" name="nick" type="text" placeholder="Login"/>
-            <input title="Password:" name="password" type="password" placeholder="Password"/>
+            <input title="Login:" name="nick" type="text" placeholder="Login" />
+            <input title="Password:" name="password" type="password" placeholder="Password" />
             <input type="file" name="file" accept="image/*">
             <input class="button" type="submit" value="Register" />
         </form>
     </div>
     <div class="user_info">
-        <img class="avatar">
+        <div class="avatar_container">
+            <img class="avatar">
+        </div>
         <p class="nick"></p>
         <p class="role"></p>
+        <p class="status"></p>
     </div>
+    <div class="overlay"></div>
 </body>
 
 </html>

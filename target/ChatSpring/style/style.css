@@ -19,7 +19,7 @@ body{
     background: none; 
     align-items: center;
     padding:0px;
-    margin: 0px;;
+    margin: 0px;
 }
 
 div {
@@ -28,11 +28,17 @@ div {
 }
 
 div.buttons{
+    display:flex;
+    flex-direction: row;
     border:none;
     background: none;
 }
 
-div#header{
+div.buttons .button{
+    margin-left: 2px;
+}
+
+div.header{
     background-color: #ebebeb;
     border: solid 0px black;
     display: -webkit-flex;
@@ -43,7 +49,7 @@ div#header{
     justify-content: space-around;
 }
     
-div#main {
+div.main {
     background-color: white;
     border: solid 0px black;
     display: -webkit-flex;
@@ -56,12 +62,12 @@ div#main {
     margin-top: 10vh;
 }
 
-div#chat{
+div.chat{
     display:none;
     flex-direction: column;
 }
 
-div#chat_content{
+div.chat_content{
     background-color: white;
     border: solid 0px black;
     display: -webkit-flex;
@@ -70,23 +76,23 @@ div#chat_content{
     align-items:center;
 }
 
-form#login_form{
+form.login_form{
     border: solid 2px #424242;
 }
     
-div#messages {
+div.messages {
     overflow: scroll;
     width: 600px;
     height: 350px;
 }
     
-div#users {
+div.users {
     overflow: scroll;
     width: 150px;
     height: 350px;
 }
     
-form#message_form {
+form.message_form {
     width: 752px;
     height: 50px;
     background-color: white;
@@ -98,7 +104,7 @@ form#message_form {
     align-items:center;
 }
 
-form#registration_form{
+form.registration_form{
     border: solid 2px #424242;
     background-color: white;
     display: -webkit-flex;
@@ -108,11 +114,11 @@ form#registration_form{
     align-items:center;
 }
 
-form#registration_form *{
+form.registration_form *{
     margin: 6px;
 }
     
-input#sending {
+input.sending {
     height: 46px;
     background-color: #424242;
     border: none;
@@ -161,5 +167,41 @@ input.unkick{
 
 .user_info{
     display:none;
+    height:250px;
     z-index: 9999;
+    padding:0px;
+}
+
+.user_info .avatar_container{
+    width:150px;
+    height:150px;
+    border:none;
+    margin:0px;
+    padding:0px;
+}
+
+.user_info .avatar{
+    max-width: 150px; 
+    height: auto;  
+}
+
+.user_info p{
+    display:block;
+    padding: 5px;
+    margin: 0px;
+}
+
+.overlay {
+	z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+	position:fixed; /* всегдa перекрывaет весь сaйт */
+	background-color:#000; /* чернaя */
+	opacity:0.4; /* нo немнoгo прoзрaчнa */
+	-moz-opacity:0.4; /* фикс прозрачности для старых браузеров */
+	filter:alpha(opacity=40);
+	width:100%; 
+	height:100%; /* рaзмерoм вo весь экрaн */
+	top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+	left:0;
+	cursor:pointer;
+	display:none; /* в oбычнoм сoстoянии её нет) */
 }

@@ -1,6 +1,7 @@
 package com.epam.chatspring.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -12,6 +13,8 @@ import com.epam.chatspring.filter.XSSInterceptor;
 
 @Configuration
 @EnableWebMvc
+@PropertySource("classpath:properties/config.properties")
+@PropertySource("classpath:properties/SQL_Queries.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 	@Override

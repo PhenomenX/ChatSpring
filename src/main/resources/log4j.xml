@@ -28,5 +28,10 @@
         <appender-ref ref="application"/>
         <appender-ref ref="ConsoleAppender" />
     </root>
+    
+    <logger name="org.springframework" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="ConsoleAppender"/>
+    </logger>
 
 </log4j:configuration>

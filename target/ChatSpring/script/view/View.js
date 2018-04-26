@@ -1,15 +1,15 @@
 function View() {
     //DOM Elements
-    this.loginForm = $("#login_form");
-    this.messageForm = $("#message_form");
-    this.registerForm = $("#registration_form");
-    this.loginButton = $("#login_button");
-    this.logoutButton = $("#logout_button");
-    this.profileButton = $("#profile_button");
-    this.registerButton = $("#register_button");
-    this.messagesContainer = $("#messages");
-    this.usersContainer = $("#users");
-    this.chat = $("#chat");
+    this.loginForm = $(".login_form").first();
+    this.messageForm = $(".message_form").first();
+    this.registerForm = $(".registration_form").first();
+    this.loginButton = $(".login_button").first();
+    this.logoutButton = $(".logout_button").first();
+    this.profileButton = $(".profile_button").first();
+    this.registerButton = $(".register_button").first();
+    this.messagesContainer = $(".messages").first();
+    this.usersContainer = $(".users").first();
+    this.chat = $(".chat").first();
     this.userWindow = new UserWindow();
     var _this = this;
 
@@ -31,7 +31,7 @@ function View() {
     //View Changers
     this.registerButton.bind("click", function () { _this.showRegisterForm() });
     this.loginButton.bind("click", function () { _this.showLoginForm() });
-    this.profileButton.bind("click", function () { _this.showProfile() });
+    this.profileButton.bind("click",  _this.showProfile.bind(_this));
 }
 
 View.prototype.refleshMessages = function (messages) {
@@ -44,18 +44,27 @@ View.prototype.refleshMessages = function (messages) {
 View.prototype.refleshUsers = function (users, kickedUsers) {
     this.usersContainer.empty();
     var _this = this;
+    var user = JSON.parse(window.sessionStorage.getItem("user"));
     $("<p>Logged users:</p>").appendTo(this.usersContainer);
-    if (window.localStorage.getItem("role") == "USER") {
+    if (user.role == "USER") {
         for (var i = 0; i < users.length; i++) {
-            $("<div class=\"user\">" + users[i].name + "</div>").appendTo(this.usersContainer);
+            var userContainer = $("<div class=\"user\">" + users[i].name + "</div>")
+                .appendTo(this.usersContainer);
+            userContainer.click(function (e) {
+                _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
+            });
         }
     }
     else {
         for (var i = 0; i < users.length; i++) {
             let userContainer = $("<div class=\"user\">" + users[i].name + "</div>");
             let button = $("<input class=\"kick_button\" type=\"button\" value=\"kick\"/>");
-            userContainer.click(function (e) { _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget }) });
-            button.click(function (e) { _this.userKicked.notify({ 'user': e.currentTarget.parentNode.textContent }) });
+            userContainer.click(function (e) {
+                _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
+            });
+            button.click(function (e) {
+                _this.userKicked.notify({ 'user': e.currentTarget.parentNode.textContent })
+            });
             button.appendTo(userContainer);
             userContainer.appendTo(this.usersContainer);
         }
@@ -63,8 +72,12 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
         for (var i = 0; i < kickedUsers.length; i++) {
             let userContainer = $("<div class=\"user\">" + kickedUsers[i].name + "</div>");
             let button = $("<input class=\"unkick_button\" type=\"button\" value=\"unkick\"/>");
-            userContainer.click(function (e) {_this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget }) });
-            button.click(function (e) { _this.userUnkicked.notify({ 'user': e.currentTarget.parentNode.textContent }) });
+            userContainer.click(function (e) {
+                _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
+            });
+            button.click(function (e) {
+                _this.userUnkicked.notify({ 'user': e.currentTarget.parentNode.textContent })
+            });
             button.appendTo(userContainer);
             userContainer.appendTo(this.usersContainer);
         }
@@ -78,26 +91,33 @@ View.prototype.showLoginForm = function () {
     this.chat.css("display", "none");
     this.registerForm.css("display", "none");
     this.registerButton.css("display", "flex");
-    window.localStorage.setItem("state", "login");
+    window.sessionStorage.setItem("state", "login");
 };
 View.prototype.showChat = function (users, messages, kickedUsers) {
     this.loginForm.css("display", "none");
     this.chat.css("display", "flex");
     this.refleshUsers(users, kickedUsers);
     this.refleshMessages(messages);
-    window.localStorage.setItem("state", "chat");
+    window.sessionStorage.setItem("state", "chat");
 };
-View.prototype.showProfile = function () {
 
+View.prototype.showProfile = function (e) {
+    var user = JSON.parse(window.sessionStorage.getItem("user"));
+    this.userWindow.clickedUserContainer = e.currentTarget;
+    this.userWindow.showInfo(user);
 };
+
 View.prototype.showUser = function () {
-
+    var user = JSON.parse(window.sessionStorage.getItem("user"));
+    var greetingContainer = $(".header h3").get(0);
+    greetingContainer.textContent = "Welcome, " + user.name + "!";
 };
+
 View.prototype.showRegisterForm = function () {
     this.loginForm.css("display", "none");
     this.chat.css("display", "none");
     this.loginButton.css("display", "flex");
     this.registerForm.css("display", "flex");
     this.registerButton.css("display", "none");
-    window.localStorage.setItem("state", "register");
+    window.sessionStorage.setItem("state", "register");
 };

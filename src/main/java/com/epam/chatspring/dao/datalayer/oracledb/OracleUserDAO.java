@@ -217,7 +217,6 @@ public class OracleUserDAO implements UserDAO {
 			ps.setString(1, nick);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
-				System.out.println("YEEAAAAAH");
 				role = Role.values()[rs.getInt(2) - 1];
 				status = Status.values()[rs.getInt(3) - 1];
 				picture = rs.getString(4);
