@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.epam.chatspring.dao.datalayer.MessageDAO;
-import com.epam.chatspring.dao.datalayer.data.Message;
+import com.epam.chatspring.dao.MessageDAO;
+import com.epam.chatspring.model.Message;
 
 @Service(value = "messageService")
 public class MessageServiceImpl implements MessageService {

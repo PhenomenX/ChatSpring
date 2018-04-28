@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.epam.chatspring.dao.datalayer.data.Message;
-import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.model.Message;
+import com.epam.chatspring.model.User;
 import com.epam.chatspring.service.MessageService;
 
 @RestController

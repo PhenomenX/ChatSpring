@@ -4,8 +4,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import com.epam.chatspring.dao.datalayer.data.Status;
-import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.model.Status;
+import com.epam.chatspring.model.User;
 
 public interface UserService {
 

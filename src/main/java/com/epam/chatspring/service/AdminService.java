@@ -1,8 +1,10 @@
 package com.epam.chatspring.service;
 
-public interface AdminService {
-	void unkick(String nick);
+import javax.servlet.http.HttpSession;
 
-	void kick(String nick);
+public interface AdminService {
+	void unkick(String nick, HttpSession httpSession);
+
+	void kick(String nick, HttpSession httpSession);
 
 }

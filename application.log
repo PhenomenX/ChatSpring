@@ -17,3 +17,5 @@
 2018-04-26 15:39:51,848 [INFO ][chatspring.filter.AuthorizationInterceptor] - in getUsers() method
 2018-04-26 15:39:53,851 [INFO ][chatspring.filter.AuthorizationInterceptor] - in getUsers() method
 2018-04-26 15:39:55,855 [INFO ][chatspring.filter.AuthorizationInterceptor] - in getUsers() method
+2018-04-28 12:26:57,918 [INFO ][chatspring.filter.AuthorizationInterceptor] - LOGGER IS WORK
+2018-04-28 12:27:08,986 [INFO ][chatspring.filter.AuthorizationInterceptor] - LOGGER IS WORK

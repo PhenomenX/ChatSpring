@@ -8,12 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.epam.chatspring.dao.datalayer.MessageDAO;
-import com.epam.chatspring.dao.datalayer.UserDAO;
-import com.epam.chatspring.dao.datalayer.data.Message;
-import com.epam.chatspring.dao.datalayer.data.Role;
-import com.epam.chatspring.dao.datalayer.data.Status;
-import com.epam.chatspring.dao.datalayer.data.User;
+import com.epam.chatspring.dao.MessageDAO;
+import com.epam.chatspring.dao.UserDAO;
+import com.epam.chatspring.model.Message;
+import com.epam.chatspring.model.Role;
+import com.epam.chatspring.model.Status;
+import com.epam.chatspring.model.User;
 
 @Service(value = "userService")
 public class UserServiceImpl implements UserService {

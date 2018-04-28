@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.epam.chatspring.dao.datalayer.data.Status;
-import com.epam.chatspring.dao.datalayer.data.User;
 import com.epam.chatspring.filter.AuthorizationInterceptor;
+import com.epam.chatspring.model.Status;
+import com.epam.chatspring.model.User;
 import com.epam.chatspring.service.AdminService;
 import com.epam.chatspring.service.FileStoreService;
 import com.epam.chatspring.service.UserService;
@@ -80,14 +80,14 @@ public class UserController {
 
 	@RequestMapping(value = "/users/kick", method = RequestMethod.PUT)
 	@ResponseBody
-	public void kick(@RequestParam String nick) {
-		adminService.kick(nick);
+	public void kick(@RequestParam String nick, HttpSession httpSession) {
+		adminService.kick(nick, httpSession);
 	}
 
 	@RequestMapping(value = "/users/unkick", method = RequestMethod.PUT)
 	@ResponseBody
-	public void unkick(@RequestParam String nick) {
-		adminService.unkick(nick);
+	public void unkick(@RequestParam String nick, HttpSession httpSession) {
+		adminService.unkick(nick, httpSession);
 	}
 
 }

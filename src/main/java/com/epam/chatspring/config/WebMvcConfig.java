@@ -8,6 +8,8 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import com.epam.chatspring.filter.AdminInterceptor;
+import com.epam.chatspring.filter.AuthenticationInterceptor;
 import com.epam.chatspring.filter.AuthorizationInterceptor;
 import com.epam.chatspring.filter.XSSInterceptor;
 
@@ -31,6 +33,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new XSSInterceptor()).addPathPatterns("/users/login").addPathPatterns("/messages");
 		registry.addInterceptor(new AuthorizationInterceptor()).addPathPatterns("/users/login");
+		registry.addInterceptor(new AuthenticationInterceptor()).addPathPatterns("/messages")
+				.addPathPatterns("/users").excludePathPatterns("/users/kick").excludePathPatterns("/users/unkick")
+				.excludePathPatterns("/users/login");
+		registry.addInterceptor(new AdminInterceptor()).addPathPatterns("/users/kick").addPathPatterns("/users/unkick");
 	}
 
 }

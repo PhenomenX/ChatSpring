@@ -6,10 +6,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
-import com.epam.chatspring.dao.datalayer.DAOFactory;
-import com.epam.chatspring.dao.datalayer.DBType;
-import com.epam.chatspring.dao.datalayer.MessageDAO;
-import com.epam.chatspring.dao.datalayer.UserDAO;
+import com.epam.chatspring.dao.DAOFactory;
+import com.epam.chatspring.dao.DBType;
+import com.epam.chatspring.dao.MessageDAO;
+import com.epam.chatspring.dao.UserDAO;
 
 @Configuration
 
