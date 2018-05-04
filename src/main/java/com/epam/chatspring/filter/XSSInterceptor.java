@@ -5,6 +5,7 @@ import java.util.Enumeration;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -15,7 +16,9 @@ import org.springframework.web.util.HtmlUtils;
 public class XSSInterceptor implements HandlerInterceptor {
 
 	@Value("${message.error.xss}")
-	private String XSSMessage;
+	private String xssMessage;
+
+	private static final Logger logger = Logger.getLogger(XSSInterceptor.class);
 
 	@Override
 	public void afterCompletion(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2, Exception arg3)
@@ -32,7 +35,8 @@ public class XSSInterceptor implements HandlerInterceptor {
 		if (isValidRequest(request)) {
 			return true;
 		} else {
-			response.sendError(406, XSSMessage);
+			response.setHeader("message", xssMessage);
+			response.sendError(406, xssMessage);
 			return false;
 		}
 
@@ -40,13 +44,16 @@ public class XSSInterceptor implements HandlerInterceptor {
 
 	private boolean isValidRequest(HttpServletRequest request) {
 		Enumeration<String> params = request.getParameterNames();
+		logger.debug("Checking request on xss attack");
 		while (params.hasMoreElements()) {
 			String paramName = (String) params.nextElement();
 			String value = request.getParameter(paramName);
 			if (!value.equals(HtmlUtils.htmlEscape(value))) {
+				logger.debug("Xss attack was finded. Request wasn't executed.");
 				return false;
 			}
 		}
+		logger.debug("Request is valid");
 		return true;
 	}
 

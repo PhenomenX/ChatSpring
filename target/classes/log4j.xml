@@ -7,19 +7,19 @@
         <param name="Encoding" value="Cp866"/>
         <param name="Threshold" value="INFO"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%30.30c] - %m%n" />
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%30.30c{-2}][%10t][%X{sessionId}][%X{userName}] - %m%n" />
         </layout>
     </appender>
 
   
     <appender name="application" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="application.log"/>
-        <param name="MaxFileSize" value="5KB"/>
-        <param name="MaxBackupIndex" value="3"/>
+        <param name="File" value="log/chat.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="2"/>
         <param name="Encoding" value="UTF-8"/>
         <param name="Threshold" value="DEBUG"/>
         <layout class="org.apache.log4j.EnhancedPatternLayout">
-            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%15c{-2}] - %m%n"/>
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%30.30c{-2}][%10t][%X{sessionId}][%X{userName}][%X{url}] - %m%n"/>
         </layout>
     </appender>
     

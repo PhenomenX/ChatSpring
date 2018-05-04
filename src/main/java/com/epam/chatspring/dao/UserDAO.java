@@ -17,7 +17,7 @@ public interface UserDAO {
 
 	void unkick(String nick);
 
-	boolean isKicked(User user);
+	boolean isKicked(String nick);
 
 	List<User> getAllLogged();
 

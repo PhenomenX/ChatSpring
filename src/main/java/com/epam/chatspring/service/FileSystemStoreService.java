@@ -5,9 +5,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.epam.chatspring.filter.AuthorizationInterceptor;
 
 @Service
 public class FileSystemStoreService implements FileStoreService {
@@ -15,13 +18,17 @@ public class FileSystemStoreService implements FileStoreService {
 	@Value( "${config.downloadfolder}" )
 	private String downloadFolder;
 	
+	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
+	
 	public void saveFile(MultipartFile file){
 		try {
 			byte[] bytes = file.getBytes();
-			Path path = Paths.get(downloadFolder + file.getOriginalFilename());
+			String fileName = file.getOriginalFilename();
+			logger.debug(String.format("Saving %s on %s", fileName, downloadFolder));
+			Path path = Paths.get(downloadFolder + fileName);
 			Files.write(path, bytes);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.error(String.format("When saving file: %s", e));
 		}
 	}
 }

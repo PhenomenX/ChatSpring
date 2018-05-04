@@ -205,3 +205,12 @@ input.unkick{
 	cursor:pointer;
 	display:none; /* в oбычнoм сoстoянии её нет) */
 }
+
+.error_container{
+    display:none;
+    background: none; 
+    border:none;
+    color: #8B0000;
+    margin-top: 10px;
+    font-size: 1.2em;
+}

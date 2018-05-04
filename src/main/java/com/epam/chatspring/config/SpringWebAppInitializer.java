@@ -14,6 +14,8 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
+import com.epam.chatspring.listeners.SessionListener;
+
 public class SpringWebAppInitializer implements WebApplicationInitializer {
 
 	@Override
@@ -25,6 +27,8 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 				new DispatcherServlet(appContext));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
+		
+		servletContext.addListener(new SessionListener());
 
 		FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", CharacterEncodingFilter.class);
 		fr.setInitParameter("encoding", "UTF-8");

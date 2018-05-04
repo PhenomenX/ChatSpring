@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:24 +0300] "PUT /ChatSpring/users/login HTTP/1.1" 200 597 http-bio-8083-exec-1 226
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:24 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 325 http-bio-8083-exec-2 15
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:24 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 117 http-bio-8083-exec-3 11
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:26 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 117 http-bio-8083-exec-5 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:26 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 325 http-bio-8083-exec-4 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:27 +0300] "POST /ChatSpring/messages HTTP/1.1" 200 - http-bio-8083-exec-7 6
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:27 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 117 http-bio-8083-exec-8 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:27 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 313 http-bio-8083-exec-6 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:28 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 117 http-bio-8083-exec-10 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:28 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 313 http-bio-8083-exec-9 3
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:29 +0300] "GET /ChatSpring/users?status=LOGIN HTTP/1.1" 200 117 http-bio-8083-exec-9 3
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:29 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 313 http-bio-8083-exec-10 4
+0:0:0:0:0:0:0:1 - - [04/May/2018:17:43:29 +0300] "PUT /ChatSpring/users/logout HTTP/1.1" 200 - http-bio-8083-exec-10 6

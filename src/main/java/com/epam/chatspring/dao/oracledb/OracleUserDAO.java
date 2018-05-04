@@ -6,15 +6,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.List;
 
-import com.epam.chatspring.model.Message;
+import com.epam.chatspring.dao.ResourceManager;
+import com.epam.chatspring.dao.UserDAO;
 import com.epam.chatspring.model.Role;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
-import com.epam.chatspring.dao.ResourceManager;
-import com.epam.chatspring.dao.UserDAO;
 
 public class OracleUserDAO implements UserDAO {
 	private Connection connection;
@@ -37,6 +35,8 @@ public class OracleUserDAO implements UserDAO {
 		this.roleQ = ResourceManager.getRegExp("role");
 		this.newUserQ = ResourceManager.getRegExp("newUser");
 		this.getUserQ = ResourceManager.getRegExp("getUser");
+		this.isLoginQ = ResourceManager.getRegExp("isLogin");
+		this.isKickedQ = ResourceManager.getRegExp("isKicked");
 	}
 
 	@Override
@@ -54,7 +54,7 @@ public class OracleUserDAO implements UserDAO {
 	public void logOut(User user) {
 		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
 			ps.setInt(1, Status.LOGOUT.ordinal() + 1);
-			ps.setInt(2, user.getId());
+			ps.setString(2, user.getName());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -63,7 +63,17 @@ public class OracleUserDAO implements UserDAO {
 
 	@Override
 	public boolean isLogged(User user) {
-		return OracleDBHandler.isLogged(user, connection);
+		boolean isLogged = true;
+		try(PreparedStatement ps = connection.prepareStatement(isLoginQ);) {
+			ps.setString(1, user.getName());
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				isLogged = Boolean.valueOf(rs.getString(1));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return isLogged;
 	}
 
 	@Override
@@ -89,8 +99,18 @@ public class OracleUserDAO implements UserDAO {
 	}
 
 	@Override
-	public boolean isKicked(User user) {
-		return OracleDBHandler.isKicked(user, connection);
+	public boolean isKicked(String nick) {
+		boolean isKicked = true;
+		try(PreparedStatement ps = connection.prepareStatement(isKickedQ);) {
+			ps.setString(1, nick);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				isKicked = Boolean.valueOf(rs.getString(1));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return isKicked;
 	}
 
 	@Override
@@ -116,7 +136,6 @@ public class OracleUserDAO implements UserDAO {
 	public Role getRole(String nick) {
 		ResultSet resultSet = null;
 		Role role = null;
-		Formatter formatter = new Formatter();
 		try (PreparedStatement ps = connection.prepareStatement(roleQ)) {
 			ps.setString(1, nick);
 			resultSet = ps.executeQuery();
@@ -126,8 +145,6 @@ public class OracleUserDAO implements UserDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			formatter.close();
 		}
 		if (role == null) {
 			System.err.print("This user does not exist");

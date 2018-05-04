@@ -9,6 +9,7 @@ function View() {
     this.registerButton = $(".register_button").first();
     this.messagesContainer = $(".messages").first();
     this.usersContainer = $(".users").first();
+    this.errorContainer = $(".error_container").first();
     this.chat = $(".chat").first();
     this.userWindow = new UserWindow();
     var _this = this;
@@ -63,6 +64,7 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
                 _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
             });
             button.click(function (e) {
+                e.stopPropagation()
                 _this.userKicked.notify({ 'user': e.currentTarget.parentNode.textContent })
             });
             button.appendTo(userContainer);
@@ -76,6 +78,7 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
                 _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
             });
             button.click(function (e) {
+                e.stopPropagation()
                 _this.userUnkicked.notify({ 'user': e.currentTarget.parentNode.textContent })
             });
             button.appendTo(userContainer);
@@ -91,14 +94,21 @@ View.prototype.showLoginForm = function () {
     this.chat.css("display", "none");
     this.registerForm.css("display", "none");
     this.registerButton.css("display", "flex");
+    this.errorContainer.css("display", "none");
+    this.profileButton.css("display", "none");
     window.sessionStorage.setItem("state", "login");
 };
-View.prototype.showChat = function (users, messages, kickedUsers) {
+View.prototype.showChat = function () {
     this.loginForm.css("display", "none");
+    this.errorContainer.css("display", "none");
     this.chat.css("display", "flex");
+    this.profileButton.css("display", "flex");
+    window.sessionStorage.setItem("state", "chat");
+};
+
+View.prototype.refleshChat = function (users, messages, kickedUsers) {
     this.refleshUsers(users, kickedUsers);
     this.refleshMessages(messages);
-    window.sessionStorage.setItem("state", "chat");
 };
 
 View.prototype.showProfile = function (e) {
@@ -119,5 +129,13 @@ View.prototype.showRegisterForm = function () {
     this.loginButton.css("display", "flex");
     this.registerForm.css("display", "flex");
     this.registerButton.css("display", "none");
+    this.errorContainer.css("display", "none");
+    this.profileButton.css("display", "none");
     window.sessionStorage.setItem("state", "register");
 };
+
+View.prototype.showError = function(status, message){
+    this.showLoginForm();
+    this.errorContainer.css("display", "flex");
+    this.errorContainer.text(status + " - " + message);
+}

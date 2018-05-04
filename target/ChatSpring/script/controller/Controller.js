@@ -14,6 +14,7 @@ function Controller(view) {
 Controller.prototype.sendMessage = function (target, event) {
     var form = $(event.currentTarget);
     var data = form.serialize();
+    var controller = this;
     $.ajax({
         type: 'POST',
         url: 'messages',
@@ -27,9 +28,8 @@ Controller.prototype.sendMessage = function (target, event) {
             window.controller.generateChat();
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
-            console.log(window.controller);
+            controller.chatRefleshingEnable = false;
+            controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
         },
         complete: function (data) {
             form.find('input[type="submit"]').prop('disabled', false);
@@ -41,6 +41,7 @@ Controller.prototype.sendMessage = function (target, event) {
 Controller.prototype.sendLoginForm = function (target, event) {
     var form = $(event.currentTarget);
     var data = form.serialize();
+    var controller = this;
     let loginPromise = new Promise(function (resolve, reject) {
         $.ajax({
             type: 'PUT',
@@ -55,8 +56,8 @@ Controller.prototype.sendLoginForm = function (target, event) {
                 resolve(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
+                controller.chatRefleshingEnable = false;
+                controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
             },
             complete: function (data) {
                 form.find('input[type="submit"]').prop('disabled', false);
@@ -77,7 +78,7 @@ Controller.prototype.generateChat = function () {
         chatGenerating = function () {
             if (this.chatRefleshingEnable) {
                 Promise.all([this.getUsers("LOGIN"), this.getMessages(), this.getUsers("KICK")]).then(
-                    values => { this.view.showChat(values[0], values[1], values[2]) });
+                    values => { this.view.refleshChat(values[0], values[1], values[2]) });
                 setTimeout(chatGenerating.bind(controller), 2000);
             }
         };
@@ -85,7 +86,7 @@ Controller.prototype.generateChat = function () {
         chatGenerating = function () {
             if (this.chatRefleshingEnable) {
                 Promise.all([this.getUsers("LOGIN"), this.getMessages()]).then(
-                    values => { this.view.showChat(values[0], values[1]) });
+                    values => { this.view.refleshChat(values[0], values[1]) });
                 setTimeout(chatGenerating.bind(controller), 2000);
             }
         }
@@ -93,6 +94,7 @@ Controller.prototype.generateChat = function () {
     chatGenerating.bind(controller)();
 }
 Controller.prototype.getMessages = function () {
+    var controller = this;
     return new Promise(function (resolve, reject) {
         $.ajax({
             type: 'GET',
@@ -102,13 +104,14 @@ Controller.prototype.getMessages = function () {
                 resolve(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
+                controller.chatRefleshingEnable = false;
+                controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
             }
         });
     });
 }
 Controller.prototype.getUsers = function (status) {
+    var controller = this;
     return new Promise(function (resolve, reject) {
         var users;
         $.ajax({
@@ -120,8 +123,8 @@ Controller.prototype.getUsers = function (status) {
                 resolve(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
+                controller.chatRefleshingEnable = false;
+                controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
             }
         });
     });
@@ -129,26 +132,26 @@ Controller.prototype.getUsers = function (status) {
 
 Controller.prototype.logoutUser = function () {
     this.chatRefleshingEnable = false;
+    var controller = this;
     $.ajax({
         type: 'PUT',
         url: 'users/logout',
         success: function (data) {
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
+            controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
         }
     });
 }
-Controller.prototype.getUser;
 
 Controller.prototype.sendRegisterForm = function (target, event) {
     var form = event.currentTarget;
     var data = new FormData(form);
+    var controller = this;
     $.ajax({
         type: "POST",
         enctype: 'multipart/form-data',
-        url: "users",
+        url: "users/register",
         data: data,
         processData: false,
         contentType: false,
@@ -158,8 +161,8 @@ Controller.prototype.sendRegisterForm = function (target, event) {
             console.log("file is uploaded");
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
+            controller.chatRefleshingEnable = false;
+            controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
         }
     });
     form.nick.value = '';
@@ -171,6 +174,7 @@ Controller.prototype.sendRegisterForm = function (target, event) {
 
 Controller.prototype.kickUser = function (target, args) {
     var data = 'nick=' + encodeURIComponent(args.user.trim());
+    var controller = this;
     $.ajax({
         type: 'PUT',
         url: 'users/kick',
@@ -178,13 +182,14 @@ Controller.prototype.kickUser = function (target, args) {
         success: function (data) {
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
+            controller.chatRefleshingEnable = false;
+            controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
         }
     });
 };
 
 Controller.prototype.unkickUser = function (target, args) {
+    var controller = this;
     var data = 'nick=' + encodeURIComponent(args.user.trim());
     $.ajax({
         type: 'PUT',
@@ -193,8 +198,8 @@ Controller.prototype.unkickUser = function (target, args) {
         success: function (data) {
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
+            controller.chatRefleshingEnable = false;
+            controller.view.showError(xhr.status, xhr.getResponseHeader("message"));
         }
     });
 };
@@ -215,6 +220,7 @@ Controller.prototype.setCurrentView = function () {
 Controller.prototype.processLoginResponse = function (data) {
     this.defineUser(data);
     this.chatRefleshingEnable = true;
+    this.view.showChat();
     this.generateChat();
 }
 
@@ -239,5 +245,4 @@ Controller.prototype.generateUserWindow = function (sender, args) {
     });
     userPromise.then(sender.showInfo.bind(sender));
 }
-
 

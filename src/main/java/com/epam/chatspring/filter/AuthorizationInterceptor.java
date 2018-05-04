@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.epam.chatspring.dao.DAOFactory;
-import com.epam.chatspring.dao.DBType;
 import com.epam.chatspring.dao.UserDAO;
 
 public class AuthorizationInterceptor implements HandlerInterceptor {
@@ -20,6 +18,9 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 
 	@Value("${message.error.login}")
 	private String loginErrorMessage;
+
+	@Value("${message.error.login.kick}")
+	private String kickedUserMessage;
 
 	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
 
@@ -38,11 +39,22 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
 		String nick = request.getParameter("nick");
 		String password = request.getParameter("password");
 		int id = userDAO.isValid(nick, password);
+		logger.debug("User trying to login");
 		if (id == 0) {
+			logger.debug("User wasn't login. " + loginErrorMessage);
+			response.setHeader("message", loginErrorMessage);
 			response.sendError(401, loginErrorMessage);
 			return false;
 		} else {
-			return true;
+			if (userDAO.isKicked(nick)) {
+				logger.debug("User wasn't login" + kickedUserMessage);
+				response.setHeader("message", kickedUserMessage);
+				response.sendError(401, kickedUserMessage);
+				return false;
+			} else {
+				logger.debug(String.format("User is valid", nick));
+				return true;
+			}
 		}
 	}
 }

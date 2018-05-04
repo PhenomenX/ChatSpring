@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.epam.chatspring.dao.MessageDAO;
 import com.epam.chatspring.dao.UserDAO;
 import com.epam.chatspring.model.Message;
-import com.epam.chatspring.model.Role;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
 
@@ -37,6 +36,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public User login(User user, HttpSession httpSession) {
+		user = userDAO.getUser(user.getName());
 		httpSession.setAttribute("currentUser", user);
 		userDAO.logIn(user);
 		user =  userDAO.getUser(user.getName());
