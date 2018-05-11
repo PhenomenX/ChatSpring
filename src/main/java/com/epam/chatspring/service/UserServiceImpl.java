@@ -4,12 +4,14 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.epam.chatspring.dao.MessageDAO;
 import com.epam.chatspring.dao.UserDAO;
+import com.epam.chatspring.exceptions.NameValidationException;
 import com.epam.chatspring.model.Message;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
@@ -21,25 +23,43 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDAO;
 	@Autowired
 	private MessageDAO messageDAO;
-
-	@Value( "${message.login}" )
-	String loginMessage;
 	
-	@Value( "${message.logout}" )
-	String logoutMessage;
+	@Autowired
+	private User currentUser;
 
+	@Value("${message.login}")
+	private String loginMessage;
+
+	@Value("${message.logout}")
+	private String logoutMessage;
+
+	@Value("${message.error.login}")
+	private String loginErrorMessage;
+
+	@Value("${message.error.login.kick}")
+	private String kickedUserMessage;
 	
+	@Value("${message.error.registration}")
+	private String registrationErrorMessage;
+
+	private static final Logger logger = Logger.getLogger(UserServiceImpl.class);
+
 	@Override
-	public void register(User user) {
+	public void register(User user) throws NameValidationException {
+		if(userDAO.isUnique(user.getName())){
 		userDAO.createUser(user);
+		} else {
+			throw new NameValidationException(registrationErrorMessage);
+		}
 	}
 
 	@Override
-	public User login(User user, HttpSession httpSession) {
-		user = userDAO.getUser(user.getName());
-		httpSession.setAttribute("currentUser", user);
+	public User login(User user) {
+		User fullUser = userDAO.getUser(user.getName());
+		user.setRole(fullUser.getRole());
+		user.setPicturePath(fullUser.getPicturePath());
 		userDAO.logIn(user);
-		user =  userDAO.getUser(user.getName());
+		System.out.println(user);
 		String messageText = String.format(loginMessage, user.getName());
 		Message message = new Message(user.getName(), messageText);
 		messageDAO.sendMessage(message);
@@ -47,8 +67,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void logout(User user, HttpSession httpSession) {
-		httpSession.removeAttribute("currentUser");
+	public void logout(User user) {
 		userDAO.logOut(user);
 		String messageText = String.format(logoutMessage, user.getName());
 		Message message = new Message(user.getName(), messageText);
@@ -64,5 +83,6 @@ public class UserServiceImpl implements UserService {
 	public List<User> getUsers(Status status) {
 		return userDAO.getUsersByStatus(status);
 	}
+
 
 }

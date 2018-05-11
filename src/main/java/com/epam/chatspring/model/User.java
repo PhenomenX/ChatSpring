@@ -7,6 +7,10 @@ public class User {
 	private Status status;
 	private Role role;
 	private int id;
+	
+    public User() {
+        super();
+    }
 
 	public User(String name) {
 		this.name = name;
@@ -77,6 +81,10 @@ public class User {
 	public void setPicturePath(String picturePath) {
 		this.picturePath = picturePath;
 	}
+	
+	public boolean isAdmin(){
+		return this.role.equals(Role.ADMIN);
+	}
 
 	public String toString() {
 		StringBuilder userString = new StringBuilder();
@@ -87,7 +95,6 @@ public class User {
 		userString.append(status);
 		return userString.toString();
 	}
-
 
 
 }

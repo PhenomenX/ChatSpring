@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.epam.chatspring.filter.AuthorizationInterceptor;
 import com.epam.chatspring.model.Message;
 import com.epam.chatspring.model.User;
 import com.epam.chatspring.service.MessageService;
@@ -28,7 +27,7 @@ public class MessageController {
 	@Qualifier("messageService")
 	MessageService messageService;
 
-	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
+	private static final Logger logger = Logger.getLogger(MessageController.class);
 
 	@RequestMapping(value = "/messages", method = RequestMethod.GET)
 	@ResponseBody

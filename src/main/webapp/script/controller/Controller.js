@@ -13,13 +13,13 @@ function Controller(view) {
 
 Controller.prototype.sendMessage = function (target, event) {
     var form = $(event.currentTarget);
-    var data = form.serialize();
+    var data = JSON.stringify(form.serializeArray());
     var controller = this;
     $.ajax({
         type: 'POST',
         url: 'messages',
         dataType: 'text',
-        contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+        contentType: 'application/json; charset=utf-8',
         data: data,
         beforeSend: function (data) {
             form.find('input[type="submit"]').attr('disabled', 'disabled');
@@ -40,15 +40,15 @@ Controller.prototype.sendMessage = function (target, event) {
 
 Controller.prototype.sendLoginForm = function (target, event) {
     var form = $(event.currentTarget);
-    var data = form.serialize();
+    var data = getFormData(form.serializeArray());
     var controller = this;
     let loginPromise = new Promise(function (resolve, reject) {
         $.ajax({
             type: 'PUT',
             url: 'users/login',
             dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
-            data: data,
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(data),
             beforeSend: function (data) {
                 form.find('input[type="submit"]').attr('disabled', 'disabled');
             },
@@ -64,7 +64,7 @@ Controller.prototype.sendLoginForm = function (target, event) {
             }
         });
     });
-    form.get(0).nick.value = '';
+    form.get(0).name.value = '';
     form.get(0).password.value = '';
     loginPromise.then(this.processLoginResponse.bind(this));
 };
@@ -173,11 +173,12 @@ Controller.prototype.sendRegisterForm = function (target, event) {
 };
 
 Controller.prototype.kickUser = function (target, args) {
-    var data = 'nick=' + encodeURIComponent(args.user.trim());
+    var data = args.user.trim();
     var controller = this;
     $.ajax({
         type: 'PUT',
         url: 'users/kick',
+        contentType: 'application/json; charset=utf-8',
         data: data,
         success: function (data) {
         },
@@ -246,3 +247,13 @@ Controller.prototype.generateUserWindow = function (sender, args) {
     userPromise.then(sender.showInfo.bind(sender));
 }
 
+function getFormData(data) {
+    var unindexed_array = data;
+    var indexed_array = {};
+ 
+    $.map(unindexed_array, function(n, i) {
+     indexed_array[n['name']] = n['value'];
+    });
+ 
+    return indexed_array;
+ }

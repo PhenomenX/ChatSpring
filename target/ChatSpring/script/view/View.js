@@ -32,7 +32,7 @@ function View() {
     //View Changers
     this.registerButton.bind("click", function () { _this.showRegisterForm() });
     this.loginButton.bind("click", function () { _this.showLoginForm() });
-    this.profileButton.bind("click",  _this.showProfile.bind(_this));
+    this.profileButton.bind("click", _this.showProfile.bind(_this));
 }
 
 View.prototype.refleshMessages = function (messages) {
@@ -96,13 +96,18 @@ View.prototype.showLoginForm = function () {
     this.registerButton.css("display", "flex");
     this.errorContainer.css("display", "none");
     this.profileButton.css("display", "none");
+    this.logoutButton.css("display", "none");
     window.sessionStorage.setItem("state", "login");
+    var greetingContainer = $(".header h3").get(0);
+    greetingContainer.textContent = "Welcome!";
 };
 View.prototype.showChat = function () {
     this.loginForm.css("display", "none");
     this.errorContainer.css("display", "none");
     this.chat.css("display", "flex");
+    this.registerButton.css("display", "none");
     this.profileButton.css("display", "flex");
+    this.logoutButton.css("display", "flex");
     window.sessionStorage.setItem("state", "chat");
 };
 
@@ -130,11 +135,12 @@ View.prototype.showRegisterForm = function () {
     this.registerForm.css("display", "flex");
     this.registerButton.css("display", "none");
     this.errorContainer.css("display", "none");
+    this.logoutButton.css("display", "none");
     this.profileButton.css("display", "none");
     window.sessionStorage.setItem("state", "register");
 };
 
-View.prototype.showError = function(status, message){
+View.prototype.showError = function (status, message) {
     this.showLoginForm();
     this.errorContainer.css("display", "flex");
     this.errorContainer.text(status + " - " + message);

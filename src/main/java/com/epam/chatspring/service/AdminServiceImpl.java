@@ -20,27 +20,27 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private MessageDAO messageDAO;
 	
+	@Autowired
+	private User currentUser;
+
 	@Value( "${message.kick}" )
 	String kickMessage;
-	
 	@Value( "${message.unkick}" )
 	String unkickMessage;
 
 	@Override
-	public void kick(String nick, HttpSession httpSession) {
+	public void kick(String nick) {
 		userDAO.kick(nick);
-		User admin = (User) httpSession.getAttribute("currentUser");
 		String formattedKickMessage = String.format(kickMessage, nick);
-		Message message = new Message(admin.getName(), formattedKickMessage);
+		Message message = new Message(currentUser.getName(), formattedKickMessage);
 		messageDAO.sendMessage(message);
 	}
 
 	@Override
-	public void unkick(String nick, HttpSession httpSession) {
+	public void unkick(String nick) {
 		userDAO.unkick(nick);
-		User admin = (User) httpSession.getAttribute("currentUser");
 		String formattedKickMessage = String.format(unkickMessage, nick);
-		Message message = new Message(admin.getName(), formattedKickMessage);
+		Message message = new Message(currentUser.getName(), formattedKickMessage);
 		messageDAO.sendMessage(message);
 	}
 

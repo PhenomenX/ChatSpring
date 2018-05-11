@@ -1,9 +1,11 @@
 com\epam\chatspring\dao\oracledb\OracleMessageDAO.class
+com\epam\chatspring\exceptions\AccessPrivilegeException.class
 com\epam\chatspring\dao\DAOFactory.class
-com\epam\chatspring\filter\XSSInterceptor.class
+com\epam\chatspring\controller\LoginController.class
 com\epam\chatspring\config\ApplicationContextConfig.class
-com\epam\chatspring\filter\AdminInterceptor.class
 com\epam\chatspring\service\MessageServiceImpl.class
+com\epam\chatspring\exceptions\UserKickedException.class
+com\epam\chatspring\exceptions\UserNotExistException.class
 com\epam\chatspring\service\FileStoreService.class
 com\epam\chatspring\dao\DBType$1.class
 com\epam\chatspring\config\WebMvcConfig.class
@@ -14,12 +16,12 @@ com\epam\chatspring\listeners\SessionListener.class
 com\epam\chatspring\controller\MessageController.class
 com\epam\chatspring\service\FileSystemStoreService.class
 com\epam\chatspring\service\UserServiceImpl.class
-com\epam\chatspring\filter\AuthorizationInterceptor.class
 com\epam\chatspring\model\UserList.class
 com\epam\chatspring\model\Role.class
 com\epam\chatspring\service\MessageService.class
 com\epam\chatspring\filter\LoggerConfigurationInterceptor.class
 com\epam\chatspring\model\User.class
+com\epam\chatspring\exceptions\NameValidationException.class
 com\epam\chatspring\service\AdminServiceImpl.class
 com\epam\chatspring\filter\AuthenticationInterceptor.class
 com\epam\chatspring\controller\UserController.class

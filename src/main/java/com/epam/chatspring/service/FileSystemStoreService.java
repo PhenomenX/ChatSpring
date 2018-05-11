@@ -10,15 +10,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.epam.chatspring.filter.AuthorizationInterceptor;
-
 @Service
 public class FileSystemStoreService implements FileStoreService {
 
 	@Value( "${config.downloadfolder}" )
 	private String downloadFolder;
 	
-	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
+	private static final Logger logger = Logger.getLogger(FileSystemStoreService.class);
 	
 	public void saveFile(MultipartFile file){
 		try {

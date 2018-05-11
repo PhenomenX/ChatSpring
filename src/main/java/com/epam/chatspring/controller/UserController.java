@@ -1,14 +1,19 @@
 package com.epam.chatspring.controller;
 
+import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +21,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.epam.chatspring.filter.AuthorizationInterceptor;
+import com.epam.chatspring.exceptions.AccessPrivilegeException;
+import com.epam.chatspring.exceptions.NameValidationException;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
 import com.epam.chatspring.service.AdminService;
@@ -35,13 +41,23 @@ public class UserController {
 	
 	@Autowired
 	private FileStoreService fileStoreService;
+	
+	@Autowired
+	private User currentUser;
+	
+	@Value("${message.error.authentication.admin}")
+	private String grantErrorMessage;
+	
+	@Value("${message.error.registration}")
+	private String registrationErrorMessage;
 
-	private static final Logger logger = Logger.getLogger(AuthorizationInterceptor.class);
+	
+	private static final Logger logger = Logger.getLogger(UserController.class);
 	
 	@RequestMapping(value = "/users/register", method = RequestMethod.POST)
 	@ResponseBody
 	public void register(@RequestParam MultipartFile file, @RequestParam(required = false) String nick,
-			@RequestParam(required = false) String password) {
+			@RequestParam(required = false) String password) throws NameValidationException {
 		User user = new User(nick, password);
 		logger.info(String.format("User %s register", nick));
 		user.setPicturePath(file.getOriginalFilename());
@@ -49,24 +65,13 @@ public class UserController {
 		fileStoreService.saveFile(file);
 	}
 
-	@RequestMapping(value = "/users/login", method = RequestMethod.PUT)
-	@ResponseBody
-	public User login(@RequestParam String nick, @RequestParam String password, HttpSession httpSession) {
-		User user = new User(nick, password);
-		MDC.put("userName", nick);
-		logger.info("User login");
-		user = userService.login(user, httpSession);
-		return user;
-	}
+
 
 	@RequestMapping(value = "/users/logout", method = RequestMethod.PUT)
 	@ResponseBody
 	public void logout(HttpSession httpSession) {
 		logger.info("User logout");
-		User user = (User) httpSession.getAttribute("currentUser");
-		if (user != null) {
-			userService.logout(user, httpSession);
-		}
+		userService.logout(currentUser);
 	}
 
 	@RequestMapping(value = "/users/{nick}", method = RequestMethod.GET)
@@ -85,16 +90,39 @@ public class UserController {
 
 	@RequestMapping(value = "/users/kick", method = RequestMethod.PUT)
 	@ResponseBody
-	public void kick(@RequestParam String nick, HttpSession httpSession) {
+	public void kick(@RequestBody String nick, HttpSession httpSession) throws AccessPrivilegeException {
 		logger.info(String.format("Admin kicked user %s", nick));
-		adminService.kick(nick, httpSession);
+		if(currentUser.isAdmin()){
+			logger.debug("User is admin");
+			adminService.kick(nick);
+		} else{
+			throw new AccessPrivilegeException(grantErrorMessage);
+		}
 	}
 
 	@RequestMapping(value = "/users/unkick", method = RequestMethod.PUT)
 	@ResponseBody
-	public void unkick(@RequestParam String nick, HttpSession httpSession) {
+	public void unkick(@RequestBody String nick) throws AccessPrivilegeException {
 		logger.info(String.format("Admin unkicked user %s", nick));
-		adminService.unkick(nick, httpSession);
+		if(currentUser.isAdmin()){
+			logger.debug("User is admin");
+			adminService.unkick(nick);
+		} else{
+			throw new AccessPrivilegeException(grantErrorMessage);
+		}
+	}
+	
+	@ExceptionHandler(value = { AccessPrivilegeException.class })
+	protected void handlePrivelegeConflict(HttpServletResponse response) throws IOException {
+		logger.debug("User not admin. Send response with error");
+		response.setHeader("message", grantErrorMessage);
+		response.sendError(HttpStatus.FORBIDDEN.value(), grantErrorMessage);
 	}
 
+	@ExceptionHandler(value = { NameValidationException.class })
+	protected void handleNameValidationConflict(HttpServletResponse response) throws IOException {
+		logger.debug("Registration failed. " + registrationErrorMessage);
+		response.setHeader("message", grantErrorMessage);
+		response.sendError(HttpStatus.NOT_ACCEPTABLE.value(), registrationErrorMessage);
+	}
 }

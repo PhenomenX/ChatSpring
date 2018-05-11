@@ -7,6 +7,10 @@ public class Message {
 	private String nick;
 	private String message;
 	
+    public Message() {
+        super();
+    }
+	
 	public Message(Timestamp date, String user, String message){
 		this.date = date;
 		this.message = message;

@@ -17,7 +17,7 @@ public interface UserDAO {
 
 	void unkick(String nick);
 
-	boolean isKicked(String nick);
+	boolean isKicked(User user);
 
 	List<User> getAllLogged();
 
@@ -25,11 +25,13 @@ public interface UserDAO {
 	
 	List<User> getAllKicked();
 	
-	int isValid(String login, String password);
+	boolean isValid(User user);
 	
 	void createUser(User user);
 
 	List<User> getUsersByStatus(Status status);
 
 	User getUser(String nick);
+	
+	boolean isUnique(String nick);
 }

@@ -99,10 +99,10 @@ public class OracleUserDAO implements UserDAO {
 	}
 
 	@Override
-	public boolean isKicked(String nick) {
+	public boolean isKicked(User user) {
 		boolean isKicked = true;
 		try(PreparedStatement ps = connection.prepareStatement(isKickedQ);) {
-			ps.setString(1, nick);
+			ps.setString(1, user.getName());
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				isKicked = Boolean.valueOf(rs.getString(1));
@@ -173,22 +173,24 @@ public class OracleUserDAO implements UserDAO {
 	}
 
 	@Override
-	public int isValid(String login, String password) {
+	public boolean isValid(User user) {
 		ResultSet resultSet = null;
 		int id = 0;
 		try (PreparedStatement ps = connection.prepareStatement(isValidQ)) {
-			ps.setString(1, login);
-			ps.setString(2, password);
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getPassword());
 			resultSet = ps.executeQuery();
 			while (resultSet.next()) {
 				id = resultSet.getInt(1);
-				System.out.println(id);
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return id;
+		if(id == 0){
+			return false;
+		}
+		return true;
 	}
 
 	@Override
@@ -243,6 +245,20 @@ public class OracleUserDAO implements UserDAO {
 			e.printStackTrace();
 		}
 		return user;
+	}
+
+	@Override
+	public boolean isUnique(String nick) {
+		try (PreparedStatement ps = connection.prepareStatement(getUserQ);) {
+			ps.setString(1, nick);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				return false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return true;
 	}
 
 }
