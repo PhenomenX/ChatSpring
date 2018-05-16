@@ -26,23 +26,17 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
-	
+
 	@Bean
 	public AuthenticationInterceptor authenticationInterceptor() {
-	    return new AuthenticationInterceptor();
+		return new AuthenticationInterceptor();
 	}
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-//		registry.addInterceptor(new LoggerConfigurationInterceptor()).addPathPatterns("/**");
-//		registry.addInterceptor(xssInterceptor()).addPathPatterns("/users/login").addPathPatterns("/messages");
-//		registry.addInterceptor(authorizationInterceptor()).addPathPatterns("/users/login");
-//		registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/messages")
-//				.addPathPatterns("/users").excludePathPatterns("/users/kick").excludePathPatterns("/users/unkick")
-//				.excludePathPatterns("/users/login").excludePathPatterns("/users/register");
-//		registry.addInterceptor(adminInterceptor()).addPathPatterns("/users/kick").addPathPatterns("/users/unkick");
-//		registry.addInterceptor(registrationInterceptor()).addPathPatterns("/users/register");
-		
+		registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/messages").addPathPatterns("/users")
+				.excludePathPatterns("/users/login").excludePathPatterns("/users/register");
+
 	}
 
 }

@@ -13,7 +13,7 @@ function Controller(view) {
 
 Controller.prototype.sendMessage = function (target, event) {
     var form = $(event.currentTarget);
-    var data = JSON.stringify(form.serializeArray());
+    var data = form.find('textarea').val();;
     var controller = this;
     $.ajax({
         type: 'POST',

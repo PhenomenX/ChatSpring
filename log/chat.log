@@ -19461,3 +19461,1221 @@
 2018-05-11 18:17:05,515 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User trying to login
 2018-05-11 18:17:05,518 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User is valid
 2018-05-11 18:17:05,518 [INFO ][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User login
+2018-05-11 18:18:19,188 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User trying to login
+2018-05-11 18:18:19,262 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User is valid
+2018-05-11 18:18:19,262 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User login
+2018-05-11 18:18:22,005 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User trying to login
+2018-05-11 18:18:22,007 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User is valid
+2018-05-11 18:18:22,007 [INFO ][ing.controller.LoginController][http-bio-8083-exec-2][][asd][] - User login
+2018-05-11 18:18:29,134 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][admin][] - User trying to login
+2018-05-11 18:18:29,135 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][admin][] - User is valid
+2018-05-11 18:18:29,135 [INFO ][ing.controller.LoginController][http-bio-8083-exec-4][][admin][] - User login
+2018-05-16 10:46:47,778 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-10][][asd][] - User trying to login
+2018-05-16 10:46:47,907 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-10][][asd][] - User is valid
+2018-05-16 10:46:47,907 [INFO ][ing.controller.LoginController][http-bio-8083-exec-10][][asd][] - User login
+2018-05-16 10:51:36,338 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User trying to login
+2018-05-16 10:51:36,340 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User is valid
+2018-05-16 10:51:36,340 [INFO ][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User login
+2018-05-16 11:02:57,582 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User trying to login
+2018-05-16 11:02:57,660 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User is valid
+2018-05-16 11:02:57,662 [INFO ][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User login
+2018-05-16 11:08:37,307 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User trying to login
+2018-05-16 11:08:37,383 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User is valid
+2018-05-16 11:08:37,383 [INFO ][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User login
+2018-05-16 11:08:37,403 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - USER asd null
+2018-05-16 11:08:37,403 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - USER asd null
+2018-05-16 11:11:36,641 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][][] - User trying to login
+2018-05-16 11:11:36,706 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][][] - User wasn't login. Invalid login or password
+2018-05-16 11:11:41,192 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][asd][] - User trying to login
+2018-05-16 11:11:41,197 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][asd][] - User is valid
+2018-05-16 11:11:41,198 [INFO ][ing.controller.LoginController][http-bio-8083-exec-3][][asd][] - User login
+2018-05-16 11:11:41,228 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][asd][] - USER asd LOGIN
+2018-05-16 11:11:41,228 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][asd][] - USER asd LOGIN
+2018-05-16 11:15:45,275 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User trying to login
+2018-05-16 11:15:45,368 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User is valid
+2018-05-16 11:15:45,368 [INFO ][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User login
+2018-05-16 11:15:45,385 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-9][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:15:45,389 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - USER asd LOGIN
+2018-05-16 11:15:45,389 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - USER asd LOGIN
+2018-05-16 11:17:34,490 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User trying to login
+2018-05-16 11:17:34,568 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User is valid
+2018-05-16 11:17:34,568 [INFO ][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User login
+2018-05-16 11:17:34,590 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-5][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:17:34,590 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - USER asd LOGIN
+2018-05-16 11:17:34,590 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - USER asd LOGIN
+2018-05-16 11:20:54,678 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User trying to login
+2018-05-16 11:20:54,756 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User is valid
+2018-05-16 11:20:54,756 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User login
+2018-05-16 11:20:54,778 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:20:54,778 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$1647bd9e
+2018-05-16 11:20:54,778 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - class com.epam.chatspring.model.User
+2018-05-16 11:23:25,826 [INFO ][ring.controller.UserController][http-bio-8083-exec-4][][][] - User logout
+2018-05-16 11:23:36,203 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][asd][] - User trying to login
+2018-05-16 11:23:36,204 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][asd][] - User is valid
+2018-05-16 11:23:36,204 [INFO ][ing.controller.LoginController][http-bio-8083-exec-4][][asd][] - User login
+2018-05-16 11:23:36,205 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-4][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:23:36,253 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][asd][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$1647bd9e
+2018-05-16 11:23:36,253 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][asd][] - class com.epam.chatspring.model.User
+2018-05-16 11:23:49,391 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][admin][] - User trying to login
+2018-05-16 11:23:49,393 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][admin][] - User is valid
+2018-05-16 11:23:49,393 [INFO ][ing.controller.LoginController][http-bio-8083-exec-3][][admin][] - User login
+2018-05-16 11:23:49,394 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-3][][admin][] - admin.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+2018-05-16 11:23:49,396 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][admin][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$1647bd9e
+2018-05-16 11:23:49,396 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][admin][] - class com.epam.chatspring.model.User
+2018-05-16 11:24:11,795 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User trying to login
+2018-05-16 11:24:11,796 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User is valid
+2018-05-16 11:24:11,796 [INFO ][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - User login
+2018-05-16 11:24:11,797 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-9][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:24:11,799 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$1647bd9e
+2018-05-16 11:24:11,799 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-9][][asd][] - class com.epam.chatspring.model.User
+2018-05-16 11:25:50,524 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User trying to login
+2018-05-16 11:25:50,601 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User is valid
+2018-05-16 11:25:50,601 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - User login
+2018-05-16 11:25:50,618 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][asd][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 11:25:50,621 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$946a19c4
+2018-05-16 11:25:50,621 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][asd][] - class com.epam.chatspring.model.User
+2018-05-16 11:25:50,657 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:25:50,659 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:25:50,664 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 11:25:50,665 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 11:25:52,659 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] - Authentication user
+2018-05-16 11:25:52,659 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:25:52,660 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] -  User autenticated
+2018-05-16 11:25:52,661 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:25:54,660 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:25:54,660 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:25:54,661 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:25:54,661 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:25:56,666 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:25:56,666 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:25:56,667 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:25:56,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:25:58,667 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:25:58,667 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - Authentication user
+2018-05-16 11:25:58,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:25:58,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] -  User autenticated
+2018-05-16 11:25:58,887 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][admin][] - User trying to login
+2018-05-16 11:25:58,888 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][admin][] - User is valid
+2018-05-16 11:25:58,888 [INFO ][ing.controller.LoginController][http-bio-8083-exec-5][][admin][] - User login
+2018-05-16 11:25:58,890 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-5][][admin][] - admin.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+2018-05-16 11:25:58,935 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][admin][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$946a19c4
+2018-05-16 11:25:58,935 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][admin][] - class com.epam.chatspring.model.User
+2018-05-16 11:25:58,957 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:25:58,958 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:25:58,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:25:58,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:25:58,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:25:58,962 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:00,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - Authentication user
+2018-05-16 11:26:00,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:26:00,669 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] -  User autenticated
+2018-05-16 11:26:00,670 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:26:00,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:00,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:00,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:00,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:00,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:00,961 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:01,982 [INFO ][ring.controller.UserController][http-bio-8083-exec-6][][][] - Admin kicked user asd
+2018-05-16 11:26:01,983 [DEBUG][ring.controller.UserController][http-bio-8083-exec-6][][][] - User is admin
+2018-05-16 11:26:02,669 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - Authentication user
+2018-05-16 11:26:02,669 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:26:02,670 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - User not log in. Response with error was sended
+2018-05-16 11:26:02,670 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - User not log in. Response with error was sended
+2018-05-16 11:26:02,970 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:02,970 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:02,970 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:02,971 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:02,972 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:02,972 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:04,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:04,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:04,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:04,976 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:04,976 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:04,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:06,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:06,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:06,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:06,978 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:06,978 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:06,978 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:08,979 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:08,979 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:08,980 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:08,980 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:08,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:08,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:09,653 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-10][][asd][] - User trying to login
+2018-05-16 11:26:09,654 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-10][][asd][] - User wasn't loginThe user was banned
+2018-05-16 11:26:10,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:10,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:10,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:10,982 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:10,982 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:10,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:12,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:12,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:12,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:12,984 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:12,985 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:12,985 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:14,989 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:14,989 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:14,989 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:14,990 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:14,990 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:14,990 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:16,991 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:16,991 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:16,991 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:16,991 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:16,992 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:16,994 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:19,004 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:19,004 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:19,005 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:19,005 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:19,006 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:19,006 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:21,020 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:21,021 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:21,021 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:21,021 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:21,022 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:21,022 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:23,035 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:23,035 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:23,035 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:23,036 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:23,036 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:23,037 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:25,039 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:25,039 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:25,039 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:25,039 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:25,040 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:25,041 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:27,041 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:27,041 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:27,041 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:27,042 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:27,042 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:27,043 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:29,043 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:29,043 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:29,043 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:29,044 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:29,044 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:29,044 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:31,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:31,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:31,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:31,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:31,064 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:31,064 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:33,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:33,063 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:33,064 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:26:33,064 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:33,065 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:26:33,065 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:35,079 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:35,080 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:35,080 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:35,081 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:35,082 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:35,083 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:37,094 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:37,094 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:37,094 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:37,095 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:37,095 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:37,095 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:39,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:39,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:39,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:39,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:39,112 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:39,112 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:41,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:41,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:41,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:41,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:41,128 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:41,129 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:43,142 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 11:26:43,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:43,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:43,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 11:26:43,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:43,144 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:45,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:45,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:45,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:45,167 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:45,167 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:45,167 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:47,180 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:47,180 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:47,180 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:47,180 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:47,181 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:47,181 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:49,193 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:49,193 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:49,194 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:49,194 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:49,195 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:49,195 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:51,209 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:51,209 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:51,209 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:26:51,209 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:51,210 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:26:51,210 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:53,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:53,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:53,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:53,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:53,212 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:53,212 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:55,225 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:55,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:55,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:55,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:55,227 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:55,227 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:57,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:57,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:57,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:57,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:57,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:57,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:26:59,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:26:59,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:26:59,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:26:59,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:26:59,265 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:26:59,265 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:01,278 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:01,278 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:01,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:01,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:27:01,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:01,280 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:27:03,293 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:27:03,294 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:03,294 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:03,294 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:27:03,295 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:03,295 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:05,310 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:05,310 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:05,310 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] - Authentication user
+2018-05-16 11:27:05,310 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:05,311 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][asd][] -  User autenticated
+2018-05-16 11:27:05,311 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:07,326 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:07,326 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:07,326 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:07,326 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:07,327 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:07,327 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:09,341 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:09,341 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:09,342 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:09,342 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:09,342 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:09,343 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:11,359 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:11,362 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:11,362 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:11,362 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:11,364 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:11,364 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:13,378 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:13,378 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:13,378 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:13,379 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:13,379 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:13,380 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:15,394 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:15,394 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:15,394 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:15,394 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:15,395 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:15,395 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:17,406 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:19,411 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:19,411 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:19,412 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:19,412 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:19,412 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:19,413 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:21,427 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:21,427 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:21,428 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:21,428 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:21,428 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:21,429 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:23,442 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:23,443 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:23,443 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:23,444 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:23,444 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:23,445 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:25,465 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:25,465 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:25,465 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:25,466 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:25,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:25,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:27,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:27,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:27,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:27,480 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:27,480 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:27,481 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:29,498 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:29,498 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:29,498 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:29,499 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:29,500 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:29,500 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:31,511 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:31,511 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:31,511 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:31,511 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:31,512 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:31,512 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:33,526 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:33,526 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:33,526 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:33,527 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:33,527 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:33,528 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:35,542 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:35,542 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:35,542 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:35,543 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:35,543 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:35,546 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:37,565 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:37,565 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:37,566 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:37,566 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:37,566 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:37,567 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:39,579 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:39,580 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:39,579 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:39,580 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:39,581 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:39,581 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:41,593 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:41,593 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:41,593 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:41,594 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:41,594 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:41,595 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:43,609 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:43,609 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] - Authentication user
+2018-05-16 11:27:43,609 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:43,609 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][admin][] -  User autenticated
+2018-05-16 11:27:43,610 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:43,610 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:45,624 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:45,624 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 11:27:45,625 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:45,626 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:45,626 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 11:27:45,626 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:47,640 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] - Authentication user
+2018-05-16 11:27:47,640 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] - Authentication user
+2018-05-16 11:27:47,640 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:47,640 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][asd][] -  User autenticated
+2018-05-16 11:27:47,641 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:47,641 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] -  User autenticated
+2018-05-16 11:27:49,641 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] - Authentication user
+2018-05-16 11:27:49,641 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - Authentication user
+2018-05-16 11:27:49,641 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] - Authentication user
+2018-05-16 11:27:49,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][asd][] -  User autenticated
+2018-05-16 11:27:49,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] -  User autenticated
+2018-05-16 11:27:49,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] -  User autenticated
+2018-05-16 11:27:51,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] - Authentication user
+2018-05-16 11:27:51,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] - Authentication user
+2018-05-16 11:27:51,642 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] - Authentication user
+2018-05-16 11:27:51,643 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][asd][] -  User autenticated
+2018-05-16 11:27:51,643 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][asd][] -  User autenticated
+2018-05-16 11:27:51,644 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][asd][] -  User autenticated
+2018-05-16 11:27:52,494 [INFO ][ring.controller.UserController][http-bio-8083-exec-7][][asd][] - User logout
+2018-05-16 14:35:12,827 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User cdee register
+2018-05-16 14:35:12,916 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving images.jpg on D:\images
+2018-05-16 14:35:32,172 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][cdee][] - User trying to login
+2018-05-16 14:35:32,172 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][cdee][] - User is valid
+2018-05-16 14:35:32,188 [INFO ][ing.controller.LoginController][http-bio-8083-exec-2][][cdee][] - User login
+2018-05-16 14:35:32,199 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-2][][cdee][] - images.jpg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+2018-05-16 14:35:32,199 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][cdee][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 14:35:32,199 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-2][][cdee][] - class com.epam.chatspring.model.User
+2018-05-16 14:35:32,239 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][cdee][] - Authentication user
+2018-05-16 14:35:32,240 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][cdee][] -  User autenticated
+2018-05-16 14:35:32,251 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 14:35:32,252 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 14:35:34,031 [INFO ][ring.controller.UserController][http-bio-8083-exec-6][][][] - User get info about cdee
+2018-05-16 14:35:34,241 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:35:34,241 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][cdee][] - Authentication user
+2018-05-16 14:35:34,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:35:34,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][cdee][] -  User autenticated
+2018-05-16 14:35:36,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][cdee][] - Authentication user
+2018-05-16 14:35:36,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:35:36,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][cdee][] -  User autenticated
+2018-05-16 14:35:36,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:35:36,630 [INFO ][ring.controller.UserController][http-bio-8083-exec-10][][cdee][] - User logout
+2018-05-16 14:36:07,583 [INFO ][ring.controller.UserController][http-bio-8083-exec-10][][cdee][] - User wwww register
+2018-05-16 14:36:07,583 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-10][][cdee][] - Saving 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg on D:\images
+2018-05-16 14:36:18,103 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][wwww][] - User trying to login
+2018-05-16 14:36:18,105 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][wwww][] - User is valid
+2018-05-16 14:36:18,105 [INFO ][ing.controller.LoginController][http-bio-8083-exec-4][][wwww][] - User login
+2018-05-16 14:36:18,106 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-4][][wwww][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 14:36:18,157 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][wwww][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 14:36:18,157 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-4][][wwww][] - class com.epam.chatspring.model.User
+2018-05-16 14:36:18,163 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:18,163 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] - Authentication user
+2018-05-16 14:36:18,164 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:18,164 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] -  User autenticated
+2018-05-16 14:36:20,164 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:20,164 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] - Authentication user
+2018-05-16 14:36:20,164 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:20,165 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] -  User autenticated
+2018-05-16 14:36:22,165 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] - Authentication user
+2018-05-16 14:36:22,165 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:22,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] -  User autenticated
+2018-05-16 14:36:22,167 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:24,170 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:24,170 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] - Authentication user
+2018-05-16 14:36:24,171 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:24,172 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] -  User autenticated
+2018-05-16 14:36:26,172 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:26,172 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:26,173 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:26,174 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:28,189 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:28,190 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:28,190 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:28,191 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:30,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:30,211 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:30,212 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:30,213 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:32,212 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:32,212 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 14:36:32,213 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:32,214 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 14:36:34,218 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 14:36:34,218 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:34,219 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 14:36:34,220 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:36,220 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 14:36:36,220 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:36,220 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 14:36:36,221 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:38,224 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:38,224 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 14:36:38,225 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:38,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 14:36:40,227 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 14:36:40,227 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:40,229 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 14:36:40,229 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:42,228 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:42,228 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 14:36:42,230 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:42,230 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 14:36:44,229 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:44,229 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:44,230 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:44,231 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:46,245 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:46,245 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:46,246 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:46,246 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:48,246 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:48,246 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:48,247 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:48,248 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:50,262 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:50,262 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:50,263 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:50,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:52,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:52,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:52,266 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:52,266 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:54,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:54,280 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:54,280 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:54,281 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:56,282 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:56,283 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:56,283 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:56,283 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:36:58,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:36:58,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:36:58,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:36:58,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:37:00,302 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:37:00,302 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:37:00,303 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:37:00,303 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:37:02,317 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:37:02,317 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:37:02,318 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:37:02,318 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:37:04,319 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 14:37:04,319 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:37:04,320 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 14:37:04,321 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:37:06,321 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] - Authentication user
+2018-05-16 14:37:06,321 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 14:37:06,322 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][wwww][] -  User autenticated
+2018-05-16 14:37:06,323 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 14:37:32,401 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User ded register
+2018-05-16 14:37:32,469 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg on D:\images
+2018-05-16 14:39:04,049 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User weder register
+2018-05-16 14:39:04,142 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving opengraph-Jpoint-RU.jpg on D:\images
+2018-05-16 14:46:09,161 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User aqa register
+2018-05-16 14:46:09,245 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving opengraph-Jpoint-RU.jpg on D:\images
+2018-05-16 14:57:08,166 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User uju register
+2018-05-16 14:57:08,248 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg on D:\images
+2018-05-16 14:58:35,517 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User gru register
+2018-05-16 14:58:35,638 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving jpoint-2018.jpg on D:\images
+2018-05-16 15:00:06,613 [INFO ][ring.controller.UserController][http-bio-8083-exec-1][][][] - User cec register
+2018-05-16 15:00:06,685 [DEBUG][service.FileSystemStoreService][http-bio-8083-exec-1][][][] - Saving jpoint-2018.jpg on D:\images
+2018-05-16 15:21:32,059 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User trying to login
+2018-05-16 15:21:32,133 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][asd][] - User wasn't loginThe user was banned
+2018-05-16 15:21:36,023 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-6][][as][] - User trying to login
+2018-05-16 15:21:36,025 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-6][][as][] - User wasn't login. Invalid login or password
+2018-05-16 15:21:42,184 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User trying to login
+2018-05-16 15:21:42,186 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User is valid
+2018-05-16 15:21:42,186 [INFO ][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User login
+2018-05-16 15:21:42,204 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-7][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:21:42,206 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$d9e2a3bc
+2018-05-16 15:21:42,206 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:21:42,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:42,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:42,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:21:42,245 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:21:44,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:44,245 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:21:44,245 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:44,246 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:21:46,257 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:21:46,257 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:46,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:21:46,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:48,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:21:48,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:48,260 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:21:48,261 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:50,274 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:21:50,274 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:50,275 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:21:50,275 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:52,277 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:52,278 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:21:52,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:21:52,279 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:54,281 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:54,281 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:21:54,282 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:54,283 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:21:56,286 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:56,286 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] - Authentication user
+2018-05-16 15:21:56,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:56,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] -  User autenticated
+2018-05-16 15:21:58,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:21:58,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] - Authentication user
+2018-05-16 15:21:58,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:21:58,289 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] -  User autenticated
+2018-05-16 15:21:58,390 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] - Authentication user
+2018-05-16 15:21:58,391 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][asd][] -  User autenticated
+2018-05-16 15:22:02,275 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User trying to login
+2018-05-16 15:22:02,276 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User is valid
+2018-05-16 15:22:02,276 [INFO ][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User login
+2018-05-16 15:22:02,277 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-8][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:22:02,279 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$d9e2a3bc
+2018-05-16 15:22:02,280 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:22:02,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:02,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:02,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:02,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:04,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:04,287 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:04,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:04,288 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:06,313 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:06,313 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:06,315 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:06,315 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:08,329 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:08,329 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:08,330 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:08,331 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:10,346 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:10,346 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:10,347 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:10,347 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:12,361 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:12,361 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:12,362 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:12,363 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:14,363 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:14,363 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:14,364 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:14,364 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:16,376 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:16,379 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:16,380 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:16,381 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:18,384 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:18,384 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:18,384 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:18,385 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:19,599 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:22:19,600 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:22:24,000 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User trying to login
+2018-05-16 15:22:24,002 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User is valid
+2018-05-16 15:22:24,002 [INFO ][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - User login
+2018-05-16 15:22:24,003 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-8][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:22:24,004 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$d9e2a3bc
+2018-05-16 15:22:24,004 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-8][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:22:24,009 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:24,009 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:22:24,010 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:22:24,010 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:22:25,623 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:22:25,624 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:23:16,969 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User trying to login
+2018-05-16 15:23:16,970 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User is valid
+2018-05-16 15:23:16,971 [INFO ][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User login
+2018-05-16 15:23:16,972 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-7][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:23:16,974 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$d9e2a3bc
+2018-05-16 15:23:16,974 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:23:16,979 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:23:16,980 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:23:16,981 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:23:16,982 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:23:18,982 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:23:18,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:23:18,983 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:23:18,984 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:23:20,985 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:23:20,985 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:23:20,986 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:23:20,986 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:23:22,760 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:23:22,761 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:27:19,507 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User trying to login
+2018-05-16 15:27:19,589 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User is valid
+2018-05-16 15:27:19,590 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User login
+2018-05-16 15:27:19,607 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:27:19,611 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 15:27:19,611 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:27:19,659 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:27:19,660 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:27:19,668 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][ded][] - Authentication user
+2018-05-16 15:27:19,669 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][ded][] -  User autenticated
+2018-05-16 15:27:21,463 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] - Authentication user
+2018-05-16 15:27:21,464 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] -  User autenticated
+2018-05-16 15:27:39,189 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][ded][] - User trying to login
+2018-05-16 15:27:39,191 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][ded][] - User is valid
+2018-05-16 15:27:39,191 [INFO ][ing.controller.LoginController][http-bio-8083-exec-3][][ded][] - User login
+2018-05-16 15:27:39,192 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-3][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:27:39,250 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 15:27:39,250 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-3][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:27:39,261 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] - Authentication user
+2018-05-16 15:27:39,261 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] - Authentication user
+2018-05-16 15:27:39,262 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] -  User autenticated
+2018-05-16 15:27:39,262 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] -  User autenticated
+2018-05-16 15:27:41,263 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] - Authentication user
+2018-05-16 15:27:41,263 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] - Authentication user
+2018-05-16 15:27:41,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] -  User autenticated
+2018-05-16 15:27:41,264 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] -  User autenticated
+2018-05-16 15:27:41,736 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] - Authentication user
+2018-05-16 15:27:41,737 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] -  User autenticated
+2018-05-16 15:27:44,541 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] - Authentication user
+2018-05-16 15:27:44,542 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] -  User autenticated
+2018-05-16 15:32:36,210 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][ded][] - User trying to login
+2018-05-16 15:32:36,212 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][ded][] - User is valid
+2018-05-16 15:32:36,212 [INFO ][ing.controller.LoginController][http-bio-8083-exec-5][][ded][] - User login
+2018-05-16 15:32:36,214 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-5][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:32:36,255 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 15:32:36,255 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-5][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:32:36,262 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:32:36,263 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:32:36,263 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:32:36,265 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:32:38,266 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:32:38,266 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:32:38,267 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:32:38,267 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:32:50,544 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:32:50,545 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:32:50,546 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:32:50,546 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:32:52,548 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:32:52,548 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:32:52,549 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:32:52,549 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:32:54,549 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:32:54,551 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:32:54,551 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:32:54,552 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:32:54,650 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User trying to login
+2018-05-16 15:32:54,651 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User is valid
+2018-05-16 15:32:54,651 [INFO ][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User login
+2018-05-16 15:32:54,652 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-7][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:32:54,697 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$41374163
+2018-05-16 15:32:54,697 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:32:54,712 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:32:54,713 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:32:54,713 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:32:54,714 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:32:56,517 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:32:56,518 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:35:15,472 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User trying to login
+2018-05-16 15:35:15,555 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User is valid
+2018-05-16 15:35:15,556 [INFO ][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User login
+2018-05-16 15:35:15,574 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-7][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:35:15,578 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$a422c053
+2018-05-16 15:35:15,578 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:35:15,612 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] - Authentication user
+2018-05-16 15:35:15,613 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:35:15,614 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] -  User autenticated
+2018-05-16 15:35:15,614 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:35:17,536 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:35:17,537 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:36:26,465 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User trying to login
+2018-05-16 15:36:26,544 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User is valid
+2018-05-16 15:36:26,544 [INFO ][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - User login
+2018-05-16 15:36:26,563 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-7][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:36:26,566 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$2fd429ad
+2018-05-16 15:36:26,566 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-7][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:36:26,604 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:36:26,605 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:36:26,605 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:36:26,606 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:36:28,593 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:36:28,594 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:36:28,596 [INFO ][g.controller.MessageController][http-bio-8083-exec-7][][ded][] - User send message "ded"
+2018-05-16 15:36:28,605 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:36:28,606 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] - Authentication user
+2018-05-16 15:36:28,606 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:36:28,607 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] -  User autenticated
+2018-05-16 15:38:24,293 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User trying to login
+2018-05-16 15:38:24,374 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User is valid
+2018-05-16 15:38:24,374 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User login
+2018-05-16 15:38:24,389 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:38:24,392 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$3a905c23
+2018-05-16 15:38:24,392 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:38:24,433 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:38:24,434 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] - Authentication user
+2018-05-16 15:38:24,435 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:38:24,435 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] -  User autenticated
+2018-05-16 15:38:26,123 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:38:26,124 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:38:26,127 [INFO ][g.controller.MessageController][http-bio-8083-exec-4][][][] - User send message "ded"
+2018-05-16 15:38:26,132 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:38:26,133 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:38:26,133 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:38:26,134 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:38:26,432 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:38:26,433 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] - Authentication user
+2018-05-16 15:38:26,433 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:38:26,434 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][][] -  User autenticated
+2018-05-16 15:38:28,138 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:28,138 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:28,139 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:28,139 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:28,441 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:28,441 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:28,441 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:28,442 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:30,142 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:30,142 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:30,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:30,143 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:30,442 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:30,442 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:30,443 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:30,444 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:32,144 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:32,144 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:32,145 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:32,145 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:32,445 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:38:32,446 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:38:32,446 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:38:32,447 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:38:33,867 [INFO ][ring.controller.UserController][http-bio-8083-exec-10][][][] - User logout
+2018-05-16 15:43:07,762 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User trying to login
+2018-05-16 15:43:07,838 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User is valid
+2018-05-16 15:43:07,838 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User login
+2018-05-16 15:43:07,854 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:43:07,857 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User$$EnhancerBySpringCGLIB$$f3e13e14
+2018-05-16 15:43:07,857 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - class com.epam.chatspring.model.User
+2018-05-16 15:43:07,897 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][ded][] - Authentication user
+2018-05-16 15:43:07,898 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:43:07,898 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][ded][] -  User autenticated
+2018-05-16 15:43:07,899 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:43:09,897 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:43:09,897 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:43:09,898 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:43:09,898 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:43:11,903 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:43:11,903 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:43:11,904 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:43:11,905 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:43:13,920 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:13,920 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:43:13,921 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:43:13,921 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:15,941 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:15,942 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:15,942 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:15,942 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:17,958 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:17,958 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:17,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:17,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:19,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:19,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:19,975 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:19,976 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:21,976 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:21,976 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:21,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:21,977 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:23,978 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:23,978 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:23,979 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:23,980 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:25,996 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:25,996 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:25,997 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:25,997 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:27,997 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:27,997 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:27,998 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:27,998 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:29,999 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:29,999 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:30,000 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:30,000 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:32,012 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:32,012 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:32,017 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:32,018 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:34,017 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:34,017 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:34,018 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:34,018 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:36,033 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:36,033 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:36,033 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:36,034 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:38,053 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:38,053 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:38,054 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:38,055 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:40,068 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:40,068 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:40,069 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:40,069 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:42,069 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:42,070 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:42,070 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:42,071 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:44,078 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:44,078 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:44,078 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:44,079 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:46,079 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:46,080 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:46,082 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:46,082 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:48,083 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:48,083 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:48,084 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:48,084 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:50,095 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:43:50,096 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:50,096 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:43:50,097 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:52,110 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:52,110 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:43:52,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:52,111 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:43:54,113 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:43:54,113 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:54,114 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:43:54,114 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:56,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:43:56,127 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:56,128 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:43:56,129 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:58,144 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:43:58,144 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:43:58,145 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:43:58,145 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:44:00,165 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:44:00,165 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:00,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:44:00,166 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:02,181 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:02,181 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:44:02,182 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:02,182 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:44:04,184 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:04,184 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] - Authentication user
+2018-05-16 15:44:04,186 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:04,186 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-1][][ded][] -  User autenticated
+2018-05-16 15:44:06,187 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:06,187 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:44:06,189 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:06,189 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:44:08,189 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:08,189 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:08,190 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:08,190 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:10,193 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:10,193 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:44:10,194 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:10,194 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:44:12,207 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:12,207 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:12,207 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:12,207 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:14,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:14,226 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:14,227 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:14,228 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:16,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:16,242 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:16,243 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:16,244 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:18,258 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:18,258 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:18,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:18,259 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:20,278 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:20,278 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:20,282 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:20,282 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:22,296 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:22,296 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:22,297 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:22,297 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:24,311 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:24,311 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] - Authentication user
+2018-05-16 15:44:24,312 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:24,312 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][ded][] -  User autenticated
+2018-05-16 15:44:26,327 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:26,327 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:26,328 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:26,328 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:28,343 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:28,343 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:28,344 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:28,344 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:30,344 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:30,345 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:30,345 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:30,345 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:32,350 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:32,350 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:44:32,350 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:32,351 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:44:34,359 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:44:34,360 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:34,360 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:44:34,361 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:36,381 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:36,382 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:44:36,382 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:36,383 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:44:38,398 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:44:38,398 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:38,399 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:44:38,399 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:40,413 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:44:40,413 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:40,414 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:44:40,414 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:42,425 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:42,425 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:44:42,429 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:44:42,429 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:44,444 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:44,445 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:44,445 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:44,446 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:46,462 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:46,462 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:46,463 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:46,463 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:48,463 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:48,464 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:48,464 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:48,464 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:50,466 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:50,466 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:50,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:50,468 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:52,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:52,468 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:52,468 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:52,469 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:54,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] - Authentication user
+2018-05-16 15:44:54,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:54,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][][] -  User autenticated
+2018-05-16 15:44:54,467 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:56,470 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:56,470 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:56,471 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:44:56,471 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:58,474 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:44:58,475 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:44:58,478 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:44:58,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:00,478 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:00,478 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:00,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:00,479 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:02,480 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:02,480 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:02,480 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:02,481 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:04,481 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:04,482 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:04,482 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:04,482 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:06,485 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:06,485 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:06,485 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:06,486 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:08,487 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:08,487 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:08,488 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:08,488 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:10,489 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:10,489 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:10,490 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:10,490 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:12,490 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:12,490 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:12,491 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:12,491 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:14,493 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:14,493 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:14,494 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:14,494 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:16,495 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:16,495 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:16,496 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:16,496 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:18,495 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:18,496 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:45:18,496 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:18,497 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:45:20,497 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:20,498 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:45:20,498 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:20,499 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:45:22,500 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:22,500 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:22,501 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] - Authentication user
+2018-05-16 15:45:22,501 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][][] -  User autenticated
+2018-05-16 15:45:24,502 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:24,502 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:24,503 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:24,503 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:26,503 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:26,504 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:26,504 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:26,504 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:28,505 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:28,505 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:28,505 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:28,506 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:30,507 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] - Authentication user
+2018-05-16 15:45:30,508 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:30,508 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][][] -  User autenticated
+2018-05-16 15:45:30,508 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:32,508 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:32,509 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:45:32,509 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:32,510 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:45:34,510 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:34,510 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:45:34,511 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:34,512 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:45:36,513 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:45:36,513 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:36,514 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:45:36,515 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:38,516 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:38,516 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:45:38,517 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:45:38,517 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:40,517 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:45:40,517 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:40,518 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:45:40,518 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:42,519 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:42,519 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:45:42,520 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:42,520 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:45:44,521 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:44,521 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:45:44,521 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:44,522 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:45:46,522 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:45:46,523 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] - Authentication user
+2018-05-16 15:45:46,523 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:45:46,524 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][ded][] -  User autenticated
+2018-05-16 15:45:47,445 [INFO ][ring.controller.UserController][http-bio-8083-exec-8][][ded][] - User logout
+2018-05-16 15:51:02,798 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User trying to login
+2018-05-16 15:51:02,876 [DEBUG][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User is valid
+2018-05-16 15:51:02,876 [INFO ][ing.controller.LoginController][http-bio-8083-exec-1][][ded][] - User login
+2018-05-16 15:51:02,898 [DEBUG][spring.service.UserServiceImpl][http-bio-8083-exec-1][][ded][] - 9cqmkocmxkvjmyfh-e7p9xoi7ac.jpeg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+2018-05-16 15:51:02,953 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] - Authentication user
+2018-05-16 15:51:02,958 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-2][][][] -  User autenticated
+2018-05-16 15:51:02,958 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] - Authentication user
+2018-05-16 15:51:02,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-3][][ded][] -  User autenticated
+2018-05-16 15:51:04,954 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] - Authentication user
+2018-05-16 15:51:04,954 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] - Authentication user
+2018-05-16 15:51:04,955 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-5][][][] -  User autenticated
+2018-05-16 15:51:04,956 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-4][][ded][] -  User autenticated
+2018-05-16 15:51:06,957 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] - Authentication user
+2018-05-16 15:51:06,957 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] - Authentication user
+2018-05-16 15:51:06,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-6][][][] -  User autenticated
+2018-05-16 15:51:06,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-7][][ded][] -  User autenticated
+2018-05-16 15:51:08,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] - Authentication user
+2018-05-16 15:51:08,959 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:51:08,960 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-8][][][] -  User autenticated
+2018-05-16 15:51:08,961 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:51:11,448 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:51:11,448 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:51:11,449 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated
+2018-05-16 15:51:11,449 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:51:14,449 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] - Authentication user
+2018-05-16 15:51:14,449 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] - Authentication user
+2018-05-16 15:51:14,450 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-10][][][] -  User autenticated
+2018-05-16 15:51:14,451 [DEBUG][lter.AuthenticationInterceptor][http-bio-8083-exec-9][][ded][] -  User autenticated

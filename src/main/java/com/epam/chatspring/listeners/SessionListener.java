@@ -4,6 +4,9 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+
 import com.epam.chatspring.dao.DAOFactory;
 import com.epam.chatspring.dao.DBType;
 import com.epam.chatspring.dao.UserDAO;
@@ -15,15 +18,14 @@ public class SessionListener implements HttpSessionListener {
 	}
 
 	public void sessionCreated(HttpSessionEvent httpSessionEvent) {
-		HttpSession httpSession = httpSessionEvent.getSession();
-		httpSession.setMaxInactiveInterval(300);
 	}
 
 	public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {
-		DAOFactory factory = DAOFactory.getInstance(DBType.ORACLE);
-		UserDAO userDAO = factory.getUserDAO();
-		HttpSession httpSession = httpSessionEvent.getSession();
-		User user = (User) httpSession.getAttribute("currentUser");
+		HttpSession session = httpSessionEvent.getSession();
+		ApplicationContext ctx = WebApplicationContextUtils
+                .getWebApplicationContext(session.getServletContext());
+        UserDAO userDAO = (UserDAO) ctx.getBean("userDAO");
+        User user = (User) ctx.getBean("currentUser");
 		userDAO.logOut(user);
 	}
 

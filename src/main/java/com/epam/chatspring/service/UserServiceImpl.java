@@ -57,13 +57,14 @@ public class UserServiceImpl implements UserService {
 	public User login(User user) {
 		User fullUser = userDAO.getUser(user.getName());
 		user.setRole(fullUser.getRole());
+		user.setStatus(fullUser.getStatus());
 		user.setPicturePath(fullUser.getPicturePath());
+		logger.debug(user.getPicturePath());
 		userDAO.logIn(user);
-		System.out.println(user);
 		String messageText = String.format(loginMessage, user.getName());
 		Message message = new Message(user.getName(), messageText);
 		messageDAO.sendMessage(message);
-		return user;
+		return fullUser;
 	}
 
 	@Override

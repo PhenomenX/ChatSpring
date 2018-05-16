@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +27,9 @@ public class MessageController {
 	@Autowired
 	@Qualifier("messageService")
 	MessageService messageService;
+	
+	@Autowired
+	private User currentUser;
 
 	private static final Logger logger = Logger.getLogger(MessageController.class);
 
@@ -42,12 +46,11 @@ public class MessageController {
 
 	@RequestMapping(value = "/messages", method = RequestMethod.POST)
 	@ResponseBody
-	public void sendMessage(@RequestParam String messageText, HttpSession httpSession,
+	public void sendMessage(@RequestBody String messageText, HttpSession httpSession,
 			HttpServletResponse httpResponse) {
 		logger.info(String.format("User send message \"%s\"", messageText));
 		Timestamp date = new Timestamp(System.currentTimeMillis());
-		User user = (User) httpSession.getAttribute("currentUser");
-		Message message = new Message(date, user.getName(), messageText);
+		Message message = new Message(date, currentUser.getName(), messageText);
 		messageService.sendMessage(message);
 	}
 

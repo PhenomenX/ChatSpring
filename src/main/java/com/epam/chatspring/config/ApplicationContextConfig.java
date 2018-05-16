@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
@@ -28,6 +29,11 @@ public class ApplicationContextConfig {
     }
 	
 	@Bean
+	public FileSystemResource imageResource(){
+		return new FileSystemResource("D://images//");
+	}
+	
+	@Bean(name = "userDAO")
 	public UserDAO userDAO(){
 		DAOFactory factory = DAOFactory.getInstance(DBType.ORACLE);
 		UserDAO userDAO = factory.getUserDAO();

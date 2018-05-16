@@ -65,8 +65,7 @@ public class LoginController {
 		logger.info("User login");
 		currentUser.setName(user.getName());
 		user = userService.login(currentUser);
-		System.out.println(currentUser);
-		return currentUser;
+		return user;
 	}
 
 	@ExceptionHandler(value = { UserKickedException.class })
