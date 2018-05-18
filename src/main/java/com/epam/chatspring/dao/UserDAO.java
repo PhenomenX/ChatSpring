@@ -7,19 +7,12 @@ import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
 
 public interface UserDAO {
-	void logIn(User user);
-
-	void logOut(User user);
-
-	boolean isLogged(User user);
 
 	void kick(String nick);
 
 	void unkick(String nick);
 
 	boolean isKicked(User user);
-
-	List<User> getAllLogged();
 
 	Role getRole(String nick);
 	

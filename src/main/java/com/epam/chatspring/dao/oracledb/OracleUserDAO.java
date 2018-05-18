@@ -1,264 +1,115 @@
 package com.epam.chatspring.dao.oracledb;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.epam.chatspring.dao.ResourceManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import com.epam.chatspring.dao.UserDAO;
+import com.epam.chatspring.dao.UserRowMapper;
 import com.epam.chatspring.model.Role;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
 
 public class OracleUserDAO implements UserDAO {
-	private Connection connection;
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	@Value("${updateUser}")
 	private String updateUserQ;
+	@Value("${isValid}")
 	private String isLoginQ;
+	@Value("${isKicked}")
 	private String isKickedQ;
+	@Value("${isValid}")
 	private String isValidQ;
-	private String allLoggedQ;
+	@Value("${role}")
 	private String roleQ;
+	@Value("${allKicked}")
 	private String allKickedQ;
+	@Value("${newUser}")
 	private String newUserQ;
+	@Value("${getUser}")
 	private String getUserQ;
 
-	public OracleUserDAO(Connection connection) {
-		this.connection = connection;
-		this.updateUserQ = ResourceManager.getRegExp("updateUser");
-		this.isValidQ = ResourceManager.getRegExp("isValid");
-		this.allLoggedQ = ResourceManager.getRegExp("allLogged");
-		this.allKickedQ = ResourceManager.getRegExp("allKicked");
-		this.roleQ = ResourceManager.getRegExp("role");
-		this.newUserQ = ResourceManager.getRegExp("newUser");
-		this.getUserQ = ResourceManager.getRegExp("getUser");
-		this.isLoginQ = ResourceManager.getRegExp("isLogin");
-		this.isKickedQ = ResourceManager.getRegExp("isKicked");
-	}
-
-	@Override
-	public void logIn(User user) {
-		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
-			ps.setInt(1, Status.LOGIN.ordinal() + 1);
-			ps.setString(2, user.getName());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public void logOut(User user) {
-		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
-			ps.setInt(1, Status.LOGOUT.ordinal() + 1);
-			ps.setString(2, user.getName());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
-	@Override
-	public boolean isLogged(User user) {
-		boolean isLogged = true;
-		try(PreparedStatement ps = connection.prepareStatement(isLoginQ);) {
-			ps.setString(1, user.getName());
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				isLogged = Boolean.valueOf(rs.getString(1));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return isLogged;
+	public OracleUserDAO() {
+		super();
 	}
 
 	@Override
 	public void kick(String nick) {
-		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
-			ps.setInt(1, 4);
-			ps.setString(2, nick);
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		jdbcTemplate.update(updateUserQ, new Object[] { Status.BANNED.ordinal(), nick });
 	}
 
 	@Override
 	public void unkick(String nick) {
-		try (PreparedStatement ps = connection.prepareStatement(updateUserQ)) {
-			ps.setInt(1, Status.LOGOUT.ordinal() + 1);
-			ps.setString(2, nick);
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		jdbcTemplate.update(updateUserQ, new Object[] { Status.NORMAL.ordinal(), nick });
 	}
 
 	@Override
 	public boolean isKicked(User user) {
 		boolean isKicked = true;
-		try(PreparedStatement ps = connection.prepareStatement(isKickedQ);) {
-			ps.setString(1, user.getName());
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				isKicked = Boolean.valueOf(rs.getString(1));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		String result = jdbcTemplate.queryForObject(isKickedQ, new Object[] { user.getName() }, String.class);
+		isKicked = Boolean.valueOf(result);
 		return isKicked;
 	}
 
-	@Override
-	public List<User> getAllLogged() {
-		List<User> onlineUserList = new ArrayList<User>();
-		User user;
-		Role role;
-		Status status;
-		try (Statement st = connection.createStatement();) {
-			ResultSet rs = st.executeQuery(allLoggedQ);
-			while (rs.next()) {
-				role = Role.values()[rs.getInt(2) - 1];
-				status = Status.values()[rs.getInt(3) - 1];
-				user = new User(rs.getString(1), status, role);
-				onlineUserList.add(user);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return onlineUserList;
-	}
-
 	public Role getRole(String nick) {
-		ResultSet resultSet = null;
 		Role role = null;
-		try (PreparedStatement ps = connection.prepareStatement(roleQ)) {
-			ps.setString(1, nick);
-			resultSet = ps.executeQuery();
-			while (resultSet.next()) {
-				String roleString = resultSet.getString("NAME").trim();
-				role = Role.valueOf(roleString);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		if (role == null) {
-			System.err.print("This user does not exist");
-		}
+		String result = jdbcTemplate.queryForObject(roleQ, new Object[] { nick }, String.class);
+		role = Role.valueOf(result);
 		return role;
 	}
 
 	@Override
 	public List<User> getAllKicked() {
 		List<User> kickedUserList = new ArrayList<User>();
-		User user;
-		Role role;
-		Status status;
-		try (Statement st = connection.createStatement();) {
-			ResultSet rs = st.executeQuery(allKickedQ);
-			while (rs.next()) {
-				role = Role.values()[rs.getInt(2) - 1];
-				status = Status.values()[rs.getInt(3) - 1];
-				user = new User(rs.getString(1), status, role);
-				kickedUserList.add(user);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		kickedUserList = jdbcTemplate.query(allKickedQ, new UserRowMapper());
 		return kickedUserList;
 	}
 
 	@Override
 	public boolean isValid(User user) {
-		ResultSet resultSet = null;
-		int id = 0;
-		try (PreparedStatement ps = connection.prepareStatement(isValidQ)) {
-			ps.setString(1, user.getName());
-			ps.setString(2, user.getPassword());
-			resultSet = ps.executeQuery();
-			while (resultSet.next()) {
-				id = resultSet.getInt(1);
-			}
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+		boolean isValid = true;
+		try {
+			jdbcTemplate.queryForObject(isValidQ, new Object[] { user.getName(), user.getPassword() },
+					Integer.class);
+		} catch (EmptyResultDataAccessException e) {
+			isValid = false;
 		}
-		if(id == 0){
-			return false;
-		}
-		return true;
+		return isValid;
 	}
 
 	@Override
 	public void createUser(User user) {
-		try (PreparedStatement ps = connection.prepareStatement(newUserQ)) {
-			ps.setString(1, user.getName());
-			ps.setString(2, user.getPassword());
-			ps.setString(3, user.getPicturePath());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
+		jdbcTemplate.update(newUserQ, new Object[] { user.getName(), user.getPassword(), user.getPicturePath() });
 	}
 
 	@Override
 	public List<User> getUsersByStatus(Status status) {
 		List<User> onlineUserList = new ArrayList<User>();
-		User user;
-		Role role;
-		try (PreparedStatement ps = connection.prepareStatement(allLoggedQ)) {
-			ps.setInt(1, status.ordinal() + 1);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				role = Role.values()[rs.getInt(2) - 1];
-				status = Status.values()[rs.getInt(3) - 1];
-				user = new User(rs.getString(1), status, role);
-				onlineUserList.add(user);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		onlineUserList = jdbcTemplate.query(allKickedQ, new Object[] { status.ordinal() }, new UserRowMapper());
 		return onlineUserList;
 	}
 
 	@Override
 	public User getUser(String nick) {
-		User user = null;
-		Role role;
-		Status status;
-		String picture;
-		try (PreparedStatement ps = connection.prepareStatement(getUserQ);) {
-			ps.setString(1, nick);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				role = Role.values()[rs.getInt(2) - 1];
-				status = Status.values()[rs.getInt(3) - 1];
-				picture = rs.getString(4);
-				user = new User(nick, status, role, picture);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		User user = new User();
+		user = jdbcTemplate.queryForObject(getUserQ, new Object[] { nick }, new UserRowMapper());
 		return user;
 	}
 
 	@Override
 	public boolean isUnique(String nick) {
-		try (PreparedStatement ps = connection.prepareStatement(getUserQ);) {
-			ps.setString(1, nick);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				return false;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		boolean isValid = false;
+		try {
+			jdbcTemplate.queryForObject(getUserQ, new Object[] { nick }, new UserRowMapper());
+		} catch (EmptyResultDataAccessException e) {
+			isValid = true;
 		}
-		return true;
+		return isValid;
 	}
 
 }

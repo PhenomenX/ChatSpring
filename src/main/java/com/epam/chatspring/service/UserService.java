@@ -2,8 +2,6 @@ package com.epam.chatspring.service;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
 import com.epam.chatspring.exceptions.NameValidationException;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;

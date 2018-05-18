@@ -91,9 +91,10 @@ public class UserController {
 	@RequestMapping(value = "/users/kick", method = RequestMethod.PUT)
 	@ResponseBody
 	public void kick(@RequestBody String nick, HttpSession httpSession) throws AccessPrivilegeException {
-		logger.info(String.format("Admin kicked user %s", nick));
+		logger.debug("Checking user at admin role");
 		if(currentUser.isAdmin()){
 			logger.debug("User is admin");
+			logger.info(String.format("Admin kicked user %s", nick));
 			adminService.kick(nick);
 		} else{
 			throw new AccessPrivilegeException(grantErrorMessage);
@@ -103,9 +104,10 @@ public class UserController {
 	@RequestMapping(value = "/users/unkick", method = RequestMethod.PUT)
 	@ResponseBody
 	public void unkick(@RequestBody String nick) throws AccessPrivilegeException {
-		logger.info(String.format("Admin unkicked user %s", nick));
+		logger.debug("Checking user at admin role");
 		if(currentUser.isAdmin()){
 			logger.debug("User is admin");
+			logger.info(String.format("Admin unkicked user %s", nick));
 			adminService.unkick(nick);
 		} else{
 			throw new AccessPrivilegeException(grantErrorMessage);

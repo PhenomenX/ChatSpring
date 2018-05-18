@@ -1,8 +1,9 @@
 package com.epam.chatspring.service;
 
+import java.util.ArrayList;
 import java.util.List;
-
-import javax.servlet.http.HttpSession;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,10 @@ import com.epam.chatspring.dao.MessageDAO;
 import com.epam.chatspring.dao.UserDAO;
 import com.epam.chatspring.exceptions.NameValidationException;
 import com.epam.chatspring.model.Message;
+import com.epam.chatspring.model.MessageType;
 import com.epam.chatspring.model.Status;
 import com.epam.chatspring.model.User;
+import com.epam.chatspring.model.UserMap;
 
 @Service(value = "userService")
 public class UserServiceImpl implements UserService {
@@ -25,7 +28,7 @@ public class UserServiceImpl implements UserService {
 	private MessageDAO messageDAO;
 	
 	@Autowired
-	private User currentUser;
+	private UserMap onlineUsers;
 
 	@Value("${message.login}")
 	private String loginMessage;
@@ -56,23 +59,25 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User login(User user) {
 		User fullUser = userDAO.getUser(user.getName());
+		user.setId(fullUser.getId());
 		user.setRole(fullUser.getRole());
 		user.setStatus(fullUser.getStatus());
 		user.setPicturePath(fullUser.getPicturePath());
-		logger.debug(user.getPicturePath());
-		userDAO.logIn(user);
+		onlineUsers.addUser( fullUser);
 		String messageText = String.format(loginMessage, user.getName());
 		Message message = new Message(user.getName(), messageText);
-		messageDAO.sendMessage(message);
+		message.setType(MessageType.SYSTEM);
+		messageDAO.sendMessage(message, fullUser.getId());
 		return fullUser;
 	}
 
 	@Override
 	public void logout(User user) {
-		userDAO.logOut(user);
+		onlineUsers.remove(user.getName());
 		String messageText = String.format(logoutMessage, user.getName());
 		Message message = new Message(user.getName(), messageText);
-		messageDAO.sendMessage(message);
+		message.setType(MessageType.SYSTEM);
+		messageDAO.sendMessage(message, user.getId());
 	}
 
 	@Override
@@ -82,7 +87,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> getUsers(Status status) {
-		return userDAO.getUsersByStatus(status);
+		List<User> users;
+		if(status.equals(Status.NORMAL)){
+			users = new ArrayList<User>(onlineUsers.getUsers().values());
+		} else{
+			users = userDAO.getUsersByStatus(status);
+		}
+		return users;
 	}
 
 

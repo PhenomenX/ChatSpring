@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.epam.chatspring.dao.UserDAO;
 import com.epam.chatspring.model.User;
+import com.epam.chatspring.model.UserMap;
 
 public class AuthenticationInterceptor implements HandlerInterceptor {
 
@@ -21,6 +22,9 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 	@Autowired
 	private User currentUser;
 
+	@Autowired
+	private UserMap onlineUsers;
+	
 	@Value("${message.error.authentication}")
 	private String authenticationError;
 
@@ -39,7 +43,8 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object arg2) throws Exception {
 		logger.debug("Authentication user");
-		if (userDAO.isLogged(currentUser)) {
+		String userName = currentUser.getName();
+		if (onlineUsers.containsKey(userName) && !userDAO.isKicked(currentUser)) {
 			logger.debug(" User autenticated");
 			return true;
 		} else {

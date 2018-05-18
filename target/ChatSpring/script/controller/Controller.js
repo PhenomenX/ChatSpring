@@ -77,7 +77,7 @@ Controller.prototype.generateChat = function () {
     if (user.role == "ADMIN") {
         chatGenerating = function () {
             if (this.chatRefleshingEnable) {
-                Promise.all([this.getUsers("LOGIN"), this.getMessages(), this.getUsers("KICK")]).then(
+                Promise.all([this.getUsers("NORMAL"), this.getMessages(), this.getUsers("BANNED")]).then(
                     values => { this.view.refleshChat(values[0], values[1], values[2]) });
                 setTimeout(chatGenerating.bind(controller), 2000);
             }
@@ -85,13 +85,15 @@ Controller.prototype.generateChat = function () {
     } else {
         chatGenerating = function () {
             if (this.chatRefleshingEnable) {
-                Promise.all([this.getUsers("LOGIN"), this.getMessages()]).then(
+                Promise.all([this.getUsers("NORMAL"), this.getMessages()]).then(
                     values => { this.view.refleshChat(values[0], values[1]) });
                 setTimeout(chatGenerating.bind(controller), 2000);
             }
         }
     }
     chatGenerating.bind(controller)();
+    var messages = $('.messages').first();
+    messages.scrollTop(messages.prop('scrollHeight'));
 }
 Controller.prototype.getMessages = function () {
     var controller = this;
@@ -257,3 +259,5 @@ function getFormData(data) {
  
     return indexed_array;
  }
+
+ 

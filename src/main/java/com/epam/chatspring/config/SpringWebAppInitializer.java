@@ -11,10 +11,8 @@ import javax.servlet.ServletRegistration;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
-import org.springframework.web.filter.HttpPutFormContentFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 
-import com.epam.chatspring.listeners.SessionListener;
 
 public class SpringWebAppInitializer implements WebApplicationInitializer {
 
@@ -28,7 +26,7 @@ public class SpringWebAppInitializer implements WebApplicationInitializer {
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
 		
-		servletContext.addListener(new SessionListener());
+		//servletContext.addListener(new SessionListener());
 
 		FilterRegistration.Dynamic fr = servletContext.addFilter("encodingFilter", CharacterEncodingFilter.class);
 		fr.setInitParameter("encoding", "UTF-8");

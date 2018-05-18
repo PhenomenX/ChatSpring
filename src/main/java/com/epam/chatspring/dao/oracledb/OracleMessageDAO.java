@@ -1,64 +1,39 @@
 package com.epam.chatspring.dao.oracledb;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import com.epam.chatspring.dao.MessageDAO;
-import com.epam.chatspring.dao.ResourceManager;
+import com.epam.chatspring.dao.MessageRowMapper;
 import com.epam.chatspring.model.Message;
 
 public class OracleMessageDAO implements MessageDAO {
 
-	private Connection connection;
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	@Value("${getMessages}")
 	private String lastQ;
+	@Value("${newMessage}")
 	private String messageQ;
 
-	public OracleMessageDAO(Connection connection) {
-		this.connection = connection;
-		this.lastQ = ResourceManager.getRegExp("last");
-		this.messageQ = ResourceManager.getRegExp("newMessage");
+	public OracleMessageDAO() {
+		super();
 	}
 
 	@Override
 	public List<Message> getLast(int count) {
-		List<Message> messages = new ArrayList<Message>();
-		try(PreparedStatement ps = connection.prepareStatement(lastQ)) {
-			ps.setInt(1, count);
-			Message message;
-			String name;
-			String text;
-			Timestamp data;
-
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				name = rs.getString(2);
-				data = rs.getTimestamp(3);
-				text = rs.getString(4);
-				message = new Message(data, name, text);
-				messages.add(message);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		Collections.reverse(messages);
+		List<Message> messages = jdbcTemplate.query(lastQ, new Object[] { count },
+				new MessageRowMapper());
 		return messages;
 	}
 
 	@Override
-	public void sendMessage(Message message) {
-		try {
-			PreparedStatement ps = connection.prepareStatement(messageQ);
-			ps.setString(1, message.getNick());
-			ps.setString(2, message.getMessage());
-			ps.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+	public void sendMessage(Message message, int userID) {
+		System.out.println(message.getType().ordinal());
+		jdbcTemplate.update(messageQ,
+				new Object[] { userID, message.getMessage(), message.getType().ordinal() });
 	}
 }

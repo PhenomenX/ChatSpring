@@ -38,7 +38,7 @@ function View() {
 View.prototype.refleshMessages = function (messages) {
     this.messagesContainer.empty();
     for (var i = 0; i < messages.length; i++) {
-        $("<p>" + messages[i] + "</p>").appendTo(this.messagesContainer);
+        $("<p>" + escapeHtml(messages[i]) + "</p>").appendTo(this.messagesContainer);
     }
 };
 
@@ -49,7 +49,7 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
     $("<p>Logged users:</p>").appendTo(this.usersContainer);
     if (user.role == "USER") {
         for (var i = 0; i < users.length; i++) {
-            var userContainer = $("<div class=\"user\">" + users[i].name + "</div>")
+            var userContainer = $("<div class=\"user\">" + escapeHtml(users[i].name) + "</div>")
                 .appendTo(this.usersContainer);
             userContainer.click(function (e) {
                 _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
@@ -58,7 +58,7 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
     }
     else {
         for (var i = 0; i < users.length; i++) {
-            let userContainer = $("<div class=\"user\">" + users[i].name + "</div>");
+            let userContainer = $("<div class=\"user\">" + escapeHtml(users[i].name) + "</div>");
             let button = $("<input class=\"kick_button\" type=\"button\" value=\"kick\"/>");
             userContainer.click(function (e) {
                 _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
@@ -72,7 +72,7 @@ View.prototype.refleshUsers = function (users, kickedUsers) {
         }
         $("<p>Kicked users:</p>").appendTo(this.usersContainer);
         for (var i = 0; i < kickedUsers.length; i++) {
-            let userContainer = $("<div class=\"user\">" + kickedUsers[i].name + "</div>");
+            let userContainer = $("<div class=\"user\">" + escapeHtml(kickedUsers[i].name) + "</div>");
             let button = $("<input class=\"unkick_button\" type=\"button\" value=\"unkick\"/>");
             userContainer.click(function (e) {
                 _this.userClicked.notify({ 'user': e.currentTarget.textContent, 'target': e.currentTarget })
@@ -125,7 +125,7 @@ View.prototype.showProfile = function (e) {
 View.prototype.showUser = function () {
     var user = JSON.parse(window.sessionStorage.getItem("user"));
     var greetingContainer = $(".header h3").get(0);
-    greetingContainer.textContent = "Welcome, " + user.name + "!";
+    greetingContainer.textContent = "Welcome, " + escapeHtml(user.name) + "!";
 };
 
 View.prototype.showRegisterForm = function () {
@@ -145,3 +145,9 @@ View.prototype.showError = function (status, message) {
     this.errorContainer.css("display", "flex");
     this.errorContainer.text(status + " - " + message);
 }
+
+function escapeHtml (string) {
+    return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+      return entityMap[s];
+    });
+  }

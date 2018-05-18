@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.epam.chatspring.model.Message;
+import com.epam.chatspring.model.MessageType;
 import com.epam.chatspring.model.User;
 import com.epam.chatspring.service.MessageService;
 
@@ -51,6 +51,7 @@ public class MessageController {
 		logger.info(String.format("User send message \"%s\"", messageText));
 		Timestamp date = new Timestamp(System.currentTimeMillis());
 		Message message = new Message(date, currentUser.getName(), messageText);
+		message.setType(MessageType.COMMON);
 		messageService.sendMessage(message);
 	}
 

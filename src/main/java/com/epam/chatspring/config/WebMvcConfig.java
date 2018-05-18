@@ -10,10 +10,12 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import com.epam.chatspring.filter.AuthenticationInterceptor;
+import com.epam.chatspring.filter.LoggerConfigurationInterceptor;
 
 @Configuration
 @EnableWebMvc
-@PropertySource("classpath:properties/config.properties")
+@PropertySource("classpath:properties/messages.properties")
+@PropertySource("classpath:properties/chat.properties")
 @PropertySource("classpath:properties/SQL_Queries.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
@@ -32,11 +34,16 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		return new AuthenticationInterceptor();
 	}
 
+	@Bean
+	public LoggerConfigurationInterceptor loggerConfigurationInterceptor() {
+		return new LoggerConfigurationInterceptor();
+	}
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(loggerConfigurationInterceptor()).addPathPatterns("/**");
 		registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/messages").addPathPatterns("/users")
 				.excludePathPatterns("/users/login").excludePathPatterns("/users/register");
-
 	}
 
 }
