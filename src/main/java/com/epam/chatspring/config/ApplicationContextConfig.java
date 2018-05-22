@@ -84,7 +84,7 @@ public class ApplicationContextConfig {
 		return new HashMap<String, User>();
 	}
 
-	@Bean
+	@Bean(name = "currentUser")
 	@Scope(value = WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
 	public User currentUser() {
 		return new User();

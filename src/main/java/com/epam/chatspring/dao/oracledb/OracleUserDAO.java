@@ -17,21 +17,19 @@ import com.epam.chatspring.model.User;
 public class OracleUserDAO implements UserDAO {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
-	@Value("${updateUser}")
+	@Value("UPDATE USERS SET STATUS_ID = ? WHERE NICK = cast(? as char(10))")
 	private String updateUserQ;
-	@Value("${isValid}")
-	private String isLoginQ;
-	@Value("${isKicked}")
+	@Value("SELECT DECODE(STATUS_ID, '0', 'false', '1', 'true') AS Kicked FROM USERS WHERE Nick = cast(? as char(10))")
 	private String isKickedQ;
-	@Value("${isValid}")
+	@Value("SELECT USER_ID FROM USERS WHERE NICK = cast(? as char(10)) AND PASS = cast(? as char(10))")
 	private String isValidQ;
-	@Value("${role}")
+	@Value("SELECT name FROM ROLES WHERE ID IN (SELECT ROLE_ID FROM USERS WHERE NICK=cast(? as char(14)))")
 	private String roleQ;
-	@Value("${allKicked}")
+	@Value("SELECT u.USER_ID, u.NICK, u.ROLE_ID, u.STATUS_ID, u.PICTURE from USERS u where u.STATUS_ID = ?")
 	private String allKickedQ;
-	@Value("${newUser}")
+	@Value("INSERT INTO USERS VALUES (user_id_seq.nextval,?,?,0,0,?)")
 	private String newUserQ;
-	@Value("${getUser}")
+	@Value("SELECT USER_ID, NICK, ROLE_ID, STATUS_ID, PICTURE FROM USERS WHERE NICK = cast(? as char(14))")
 	private String getUserQ;
 
 	public OracleUserDAO() {

@@ -1,8 +1,13 @@
 package com.epam.chatspring.config;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.support.SimpleThreadScope;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -39,10 +44,19 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 		return new LoggerConfigurationInterceptor();
 	}
 
+//	@Bean
+//	public CustomScopeConfigurer customScope() {
+//		CustomScopeConfigurer configurer = new CustomScopeConfigurer();
+//		Map<String, Object> workflowScope = new HashMap<String, Object>();
+//		workflowScope.put("session", new SimpleThreadScope());
+//		configurer.setScopes(workflowScope);
+//		return configurer;
+//	}
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(loggerConfigurationInterceptor()).addPathPatterns("/**");
-		registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/messages").addPathPatterns("/users")
+		registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/messages").addPathPatterns("/users/**")
 				.excludePathPatterns("/users/login").excludePathPatterns("/users/register");
 	}
 

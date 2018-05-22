@@ -12,6 +12,7 @@ com\epam\chatspring\service\AdminService.class
 com\epam\chatspring\dao\MessageRowMapper.class
 com\epam\chatspring\dao\UserDAO.class
 com\epam\chatspring\model\Message.class
+com\epam\chatspring\listeners\SessionListener.class
 com\epam\chatspring\controller\MessageController.class
 com\epam\chatspring\service\FileSystemStoreService.class
 com\epam\chatspring\service\UserServiceImpl.class

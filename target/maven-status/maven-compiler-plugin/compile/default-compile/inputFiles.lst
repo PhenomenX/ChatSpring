@@ -26,6 +26,7 @@ C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\dao\UserDAO.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\exceptions\UserKickedException.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\exceptions\NameValidationException.java
+C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\listeners\SessionListener.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\model\User.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\config\WebMvcConfig.java
 C:\Users\Pavel_Romanenko\workspace\ChatSpring\src\main\java\com\epam\chatspring\service\AdminServiceImpl.java

@@ -12,23 +12,23 @@ function UserWindow() {
 }
 
 UserWindow.prototype.showInfo = function (data) {
-    var container = $(".user_info").get(0);
+    var container = $(".user_info").first();
     var coordinats = this.clickedUserContainer.getBoundingClientRect();
-    container.style.top = coordinats.top + "px";
-    container.style.left = coordinats.left + "px";
+    container.css("top", coordinats.top + "px");
+    container.css("left", coordinats.left + "px");
     $('.overlay').fadeIn(200);
     changeContainerStyle(container);
-    container.getElementsByClassName("avatar")[0].setAttribute("src", "images/" + data.picturePath);
-    container.getElementsByClassName("nick")[0].textContent = data.name;
-    container.getElementsByClassName("role")[0].textContent = data.role;
-    container.getElementsByClassName("status")[0].textContent = data.status;
+    container.find(".avatar").attr("src", "images/" + data.picturePath);
+    container.find(".nick").text(data.name);
+    container.find(".role").text(data.role);
+    container.find(".status").text(data.status);
 }
 
 function changeContainerStyle(container) {
-    container.style.position = "absolute";
-    container.style.border = "2px solid black";
-    container.style.display = "flex";
-    container.style.flexDirection = "column";
-    container.style.justifyContent = "flex-start";
-    container.style.alignItems = "center";
+    container.css("position", "absolute");
+    container.css("border", "2px solid black");
+    container.css("display", "flex");
+    container.css("flexDirection", "column");
+    container.css("justifyContent", "flex-start");
+    container.css("alignItems", "center");
 }

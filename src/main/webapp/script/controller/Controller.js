@@ -193,10 +193,11 @@ Controller.prototype.kickUser = function (target, args) {
 
 Controller.prototype.unkickUser = function (target, args) {
     var controller = this;
-    var data = 'nick=' + encodeURIComponent(args.user.trim());
+    var data = args.user.trim();
     $.ajax({
         type: 'PUT',
         url: 'users/unkick',
+        contentType: 'application/json; charset=utf-8',
         data: data,
         success: function (data) {
         },
@@ -213,6 +214,7 @@ Controller.prototype.setCurrentView = function () {
         if (state == "login") {
             this.view.showLoginForm();
         } else if (state == "chat") {
+            this.view.showChat();
             this.generateChat();
         } else if (state == "register") {
             this.view.showRegisterForm();

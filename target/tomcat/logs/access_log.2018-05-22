@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [22/May/2018:12:46:57 +0300] "PUT /ChatSpring/users/login HTTP/1.1" 200 613 http-bio-8083-exec-1 400
+0:0:0:0:0:0:0:1 - - [22/May/2018:12:46:57 +0300] "GET /ChatSpring/users?status=NORMAL HTTP/1.1" 200 615 http-bio-8083-exec-2 33
+0:0:0:0:0:0:0:1 - - [22/May/2018:12:46:57 +0300] "GET /ChatSpring/messages HTTP/1.1" 200 1288 http-bio-8083-exec-3 51
+0:0:0:0:0:0:0:1 - - [22/May/2018:12:46:58 +0300] "PUT /ChatSpring/users/logout HTTP/1.1" 200 - http-bio-8083-exec-5 31
